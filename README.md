@@ -1,3 +1,2 @@
 # web
 
-hugo based
