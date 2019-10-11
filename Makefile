@@ -1,11 +1,16 @@
 
 
-# https://github.com/winwisely99/web
 
 
-LIB_NAME=web
-LIB=github.com/winwisely99/$(LIB_NAME)
-LIB_BRANCH=master
+# SOURCE
+# https://github.com/letsencrypt/website
+
+
+LIB_NAME=website
+LIB=github.com/letsencrypt/$(LIB_NAME)
+LIB_BRANCH=desktop
+#LIB_BRANCH=flutter_web
+#LIB_BRANCH=master
 LIB_FSPATH=$(GOPATH)/src/$(LIB)
 
 
@@ -29,6 +34,20 @@ git-pull:
 git-clean:
 	rm -rf $(LIB_FSPATH)
 
+code:
+	code $(LIB_FSPATH)
+
+run:
+	cd $(LIB_FSPATH) && hugo server -F
+build:
+	cd $(LIB_FSPATH) && hugo server -D
+	ls -al $(LIB_FSPATH)/public
+
+open:
+	open http://localhost:1313/
+
+
+
 ###
 
 dep:
@@ -40,7 +59,20 @@ dep:
 	## gcloud
 	brew cask install google-cloud-sdk
 
-### deploy
+modify:
+	# This is the monester modification script.
+
+	# delete all LE stuff we dont want
+	# - languages other then EN
+
+	# copy our markdown in to the LE file system path
+	# - copy into the various place needed
+	# google analytics
+
+	## logos, images, favicon.
+
+
+### deploy ( not using )
 GCLOUD_PROJ_ID=winwisely-web-example-letencrypt
 deploy-gc:
 	# see: https://stephenmann.io/post/hosting-a-hugo-site-in-a-google-bucket/
@@ -52,7 +84,7 @@ deploy-gc:
 
 	#cd $(LIB_FSPATH) && hugo deploy -h
 
-
+# Deploy to Firebase ( using this for ease for now )
 FB_PROJ_ID=winwisely-web-letencrypt
 FB_PROJ_CONSOLEURL=https://console.firebase.google.com/project/$(FB_PROJ_ID)
 deploy-fb:
@@ -63,6 +95,6 @@ deploy-fb:
 
 	firebase login --no-localhost
 	
-	# 3 deploy
+	# iterate...
 	cd $(LIB_FSPATH) & hugo
 	cp $(LIB_FSPATH)/public ./public
