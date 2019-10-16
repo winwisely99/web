@@ -8,10 +8,12 @@
 
 LIB_NAME=website
 LIB=github.com/letsencrypt/$(LIB_NAME)
-LIB_BRANCH=desktop
+#LIB_BRANCH=desktop
+LIB_BRANCH=le
 #LIB_BRANCH=flutter_web
 #LIB_BRANCH=master
-LIB_FSPATH=$(GOPATH)/src/$(LIB)
+#LIB_FSPATH=$(GOPATH)/src/$(LIB)
+LIB_FSPATH=/Users/dyan/Sites/Clients/winwisely.org/web/src/$(LIB)
 
 
 
@@ -27,8 +29,8 @@ git-print:
 	cd $(LIB_FSPATH) && git status
 git-clone:
 	mkdir -p $(LIB_FSPATH)
-	cd $(LIB_FSPATH) && cd .. && rm -rf $(LIB_NAME) && git clone ssh://git@$(LIB).git
-	cd $(LIB_FSPATH) && git checkout $(LIB_BRANCH)
+	cd $(LIB_FSPATH) && cd .. && rm -rf $(LIB_NAME) && git clone https://git@$(LIB).git
+	cd $(LIB_FSPATH) && git checkout -b $(LIB_BRANCH)
 git-pull:
 	cd $(LIB_FSPATH) && git pull
 git-clean:
