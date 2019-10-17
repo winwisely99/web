@@ -1,5 +1,6 @@
 #!/bin/sh
 
+## DO NOT USE FOR NOW
 
 # Paths
 
@@ -19,6 +20,5 @@ LOGONEW=$GIMAGES/logo-main.png
 sed -i "" "s|$LOGOOLD|$LOGONEW|g" $LEROOT/layouts/partials/header.html
 
 # remove linx foundation link
-STRING_LINUX=
 
 

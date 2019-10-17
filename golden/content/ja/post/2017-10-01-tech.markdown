@@ -1,0 +1,99 @@
+---
+author: davidvgoliath@gmail.com
+comments: false
+date: 2017-10-01 17:34:00+00:00
+layout: post
+link: /jobs/tech
+slug: tech
+title: 'Wanted: Senior or Near Senior level Golang Web app Developer,    PT and Any
+  Location OK'
+wordpress_id: 4
+---
+
+**Wanted:** Senior or near Senior Level Golang Web app Developer, PT OK, Any Location OK
+
+**YOU: **You must be deeply concerned about what is happening to the planet and to society and have a huge yearning to use your talents to make a huge difference, even if it means temporarily major reduction in your salary, to make what could be the most important social change tool of 2019 and 2020, arguably “the absolutely most critical time in our species history” (Carl Sagan)  before it will be too late according to most scientific estimates.
+
+**WHO WE ARE **: See Mission at the end of this JD
+
+**TECH SKILLS WE’RE LOOKING FOR**
+
+Preferred Additional Special Skills/Knowledge:
+
+  * Golang
+
+    * Backend - Reverse Proxy, Etcd
+
+    * Web - HUGO
+
+  * Flutter
+
+  * Wireguard
+
+**HOW TO APPLY: **
+
+**Please do not send a boilerplate cover letter. Instead, besides attaching your resume, send a cover letter that** does the following:
+
+  1. explains your motivation to want to work for us based on the ABOUT US/Our Mission and especially the 3min animation & the 10minute video demo in our demo package ([bit.ly/WinWiselyPrep](https://bit.ly/WinWiselyPrep)). Why us when there are many other save the planet or economic justice tech projects around?
+
+  2. provides bullet points re your top skills and years employing that skill and accomplishments, and also includes, if you have it, any background in security, cryptography
+
+  3. indicates if you also have fast prototyping skills, 
+
+  4. Nice To Haves:  friends (besides your mate) willing to help with user testing
+
+and/or  know a skilled PM or UI Designer wanting to join
+
+  5. Feel free to make suggestions. We are very collaborative and into the eco not ego space, and of course cherish criticism
+
+**OUR MISSION **
+
+Our Mission is to answer what most grass roots organizers often call the [mother of all challenges](http://bit.ly/MotherOfAllChallenges):
+
+_"How can progressive campaigns in the next few months recruit, commit, and support massively larger numbers of volunteers than we are now doing to do much bigger impact tasks, non-violent direct action and strikes in particular, to save the planet, to therefore keep fossil fuels in the ground and pass strong Green New Deals in key nations worldwide, and ASAP, and after achieving POC to also to begin to defeat and reverse our grotesque wealth inequality, before it's too late?  _
+
+The Organization:
+
+We are a nonprofit tech startup developing a mobile-friendly, open-source, one-stop new concept volunteer recruitment app that would support XRebellion’s  Greta Thunberg’s (FFF’s) efforts to defeat our catastrophic climate collapse and species extinction trajectories,  by being able to scale courage—enabling these organizations to recruit and commit the numbers they need for effective non-violent mass civil resistance. We are currently working on a beta test for Extinction Rebellion’s London chapter, which, if successful, could see our app taken internationally and used across various major climate organizations.
+
+**DEMO PACKET:**
+
+To see our answer, our hypothesis to be beta tested ASAP,  and find out more, check out [our 3 part demo packet](http://bit.ly/WinWiselyPrep) (animation + 10min video demo +key premises one pager).  If still skeptical, feel free to check out reviews from over [20 top organizers and IT pros](http://bit.ly/WinWiselyReviews)
+
+**CURRENT STATUS:**
+
+  * CTO/lead engineer has more than 20 yrs programming experience and is one of Germany’s top security architects, and so devoted he like the product director are currently working fulltime without pay
+
+  * 3 years of R&D, all userstories (about 30) and workflow(s); everything well organized in our own shared google drive
+
+  * Completed demo (though will be further improved to better describe more powerful Peer-bonding and behavioral economics features). Ask us for this
+
+  * Alpha native apps (IOS and Android) created for an electoral version of WinWisely for 2018 American midterms to help take back the Senate
+
+  * Over 20 reviews from top organizers and tech activists
+
+  * Product director (defacto Chief Innovation Officer) is PhD psychologist and original founder and CEO of CoupleWise.com, which is expected to be serving 100-200,000 couples by June 2020,  for which he was often the PM as well. CoupleWise has won two national and two international startup awards.
+
+  * Only $25,000 available so far for development and testing, but finding new major donor leads every week, and currently being considered by two foundations for $50k each. 
+
+  * Answers to most questions can be found on [our FAQ](https://bit.ly/WinWiselyFAQ)
+
+**RESPONSIBILITIES:**
+
+  1. Do the necessary coding, QA, including clear documentation
+
+  2. Implement bug-fixes
+
+  3. Provide realistic deadlines you can keep
+
+  4. be frank and timely re what is working and not working for you, your frustrations, able to give concrete examples of what confuses or frustrates and what meets your need for clarity, rather than criticism,  etc
+
+  5. participate in weekly sprints, and daily interaction
+
+**COMPENSATION:**
+
+Project Based and based on funding able to raise. We have enough at the moment to at least provide basic living expenses for at least the first 3-4 months, and are optimistic about raising much more in the next 4-8 wks. Our full-time Product Director cofounder has raised more than $1.5M in the past for progressive projects, and his prior Internet-based consumer startup has raised $350k and is beginning to take off.
+
+**TO APPLY: **see** “How to Apply” above**
+
+WinWisely believes a diverse, inclusive staff makes us a stronger company and better partner for our clients. We’re committed to hiring people of all races, ethnicities, ages, sex, genders, sexual orientation or gender identities, marital status, religions, and disabilities. Women, people of color, LGBTQ individuals, and members of other minority or marginalized groups are encouraged to apply.
