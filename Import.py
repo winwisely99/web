@@ -9,8 +9,8 @@ Super Duper Importer
 '''
 
 # le paths and directories
-leRoot = 'src/github.com/letsencrypt/website/'
-leImages = 'src/github.com/letsencrypt/website/static/images/'
+leRoot = 'source/github.com/letsencrypt/website/'
+leImages = 'source/github.com/letsencrypt/website/static/images/'
 
 # make a copy of the golden image folder into the LE 'static' folder
 srcImgDir = 'golden/wwimages'
@@ -19,14 +19,21 @@ if not os.path.exists(destImgDir):
   shutil.copytree(srcImgDir,destImgDir)
 
 # new golden image path
-goldenImages = 'assets/images/'
+goldenImages = 'wwimages/'
 
-# make a copy of the golden content folder into LE site root
-srcContentDir = 'golden/content'
-destContentDir = leRoot + 'content'
-if os.path.exists(destContentDir):
-  destContentDir.rmdir() ##### check if correct method
-  shutil.copytree(srcContentDir,destContentDir)
+# # make a copy of the golden content folder into LE site root
+# srcContentDir = 'golden/content'
+# destContentDir = leRoot + 'content'
+# if os.path.exists(destContentDir):
+#   destContentDir.rmdir() ##### check if correct method
+#   shutil.copytree(srcContentDir,destContentDir)
+
+# # make a copy of the config folders
+# srcConfigDir = 'golden/config'
+# destConfigDir = leRoot + 'config'
+# if os.path.exists(destConfigDir):
+#   destConfigDir.rmdir() ##### check if correct method
+#   shutil.copytree(srcConfigDir,destConfigDir)
 
 ########################
 # layout replacements
@@ -88,17 +95,6 @@ with open(homePageEn, 'w') as en:
 #   print(soup)
 # # with open(headerHtml, 'w') as header:
 # #   header.write(removeFundLink)
-
-
-
-
-
-
-
-
-
-
-
 
 
 print "done"

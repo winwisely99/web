@@ -13,7 +13,7 @@ LIB_BRANCH=le
 #LIB_BRANCH=flutter_web
 #LIB_BRANCH=master
 #LIB_FSPATH=$(GOPATH)/src/$(LIB)
-LIB_FSPATH=/Users/dyan/Sites/Clients/winwisely.org/web/src/$(LIB)
+LIB_FSPATH=/Users/dyan/Sites/Clients/winwisely.org/web/source/$(LIB)
 
 
 
