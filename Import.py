@@ -75,14 +75,13 @@ shutil.copyfile(srcIndex,destIndex)
 # layout replacements
 ########################
 
-# replace favicon ###
+### header partial #####
 
+# replace favicon
 srcFavicon = 'golden/wwimages/favicon.ico'
 destFavicon = leRoot + 'static/favicon.ico'
 from shutil import copyfile
 shutil.copyfile(srcFavicon,destFavicon)
-
-### header partial only
 
 # replace logo and alt text
 headerHtml = leRoot + 'layouts/partials/header.html'
@@ -132,6 +131,25 @@ try:
     header.write(replaceHero)
 except IOError:
   print(heroHtml + ' not accessible.')
+
+### footer partial #####
+
+# replace contact footer text
+footerHtml = leRoot + 'layouts/partials/footer.html'
+oldAddress1 = '1 Letterman Drive, Suite D4700,'
+newAddress1 = '(650) 383 8435 | gary@winwisely.org'
+oldAddress2 = 'San Francisco,'
+oldAddress3 = 'CA'
+oldAddress4 = '94129'
+linuxLink = '{{ i18n "linux_foundation_trademark" }}'
+
+try:
+  with open(footerHtml) as footer:
+    replaceFooter = footer.read().replace(oldAddress1,newAddress1).replace(oldAddress2,'').replace(oldAddress3,'').replace(oldAddress4,'').replace(linuxLink,'')
+  with open(footerHtml, 'w') as footer:
+    footer.write(replaceFooter)
+except IOError:
+  print(footerHtml + ' not accessible.')
 
 
 ########################
