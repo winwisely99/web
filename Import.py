@@ -145,15 +145,15 @@ except IOError:
 # content replacements
 ########################
 
-try:
-  with open(headerHtml) as header:
-    soup = BeautifulSoup(header, 'html.parser')
-    removeFundLink = soup.find("div", {'class': 'linux-foundation-link'})
-    removeFundLink.decompose()
-    goneFundLink = str(soup)
+with open(headerHtml) as header:
+  soup = BeautifulSoup(header, 'html.parser')
+  removeFundLink = soup.find("div", {'class': 'linux-foundation-link'})
+  statusLink = bool(removeFundLink)
+if statusLink:
+  removeFundLink.decompose()
+  goneFundLink = str(soup)
   with open(headerHtml, 'w') as header:
     header.write(goneFundLink)
-except IOError:
-  print(headerHtml + ' not accessible.')
+
 
 print "done"
