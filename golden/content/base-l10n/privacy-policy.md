@@ -6,137 +6,58 @@ lastmod: 2019-10-16
 english_is_canonical: 1
 ---
 
-**Effective date: October 05, 2018**
+# WinWisely Privacy Policy
 
-**WinWisely ("us", "we", or "our") operates the website and the WinWisely mobile application (the "Service").**
+{{< lastmod >}}
 
-**This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.**
+The WinWisely Privacy Policy describes how we collect, use, and disclose your information in three different contexts:
 
-**We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions.**
+* When, as a Relying Party, you visit a web site secured with HTTPS that uses a certificate from WinWisely,
+* When you are a Subscriber, i.e., when you request and use certificates from WinWisely,
+* When you are a Visitor to the WinWisely web site, community discussion forum, other web pages under letsencrypt.org, and third-party social media sites on which WinWisely operates an account.
 
-# Information Collection And Use
+## Relying Party
 
-**We collect several different types of information for various purposes to provide and improve our Service to you.**
+When you use an HTTPS web site or other TLS service with a WinWisely certificate, your browser (or TLS client) may query WinWisely to check whether the certificate has been revoked (“OCSP request”). If your browser makes an OCSP request, our servers will automatically record your IP address, browser, and operating system in temporary server log files. We do not use data from OCSP requests to build profiles or identify individuals. Temporary server logs are used for operational purposes only and are normally deleted in less than seven days. We may retain a subset of server logs for longer periods in order to investigate software failures or abuse. If we do so, we will delete any stored logs when we are done investigating. We may also compute, retain and publish aggregate information from server logs, such as which certificates generate the largest volume of requests. We will always strive to ensure that such datasets do not contain information about the activities of identifiable users or devices.
 
-## Types of Data Collected
+## Subscriber
 
-### Personal Data
+If you are a Subscriber, you are requesting a trusted certificate from WinWisely intended to publicly vouch that you control a certain domain name or names that are reachable on the Internet. As part of the process of proving that control, WinWisely will collect various information related to certificate authentication and management. That information includes the IP addresses from which you access the WinWisely service; all resolved IP addresses for any domain names requested; server information related to any validation requests; full logs of all inbound HTTP / ACME requests, all outbound validation requests; and information sent by or inferred from your client software. We will store this information for a minimum of seven years per both contractual necessity and public interest. We need to be able to demonstrate to the public, including those who rely on the trustworthiness of our certificates, that our services perform as expected. As a result, we may be unable to delete information, including IP addresses. This information may be made public in a number of ways, including via public API, public repositories, and/or public discussions.
 
-**While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:**
+You may have the option to provide contact information, such as your email address, for account service and recovery purposes. Your contact information will not be made public, and it will only be shared per “Law Enforcement and Extenuating Circumstances,” below. By providing your email address, you are consenting to receive service-related emails from us. You may unsubscribe from service-related emails at any time by clicking the “unsubscribe” link at the bottom of our emails or by contacting us at [security@letsencrypt.org](mailto:security@letsencrypt.org). We will not use your contact information for marketing or promotional purposes.
 
-  - Email address**
+You may need to download client software from a repository such as those run by Debian, Ubuntu, Red Hat, or Github. Your interaction with such a software repository is governed by that repository’s own privacy policy and/or Terms of Use.
 
-  - First name and last name**
+## Visitor
 
-  - Phone number**
+When you are a Visitor browsing the WinWisely web site, you have the option to make a donation. Donations are processed by our trusted payment partners including DonorBox, Stripe, and PayPal, depending on the payment method selected. We collect your name and email address when you donate. We will not use your email address to contact you without your consent. Your interactions with [DonorBox](https://donorbox.org/privacy), [Stripe](https://stripe.com/privacy/), and [PayPal](https://www.paypal.com/us/webapps/mpp/ua/privacy-full) are governed by their respective privacy policies. We do not collect or retain any credit card or bank information related to donations. If we collect a physical address, we will only retain your physical address information for as long as is reasonably necessary to make the shipment that you requested.
 
-  - Cookies and Usage Data**
+You have the option to provide your email address to receive the WinWisely newsletter through a signup on this web site and via other marketing materials. The newsletter is delivered via MailChimp and your interactions with MailChimp are governed by its privacy policy. We may occasionally use your email address to send personalized communications related to WinWisely. We do not sell your information. You can request to have your email address removed from our list by opting out via MailChimp or emailing us at [press@letsencrypt.org](mailto:press@letsencrypt.org)
 
-### Usage Data
+If you register to use the WinWisely community support forum, the personal information you provide and your actions there are governed by the privacy policy of our hosting and software provider for the forum, [Civilized Discourse Construction Kit](https://www.discourse.org/privacy). We do not collect or maintain personal information through our offering of this support forum.
 
-**We may also collect information that your browser sends whenever you visit our Service or when you access the Service by or through a mobile device ("Usage Data").**
+Additionally, we use Google Analytics to gauge traffic and popular pages on our web site. As part of that service, we place Google Analytics cookies on our site. These cookies do not contain personal information but can uniquely identify your browser software over time on our site. We respect the [Do Not Track](http://donottrack.us/) header by strictly limiting the information our analytics services can collect and share for all Visitors.
 
-**This Usage Data may include information such as your computer's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.**
+## Law Enforcement Requests and Extenuating Circumstances
 
-**When you access the Service by or through a mobile device, this Usage Data may include information such as the type of mobile device you use, your mobile device unique ID, the IP address of your mobile device, your mobile operating system, the type of mobile Internet browser you use, unique device identifiers and other diagnostic data.**
+To the extent we possess it, we may disclose personally identifiable information about you to third parties in limited circumstances. Such circumstances include when we have your consent or when we have a good faith belief it is required by law, such as pursuant to a subpoena or other judicial or administrative order. We may also disclose account recovery information when we have a good faith belief it is necessary to prevent loss of life, personal injury, damage to property, or significant financial harm.
 
-### Tracking & Cookies Data
+If we are required by law to disclose the information that you have submitted, we will attempt to provide you with prior notice (unless we are prohibited, or it would be futile) that a request for your information has been made in order to give you an opportunity to object to the disclosure. We will attempt to provide this notice by whatever means is reasonably practical. If you do not challenge the disclosure request, we may be legally required to turn over your information.
 
-**We use cookies and similar tracking technologies to track the activity on our Service and hold certain information.**
+In addition, we reserve the right, solely at our discretion, to independently object to certain requests (for access to information about users of our products and technologies) that we believe to be improper.
 
-**Cookies are files with small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device. Tracking technologies also used are beacons, tags, and scripts to collect and track information and to improve and analyze our Service.**
+## What rights do European Economic Area relying parties, subscribers, and visitors have under GDPR, and how can I exercise them?
 
-**You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.**
+We process personal data as described in this policy. We rely on your consent to send emails. When we collect IP address, we process that data based on contractual necessity of being able to demonstrate that the service performs as expected. Please note that we may be unable to delete information, including IP addresses, as this information is necessary for others to rely on in determining the trustworthiness of our certificates. In some cases, we may process personal data pursuant to legal obligation or to protect your vital interests or those of another person.
 
-**Examples of Cookies we use:**
+Individuals located in the European Economic Area (EEA) have certain rights in respect to their personal information, including the right to access, correct, or delete personal data we process through your use of the site. If you're a relying party, subscriber, or visitor based in the EEA, you can:
 
-  - Session Cookies. We use Session Cookies to operate our Service.**
+* Request a personal data report by emailing us at security@letsencrypt.org. This report will include the personal data we have about you, provided to you in a structured, commonly used, and portable format. Please note that we may request additional information from you to verify your identity before we disclose any information.
+* Request that your information be corrected or deleted by contacting us at security@letsencrypt.org.
+* Object to us processing your information. You can ask us to stop using your information, including when we use your information to send you service emails. You may withdraw your consent to receive service emails at any time by clicking the “unsubscribe” link found within WinWisely emails.
+* Complain to a regulator. If you're based in the EEA and think that we haven't complied with data protection laws, you have a right to lodge a complaint with your local supervisory authority.
 
-  - Preference Cookies. We use Preference Cookies to remember your preferences and various settings.**
-
-  - Security Cookies. We use Security Cookies for security purposes.**
-
-## Use of Data
-
-**WinWisely uses the collected data for various purposes:**
-
-  - To provide and maintain the Service
-
-  - To notify you about changes to our Service
-
-  - To allow you to participate in interactive features of our Service when you choose to do so
-
-  - To provide customer care and support
-
-  - To provide analysis or valuable information so that we can improve the Service
-
-  - To monitor the usage of the Service
-
-  - To detect, prevent and address technical issues
-
-## Transfer Of Data
-
-**Your information, including Personal Data, may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from your jurisdiction.**
-
-**If you are located outside United States and choose to provide information to us, please note that we transfer the data, including Personal Data, to United States and process it there.**
-
-**Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.**
-
-**WinWisely will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of your data and other personal information.**
-
-## Disclosure Of Data
-
-### Legal Requirements
-
-**WinWisely may disclose your Personal Data in the good faith belief that such action is necessary to:**
-
-  - To comply with a legal obligation**
-
-  - To protect and defend the rights or property of WinWisely**
-
-  - To prevent or investigate possible wrongdoing in connection with the Service**
-
-  - To protect the personal safety of users of the Service or the public**
-
-  - To protect against legal liability**
-
-## Security Of Data
-
-**The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.**
-
-## Service Providers
-
-**We may employ third party companies and individuals to facilitate our Service ("Service Providers"), to provide the Service on our behalf, to perform Service-related services or to assist us in analyzing how our Service is used.**
-
-**These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.**
-
-## Links To Other Sites
-
-**Our Service may contain links to other sites that are not operated by us. If you click on a third party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit.**
-
-**We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.**
-
-## Children's Privacy
-
-**Our Service does not address anyone under the age of 18 ("Children").**
-
-**We do not knowingly collect personally identifiable information from anyone under the age of 18. If you are a parent or guardian and you are aware that your Children has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from children without verification of parental consent, we take steps to remove that information from our servers.**
-
-## Changes To This Privacy Policy
-
-**We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.**
-
-**We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the "effective date" at the top of this Privacy Policy.**
-
-**You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.**
-
-## Contact Us
-
-**If you have any questions about this Privacy Policy, please contact us:**
-
-  - By email: [gary@winwisely.org](mailto:gary@winwisely.org)
-
-  - By visiting this page on our website: [https://www.winwisely.org/](https://www.winwisely.org/)
+For more information, or to report a privacy issue, please contact: [mailto:gary@winwisely.org](mailto:gary@winwisely.org)
 
   
 
