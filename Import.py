@@ -8,16 +8,17 @@ import shutil
 Super Duper Importer
 '''
 
-########################
+###################################
 # paths and directories
-########################
+###################################
 
 leRoot = 'source/github.com/letsencrypt/website/'
 leImages = 'source/github.com/letsencrypt/website/static/images/'
 
-# make a copy of the golden image folder into the LE 'static' folder
+# make a copy of the GOLDEN image dir into the LE 'static' dir
 srcImgDir = 'golden/wwimages'
 destImgDir = leRoot + 'static/wwimages'
+
 if not os.path.exists(destImgDir):
     shutil.copytree(srcImgDir,destImgDir)
     print('Golden image directory updated successfully!')
@@ -28,9 +29,10 @@ else:
 
 goldenImages = 'wwimages/'
 
-# make a copy of the golden content folder into LE site root
+# replace the LE CONTENT dir with the WW content dir
 srcContentDir = 'golden/content'
 destContentDir = leRoot + 'content'
+
 if not os.path.exists(destContentDir):
     shutil.copytree(srcContentDir,destContentDir)
     print('Golden content directory updated successfully!')
@@ -39,9 +41,10 @@ else:
     shutil.copytree(srcContentDir,destContentDir)
     print('Golden content directory updated successfully!')
 
-# make a copy of the config folders
+# replace the LE CONFIG dir with the WW content dir
 srcConfigDir = 'golden/config'
 destConfigDir = leRoot + 'config'
+
 if not os.path.exists(destConfigDir):
     shutil.copytree(srcConfigDir,destConfigDir)
     print('Golden config directory updated successfully!')
@@ -53,6 +56,7 @@ else:
 # make a copy of the i18n folders
 srcI18nDir = 'golden/i18n'
 destI18nDir = leRoot + 'i18n'
+
 if not os.path.exists(destI18nDir):
     shutil.copytree(srcI18nDir,destI18nDir)
     print('Golden i18n directory updated successfully!')
@@ -63,23 +67,26 @@ else:
 
 # delete LE git directory, it doesnt need to be there
 gitDir = leRoot + '.git'
+
 if os.path.exists(gitDir):
     shutil.rmtree(gitDir) 
 
 srcIndex = 'golden/layouts/index.html'
 destIndex = leRoot + 'layouts/index.html'
+
 from shutil import copyfile
 shutil.copyfile(srcIndex,destIndex)
 
-########################
-# layout replacements
-########################
+###################################
+# layout only
+###################################
 
 ### header partial #####
 
 # replace favicon
 srcFavicon = 'golden/wwimages/favicon.ico'
 destFavicon = leRoot + 'static/favicon.ico'
+
 from shutil import copyfile
 shutil.copyfile(srcFavicon,destFavicon)
 
@@ -89,6 +96,7 @@ oldLogo = '/images/letsencrypt-logo-horizontal.svg'
 newLogo = goldenImages + 'logo-main.png'
 oldAlt = 'Let\'s Encrypt'
 newAlt = 'WinWisely'
+
 try:
   with open(headerHtml) as header:
     replaceHeader = header.read().replace(oldLogo, newLogo).replace(oldAlt, newAlt)
@@ -112,6 +120,7 @@ if statusLink:
 mainCss = leRoot + 'static/css/main.min.css'
 oldBanner = '/images/3.jpg'
 newBanner = '../' + goldenImages + 'banners/1.jpg'
+
 try:
   with open(mainCss) as css:
     replaceBanner = css.read().replace(oldBanner, newBanner)
@@ -124,6 +133,7 @@ except IOError:
 heroHtml = leRoot + 'layouts/partials/hero.html'
 oldHero = 'images/%d.jpg'
 newHero = 'wwimages/banners/%d.jpg'
+
 try:
   with open(heroHtml) as header:
     replaceHero = header.read().replace(oldHero, newHero)
@@ -152,9 +162,29 @@ except IOError:
   print(footerHtml + ' not accessible.')
 
 
-########################
-# content replacements
-########################
+###################################
+# configuration files
+###################################
+
+### config file #####
+
+# replace contact footer text
+configFile = leRoot + 'config/_default/config.toml'
+oldBaseURL = 'https://letsencrypt.org/'
+newBaseUrl = ''
+oldSocial1 = 'letsencrypt'
+newSocial1 = 'winwisely99'
+oldSocial2 = 'letsencrypt'
+newSocial2 = 'winwisely'
+oldSocial3 = 'https://www.generosity.com/community-fundraising/make-a-more-secure-web-with-let-s-encrypt'
+
+try:
+  with open(configFile) as config:
+    replaceFooter = config.read().replace(oldBaseURL,newBaseUrl).replace(oldSocial1,newSocial1).replace(oldSocial2,newSocial2).replace(oldSocial3,'')
+  with open(configFile, 'w') as config:
+    config.write(replaceFooter)
+except IOError:
+  print(configFile + ' not accessible.')
 
 
 
