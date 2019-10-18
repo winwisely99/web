@@ -73,6 +73,8 @@ modify:
 
 	## logos, images, favicon.
 
+	## Please see Import.py !!
+
 
 ### deploy ( not using )
 GCLOUD_PROJ_ID=winwisely-web-example-letencrypt
