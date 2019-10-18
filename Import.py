@@ -8,7 +8,10 @@ import shutil
 Super Duper Importer
 '''
 
-# le paths and directories
+########################
+# paths and directories
+########################
+
 leRoot = 'source/github.com/letsencrypt/website/'
 leImages = 'source/github.com/letsencrypt/website/static/images/'
 
@@ -25,7 +28,7 @@ else:
 
 goldenImages = 'wwimages/'
 
-# # make a copy of the golden content folder into LE site root
+# make a copy of the golden content folder into LE site root
 srcContentDir = 'golden/content'
 destContentDir = leRoot + 'content'
 if not os.path.exists(destContentDir):
@@ -46,6 +49,11 @@ else:
     shutil.rmtree(destConfigDir)           
     shutil.copytree(srcConfigDir,destConfigDir)
     print('Golden config directory updated successfully!')
+
+# delete git folder of LE
+gitDir = leRoot + '.git'
+if os.path.exists(gitDir):
+    shutil.rmtree(gitDir) 
 
 ########################
 # layout replacements
