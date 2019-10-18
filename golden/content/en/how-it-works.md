@@ -1,6 +1,6 @@
 ---
-title: How It Works
-linkTitle: "How It Works"
+title: Why WinWisely
+linkTitle: "Why WinWisely"
 slug: how-it-works
 top_graphic: 4
 no_donate_footer: false

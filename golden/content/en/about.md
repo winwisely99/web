@@ -1,5 +1,5 @@
 ---
-title: WinWisely
+title: About WinWisely
 linkTitle: "WinWisely"
 slug: about
 top_graphic: 5
@@ -15,19 +15,22 @@ WinWisely is a free, mobile friendly, open source, volunteer recruitment app tha
 
 We use simple recruitment strategies, along with proven psychological motivators, to increase participation rates in climate actions within partnering organizations. We do this because we care about the fate of our planet and all beings that call it home.
 
-The key principles behind WinWisely are:
-Solution and Efficiency Focussed: Based on the research of Erica Chenoweth and Maria Stephan, we believe that mass civil resistance in support of climate justice is now the best option we have of saving the planet. It would require far fewer people and be far less challenging than totally overthrowing and replacing existing governments that are doing the damage. However this would require more advanced organizing technology to recruit, commit, cleverly organize, and support the numbers needed to succeed, that’s where we come in. 
-One-Stop Shop: WinWisely makes it easy for anyone seeking a progressive solution to find the campaign and action or role that best fits their capacities, skills, limitations, and other preferences. 
+### The key principles behind WinWisely are:
+
+- Solution and Efficiency Focussed: Based on the research of Erica Chenoweth and Maria Stephan, we believe that mass civil resistance in support of climate justice is now the best option we have of saving the planet. It would require far fewer people and be far less challenging than totally overthrowing and replacing existing governments that are doing the damage. However this would require more advanced organizing technology to recruit, commit, cleverly organize, and support the numbers needed to succeed, that’s where we come in. 
+
+- One-Stop Shop: WinWisely makes it easy for anyone seeking a progressive solution to find the campaign and action or role that best fits their capacities, skills, limitations, and other preferences. 
 Based on Sound Tactics and Advanced Tech: All the components of our app have been carefully thought out by our talented team to give users the best experience and increase the success of climate actions. 
-Free: Anyone can use these services to get involved and help save the planet. 
+
+- Free: Anyone can use these services to get involved and help save the planet. 
 Secure: WinWisely will serve as a platform for advancing TLS security best practices. All users data and communication through the app will be stored securely within the app, keeping your info safe from the bad guys.   
-Open: The automatic issuance and renewal protocol will be published as an open standard that others can adopt.
+
+- Open: The automatic issuance and renewal protocol will be published as an open standard that others can adopt.
 Cooperative: We work with campaign partners to ensure the best possible outcomes for climate actions, activists, and their supporters. 
 
 See [HOW WINWISLEY WORKS](/how-it-works) for more info.
 
-
-###More about how the WinWisely idea came about:
+### More about how the WinWisely idea came about:
 
 Gary Krane, the co-founder and chief psychologist of WinWisely came up with the first part of the idea in 2016 while was watching Bill McKibben (founder of 350.org) , Michael Brune (ED of Sierra Club) and actor, Daryl Hannah get arrested at the White House protesting the XL pipeline. He thought, _*“I wish I had been there. So, where is the next opportunity to do direct action to stop this horrific pipeline?”*_
 

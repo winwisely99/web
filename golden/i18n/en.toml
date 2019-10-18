@@ -32,7 +32,7 @@ other = "Donate"
 
 [footer_policies]
 other = """
-<a href="/#">home</a> | <a href="/team">team</a> | <a href="/jobs">jobs</a> | <a href="/privacy-policy/">privacy</a>
+<a href="/#">home</a> | <a href="/team">team</a> | <a href="/careers">careers</a> | <a href="/privacy">privacy</a>
 
 """
 
