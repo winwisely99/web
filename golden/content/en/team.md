@@ -28,9 +28,9 @@ Michael is a senior level web-based app programmer who has been programming for 
 
 Rosie brings the team together with her communication skills and empathic reasoning, easily slipping into any role. Rosie’s background is in psychology research, with a specific interest and published research in the area of conservation psychology. She has experience leading and assisting various international and interdisciplinary research projects, going out of her way to ensure their success. Rosie is passionate about giving her time to projects that make a difference, and has worked full-time with only living expenses pay for several months.
 
-### **Dyan Bitan, UI/UX Designer **
+### **Dyan Bitan, UI/UX Designer**
 
-Dyan has over 8 years as a front-end web developer and is now traveling the world as a freelancer.  She has worked on projects for Disney Infinity, Marvel XP, Family Guy, Pokemon, and IBM.  Her current focus is helping others get their soul-aligned services/businesses online.  
+Dyan has over 8 years of experience as a front-end web developer and is now traveling the world as a freelancer.  She has worked on projects for Disney Infinity, Marvel XP, Family Guy, Pokemon, and IBM.  Her current focus is to use her resourcefulness and technical skills to help others get their soul-aligned services or businesses online.  
 
 ### **Kerre Dubinsky, Cofounder & Chief Native App Developer** 
 
