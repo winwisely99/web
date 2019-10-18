@@ -1,8 +1,14 @@
 ---
 title: Our Key Premises
+linkTitle: "Our Key Premises"
 slug: premises
-top_graphic: 1
-lastmod: 2019-10-16
+top_graphic: 2
+no_donate_footer: true
+lastmod: 2019-09-18
+menu:
+  main:
+    weight: 10
+    parent: how-it-works
 ---
 
 ## 1

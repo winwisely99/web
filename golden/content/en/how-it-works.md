@@ -7,7 +7,7 @@ no_donate_footer: true
 lastmod: 2019-09-18
 menu:
   main:
-    weight: 10
+    weight: 20
     parent: how-it-works
 ---
 
