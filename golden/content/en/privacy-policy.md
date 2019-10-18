@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy
 slug: privacy-policy
-top_graphic: 6
+top_graphic: 2
 lastmod: 2019-10-16
 english_is_canonical: 1
 ---
