@@ -16,24 +16,36 @@ leImages = 'source/github.com/letsencrypt/website/static/images/'
 srcImgDir = 'golden/wwimages'
 destImgDir = leRoot + 'static/wwimages'
 if not os.path.exists(destImgDir):
-  shutil.copytree(srcImgDir,destImgDir)
+    shutil.copytree(srcImgDir,destImgDir)
+    print('Golden image directory updated successfully!')
+else:
+    shutil.rmtree(destImgDir)           
+    shutil.copytree(srcImgDir,destImgDir)
+    print('Golden image directory updated successfully!')
 
-# new golden image path
 goldenImages = 'wwimages/'
 
 # # make a copy of the golden content folder into LE site root
-# srcContentDir = 'golden/content'
-# destContentDir = leRoot + 'content'
-# if os.path.exists(destContentDir):
-#   destContentDir.rmdir() ##### check if correct method
-#   shutil.copytree(srcContentDir,destContentDir)
+srcContentDir = 'golden/content'
+destContentDir = leRoot + 'content'
+if not os.path.exists(destContentDir):
+    shutil.copytree(srcContentDir,destContentDir)
+    print('Golden content directory updated successfully!')
+else:
+    shutil.rmtree(destContentDir)           
+    shutil.copytree(srcContentDir,destContentDir)
+    print('Golden content directory updated successfully!')
 
 # # make a copy of the config folders
-# srcConfigDir = 'golden/config'
-# destConfigDir = leRoot + 'config'
-# if os.path.exists(destConfigDir):
-#   destConfigDir.rmdir() ##### check if correct method
-#   shutil.copytree(srcConfigDir,destConfigDir)
+srcConfigDir = 'golden/config'
+destConfigDir = leRoot + 'config'
+if not os.path.exists(destConfigDir):
+    shutil.copytree(srcConfigDir,destConfigDir)
+    print('Golden config directory updated successfully!')
+else:
+    shutil.rmtree(destConfigDir)           
+    shutil.copytree(srcConfigDir,destConfigDir)
+    print('Golden config directory updated successfully!')
 
 ########################
 # layout replacements
@@ -42,20 +54,57 @@ goldenImages = 'wwimages/'
 headerHtml = leRoot + '/layouts/partials/header.html'
 oldLogo = '/images/letsencrypt-logo-horizontal.svg'
 newLogo = goldenImages + 'logo-main.png'
-
-with open(headerHtml) as header:
-  replaceLogo = header.read().replace(oldLogo, newLogo)
-with open(headerHtml, 'w') as header:
-  header.write(replaceLogo)
+try:
+  with open(headerHtml) as header:
+    replaceLogo = header.read().replace(oldLogo, newLogo)
+  with open(headerHtml, 'w') as header:
+    header.write(replaceLogo)
+except IOError:
+  print(headerHtml + ' not accessible.')
 
 mainCss = leRoot + 'static/css/main.min.css'
 oldBanner = '/images/3.jpg'
-newBanner = '../' + goldenImages + 'banners/paddle-seattle.jpg'
+newBanner = '../' + goldenImages + 'banners/1.jpg'
+try:
+  with open(mainCss) as css:
+    replaceBanner = css.read().replace(oldBanner, newBanner)
+  with open(mainCss, 'w') as css:
+    css.write(replaceBanner)
+except IOError:
+  print(mainCss + ' not accessible.')
 
-with open(mainCss) as css:
-  replaceBanner = css.read().replace(oldBanner, newBanner)
-with open(mainCss, 'w') as css:
-  css.write(replaceBanner)
+headerHtml = leRoot + '/layouts/partials/header.html'
+oldLogo = '/images/letsencrypt-logo-horizontal.svg'
+newLogo = goldenImages + 'logo-main.png'
+try:
+  with open(headerHtml) as header:
+    replaceLogo = header.read().replace(oldLogo, newLogo)
+  with open(headerHtml, 'w') as header:
+    header.write(replaceLogo)
+except IOError:
+  print(headerHtml + ' not accessible.')
+
+oldAlt = 'Let\'s Encrypt'
+newAlt = 'WinWisely'
+try:
+  with open(headerHtml) as header:
+    replaceAlt = header.read().replace(oldAlt, newAlt)
+  with open(headerHtml, 'w') as header:
+    header.write(replaceAlt)
+except IOError:
+  print(headerHtml + ' not accessible.')
+
+heroHtml = leRoot + '/layouts/partials/hero.html'
+oldHero = 'images/%d.jpg'
+newHero = 'wwimages/banners/%d.jpg'
+try:
+  with open(heroHtml) as header:
+    replaceHero = header.read().replace(oldHero, newHero)
+  with open(heroHtml, 'w') as header:
+    header.write(replaceHero)
+except IOError:
+  print(heroHtml + ' not accessible.')
+
 
 ########################
 # content replacements
@@ -65,11 +114,13 @@ homePageEn = leRoot + 'i18n/en.toml'
 oldHeadline = 'Let&rsquo;s Encrypt is a <span>free</span>, <span>automated</span>, and <span>open</span> Certificate Authority.'
 newHeadline = '<span>WinWisely</span><br>Help Scale Courage Now'
 
-with open(homePageEn) as en:
-  replaceHeadline = en.read().replace(oldHeadline, newHeadline)
-with open(homePageEn, 'w') as en:
-  en.write(replaceHeadline)
-
+try:
+  with open(homePageEn) as en:
+    replaceHeadline = en.read().replace(oldHeadline, newHeadline)
+  with open(homePageEn, 'w') as en:
+    en.write(replaceHeadline)
+except IOError:
+  print(homePageEn + ' not accessible.')
 
 # with open(headerHtml) as f:
 #   elementToDelete = BeautifulSoup(f.read()).find('div', {'class': 'linux-foundation-link'})
@@ -88,13 +139,15 @@ with open(homePageEn, 'w') as en:
 
 #   print removeFundLink
 
-# with open(headerHtml) as header:
-#   soup = BeautifulSoup(header, 'html.parser')
-#   removeFundLink = soup.find("div", {'class': 'linux-foundation-link'})
-#   removeFundLink.decompose()
-#   print(soup)
-# # with open(headerHtml, 'w') as header:
-# #   header.write(removeFundLink)
-
+# try:
+#   with open(headerHtml) as header:
+#     soup = BeautifulSoup(header, 'html.parser')
+#     removeFundLink = soup.find("div", {'class': 'linux-foundation-link'})
+#     removeFundLink.decompose()
+#     print(soup)
+#   with open(headerHtml, 'w') as header:
+#     header.write(removeFundLink)
+# except IOError:
+#   print(headerHtml + ' not accessible.')
 
 print "done"

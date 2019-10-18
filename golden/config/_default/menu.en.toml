@@ -1,1 +1,5 @@
 [[main]]
+name = "How It Works"
+weight = 10
+identifier = "how-it-works"
+url = "/how-it-works/"

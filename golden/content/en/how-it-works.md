@@ -1,12 +1,14 @@
 ---
-untranslated: 1
 title: How It Works
-top_graphic: 1
-menu: "main"
+linkTitle: "How It Works"
+slug: how-it-works
+top_graphic: 3
+no_donate_footer: true
+lastmod: 2019-09-18
 menu:
   main:
     weight: 10
-lastmod: 2019-10-09
+    parent: how-it-works
 ---
 
 ## **HOW DOES WINWISELY ACTUALLY WORK? **
