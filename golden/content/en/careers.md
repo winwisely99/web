@@ -1,13 +1,12 @@
 ---
-title: Join Our Team
-linkTitle: "Join Our Team"
-slug: jobs
+title: Careers
+slug: careers
 top_graphic: 7
-no_donate_footer: true
-lastmod: 2019-09-18
+lastmod: 2019-01-11
 menu:
   main:
-    weight: 30
+    weight: 50
+    parent: about
 ---
 
 [WinWisely.org](http://winwisely.org/) is a non-profit tech startup developing a mobile-friendly, open-source, one-stop, groundbreaking volunteer recruitment app.
@@ -24,11 +23,11 @@ We'll be open source & free to most nonprofits and expect to play a major role t
 
 ### **AVAILABLE POSITIONS AT WINWISELY:**
 
-- [PT Project Manager](/jobs/project-manager) (option to combine with Director/User Testing)
-- [PT/FT UI/UX Designer](/jobs/ui-designer) (possible CXO)
-- [PT/FT Director of User-Testing](/jobs/user-testing) (Co-Founder)
-- [PT Senior or Near Senior level Golang Web App Developer](/jobs/web-developer)
-- [PT/FT Marketing Director](/jobs/marketing-director) (Co-Founder)
+- [PT Project Manager](/careers/project-manager) (option to combine with Director/User Testing)
+- [PT/FT UI/UX Designer](/careers/ui-designer) (possible CXO)
+- [PT/FT Director of User-Testing](/careers/user-testing) (Co-Founder)
+- [PT Senior or Near Senior level Golang Web App Developer](/careers/web-developer)
+- [PT/FT Marketing Director](/careers/marketing-director) (Co-Founder)
 
 ### **CURRENT STATUS:**
 

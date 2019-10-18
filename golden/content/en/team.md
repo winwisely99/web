@@ -1,13 +1,14 @@
 ---
 title: The WinWisely Team
-linkTitle: "Who We Are"
+linkTitle: "The Team"
 slug: team
 top_graphic: 5
 no_donate_footer: false
 lastmod: 2019-09-18
 menu:
   main:
-    weight: 20
+    weight: 30
+    parent: about
 ---
 
 ### **Gary Krane, Ph.D., Cofounder & Executive Director**

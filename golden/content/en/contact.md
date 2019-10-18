@@ -7,7 +7,8 @@ no_donate_footer: false
 lastmod: 2019-09-18
 menu:
   main:
-    weight: 40
+    weight: 60
+    parent: about
 ---
 
 # Our Office
