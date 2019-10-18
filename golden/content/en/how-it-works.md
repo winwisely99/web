@@ -2,7 +2,7 @@
 title: How It Works
 linkTitle: "How It Works"
 slug: how-it-works
-top_graphic: 1
+top_graphic: 3
 no_donate_footer: true
 lastmod: 2019-09-18
 menu:

@@ -59,6 +59,11 @@ if os.path.exists(gitDir):
 # layout replacements
 ########################
 
+srcIndex = 'golden/layouts/index.html'
+destIndex = leRoot + '/layouts/index.html'
+from shutil import copyfile
+shutil.copyfile(srcIndex,destIndex)
+
 headerHtml = leRoot + '/layouts/partials/header.html'
 oldLogo = '/images/letsencrypt-logo-horizontal.svg'
 newLogo = goldenImages + 'logo-main.png'
