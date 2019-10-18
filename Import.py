@@ -66,6 +66,12 @@ gitDir = leRoot + '.git'
 if os.path.exists(gitDir):
     shutil.rmtree(gitDir) 
 
+# replace favicon
+srcFavicon = 'golden/wwimages/favicon.ico'
+destFavicon = leRoot + 'static/favicon.ico'
+from shutil import copyfile
+shutil.copyfile(srcFavicon,destFavicon)
+
 ########################
 # layout replacements
 ########################
