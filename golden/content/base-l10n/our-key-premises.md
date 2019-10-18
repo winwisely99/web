@@ -2,7 +2,7 @@
 title: Our Key Premises
 linkTitle: "Our Key Premises"
 slug: premises
-top_graphic: 6
+top_graphic: 
 no_donate_footer: false
 lastmod: 2019-09-18
 menu:

@@ -154,6 +154,8 @@ if statusLink:
   goneFundLink = str(soup)
   with open(headerHtml, 'w') as header:
     header.write(goneFundLink)
+else
+  print('Error in removing html tag.')
 
 
 print "done"
