@@ -1,13 +1,13 @@
 ---
-title: Director of UserTesting (Co-Founder)
-linkTitle: "Director of UserTesting (Co-Founder)"
+title: Director of User-Testing (Co-Founder)
+linkTitle: "Director of User-Testing (Co-Founder)"
 slug: user-testing
 top_graphic: 7
 no_donate_footer: true
 lastmod: 2019-09-18
 ---
 
-**WANTED:** Director of UserTesting (Co-Founder)
+**WANTED:** Director of User-Testing (Co-Founder)
 
 **WHO YOU ARE:** You must be deeply concerned about what is happening to the planet and to society and have a huge yearning to use your talents to make a huge difference, even if it means temporarily major reduction in your salary, to make what could be the most important social change tool of 2019 and 2020, arguably “the absolutely most critical time in our species history” (Carl Sagan)  before it will be too late according to most scientific estimates.
 
@@ -41,7 +41,7 @@ You can live/work from anywhere.
 
 **HOURS:**
 
-Co-Founder, at least 25 hours/wk
+Co-Founder, FT/PT at least 25 hrs/wk
 
 **COMPENSATION:**
 

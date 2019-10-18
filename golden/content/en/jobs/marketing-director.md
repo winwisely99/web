@@ -1,13 +1,13 @@
 ---
-title: Senior or Near Senior-Level Golang Web App Developer
-linkTitle: "Senior or Near Senior-Level Golang Web App Developer"
+title: Marketing Director for WinWisely App Team
+linkTitle: "Marketing Director for WinWisely App Team (Co-Founder)"
 slug: marketing-director
 top_graphic: 7
 no_donate_footer: true
 lastmod: 2019-09-18
 ---
 
-**WANTED:** Marketing Director for WinWisely App Team
+**WANTED:** Marketing Director for WinWisely App Team (Co-Founder)
 
 **WHO YOU ARE:** You must be deeply concerned about what is happening to the planet and to society and have a huge yearning to use your talents to make a huge difference, even if it means temporarily major reduction in your salary, to make what could be the most important social change tool of 2019 and 2020, arguably “the absolutely most critical time in our species history” (Carl Sagan)  before it will be too late according to most scientific estimates.
 
@@ -27,7 +27,7 @@ You can live/work from anywhere.
 
 **HOURS:**
 
-Co-Founder, 25 hours/wk minimum
+Co-Founder, PT/FT at least 25 hrs/wk 
 
 **HOW TO APPLY:**
 

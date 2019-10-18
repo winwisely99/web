@@ -21,7 +21,7 @@ You can live/work from anywhere.
 
 **HOURS:**
 
-Part-time, at least 25 hours/wk
+PT at least 25 hrs/wk
 
 **COMPENSATION:**
 

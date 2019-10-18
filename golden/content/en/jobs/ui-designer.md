@@ -1,13 +1,13 @@
 ---
-title: UI/UX Designer CoFounder (possible CXO)
-linkTitle: "UI/UX Designer CoFounder (possible CXO)"
+title: UI/UX Designer CoFounder (Possible CXO)
+linkTitle: "UI/UX Designer CoFounder (Possible CXO)"
 slug: ui-designer
 top_graphic: 7
 no_donate_footer: true
 lastmod: 2019-09-18
 ---
 
-**WANTED:** UI/UX Designer CoFounder (possible CXO)
+**WANTED:** UI/UX Designer CoFounder (Possible CXO)
 
 **WHO YOU ARE:** You must be deeply concerned about what is happening to the planet and to society and have a huge yearning to use your talents to make a huge difference, even if it means temporarily major reduction in your salary, to make what could be the most important social change tool of 2019 and 2020, arguably “the absolutely most critical time in our species history” (Carl Sagan)  before it will be too late according to most scientific estimates.
 
@@ -45,7 +45,7 @@ You can live/work from anywhere.
 
 **HOURS:**
 
-Co-Founder, at least 20 hours/wk
+Co-Founder, PT/FT at least 20 hrs/wk
 
 **COMPENSATION:**
 
