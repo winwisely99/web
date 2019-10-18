@@ -1,6 +1,6 @@
 ---
-title: Marketing Director for WinWisely App Team
-linkTitle: "Marketing Director for WinWisely App Team (Co-Founder)"
+title: Marketing Director for WinWisely (Co-Founder)
+linkTitle: "Marketing Director for WinWisely (Co-Founder)"
 slug: marketing-director
 top_graphic: 7
 no_donate_footer: true
