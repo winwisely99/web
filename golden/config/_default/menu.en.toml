@@ -1,20 +1,15 @@
 [[main]]
-name = "Home"
-weight = 10
-identifier = "home"
-url = "/#"
-[[main]]
 name = "How It Works"
 weight = 20
 identifier = "how-it-works"
 url = "/how-it-works/"
 [[main]]
 name = "Donate"
-weight = 30
+weight = 40
 identifier = "donate"
 url = "/donate/"
 [[main]]
 name = "About Us"
-weight = 40
+weight = 50
 identifier = "about"
 url = "/about/"

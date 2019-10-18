@@ -1,13 +1,12 @@
 ---
-title: WinWisely FAQs
-linkTitle: "FAQs"
+title: Get Help
+linkTitle: "Get Help"
 slug: faqs
 top_graphic: 7
 lastmod: 2019-01-11
 menu:
   main:
-    weight: 70
-    parent: about
+    weight: 30
 ---
 
 ### 1) Is Winwisely For Causes Or For Electoral Campaigns?
