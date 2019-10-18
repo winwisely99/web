@@ -145,35 +145,15 @@ except IOError:
 # content replacements
 ########################
 
-homePageEn = leRoot + 'i18n/en.toml'
-oldHeadline = 'Let&rsquo;s Encrypt is a <span>free</span>, <span>automated</span>, and <span>open</span> Certificate Authority.'
-newHeadline = '<span>WinWisely</span><br>Help Scale Courage Now'
-
 try:
-  with open(homePageEn) as en:
-    replaceHeadline = en.read().replace(oldHeadline, newHeadline)
-  with open(homePageEn, 'w') as en:
-    en.write(replaceHeadline)
+  with open(headerHtml) as header:
+    soup = BeautifulSoup(header, 'html.parser')
+    removeFundLink = soup.find("div", {'class': 'linux-foundation-link'})
+    removeFundLink.decompose()
+    goneFundLink = str(soup)
+  with open(headerHtml, 'w') as header:
+    header.write(goneFundLink)
 except IOError:
-  print(homePageEn + ' not accessible.')
-
-
-
-# with open(headerHtml) as header:
-#   oldFundLink = BeautifulSoup(header.read()).find("div", {'class': 'linux-foundation-link'})
-#   removeFundLink = oldFundLink.decompose()
-
-#   print removeFundLink
-
-# try:
-#   with open(headerHtml) as header:
-#     soup = BeautifulSoup(header, 'html.parser')
-#     removeFundLink = soup.find("div", {'class': 'linux-foundation-link'})
-#     removeFundLink.decompose()
-#     print(soup)
-#   with open(headerHtml, 'w') as header:
-#     header.write(removeFundLink)
-# except IOError:
-#   print(headerHtml + ' not accessible.')
+  print(headerHtml + ' not accessible.')
 
 print "done"
