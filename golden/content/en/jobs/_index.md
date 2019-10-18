@@ -10,7 +10,7 @@ menu:
     weight: 30
 ---
 
-[WinWisely.org](http://winwisely.org/) is a nonprofit tech startup developing a mobile-friendly, open-source, one-stop groundbreaking volunteer recruitment app.
+[WinWisely.org](http://winwisely.org/) is a non-profit tech startup developing a mobile-friendly, open-source, one-stop, groundbreaking volunteer recruitment app.
 
 Our mission is to answer what most grass roots organizers often call the _mother of all challenges_--
 

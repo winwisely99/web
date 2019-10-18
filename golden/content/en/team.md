@@ -3,7 +3,7 @@ title: Who We Are
 linkTitle: "Who We Are"
 slug: team
 top_graphic: 5
-no_donate_footer: true
+no_donate_footer: false
 lastmod: 2019-09-18
 menu:
   main:

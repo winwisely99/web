@@ -39,7 +39,7 @@ else:
     shutil.copytree(srcContentDir,destContentDir)
     print('Golden content directory updated successfully!')
 
-# # make a copy of the config folders
+# make a copy of the config folders
 srcConfigDir = 'golden/config'
 destConfigDir = leRoot + 'config'
 if not os.path.exists(destConfigDir):
@@ -50,7 +50,18 @@ else:
     shutil.copytree(srcConfigDir,destConfigDir)
     print('Golden config directory updated successfully!')
 
-# delete git folder of LE
+# make a copy of the i18n folders
+srcI18nDir = 'golden/i18n'
+destI18nDir = leRoot + 'i18n'
+if not os.path.exists(destI18nDir):
+    shutil.copytree(srcI18nDir,destI18nDir)
+    print('Golden i18n directory updated successfully!')
+else:
+    shutil.rmtree(destI18nDir)           
+    shutil.copytree(srcI18nDir,destI18nDir)
+    print('Golden i18n directory updated successfully!')
+
+# delete LE git directory, it doesnt need to be there
 gitDir = leRoot + '.git'
 if os.path.exists(gitDir):
     shutil.rmtree(gitDir) 
@@ -61,6 +72,11 @@ if os.path.exists(gitDir):
 
 srcIndex = 'golden/layouts/index.html'
 destIndex = leRoot + '/layouts/index.html'
+from shutil import copyfile
+shutil.copyfile(srcIndex,destIndex)
+
+srcIndex = 'golden/layouts/partials/footer.html'
+destIndex = leRoot + '/layouts/partials/footer.html'
 from shutil import copyfile
 shutil.copyfile(srcIndex,destIndex)
 
@@ -135,16 +151,7 @@ try:
 except IOError:
   print(homePageEn + ' not accessible.')
 
-# with open(headerHtml) as f:
-#   elementToDelete = BeautifulSoup(f.read()).find('div', {'class': 'linux-foundation-link'})
-#   removeTheElement = elementToDelete.decompose()
-# with open(headerHtml, 'w') as f:
-#   f.write(removeTheElement) 
 
-# with open(headerHtml) as header:
-#   replaceLogo = header.read().replace(oldLogo, newLogo)
-# with open(headerHtml, 'w') as header:
-#   header.write(replaceLogo)
 
 # with open(headerHtml) as header:
 #   oldFundLink = BeautifulSoup(header.read()).find("div", {'class': 'linux-foundation-link'})

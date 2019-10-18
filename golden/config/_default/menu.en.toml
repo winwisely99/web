@@ -1,5 +1,10 @@
 [[main]]
-name = "How It Works"
+name = "Home"
 weight = 10
+identifier = "home"
+url = "/#"
+[[main]]
+name = "How It Works"
+weight = 20
 identifier = "how-it-works"
 url = "/how-it-works/"
