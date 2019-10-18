@@ -25,10 +25,10 @@ We'll be open source & free to most nonprofits and expect to play a major role t
 ### **AVAILABLE POSITIONS AT WINWISELY:**
 
 - [PT Project Manager](/jobs/project-manager) (option to combine with Director/User Testing)
-- [Co-Founder UI/UX Designer](/jobs/ui-designer) (possible CXO)
-- [PT/FT Director of User-Testing Cofounder](/jobs/user-testing)
-- [PT Senior or Near Senior level Golang Web app Developer](/jobs/web-developer)
-- [Co-Founder Marketing Director](/jobs/marketing-director)
+- [PT/FT UI/UX Designer](/jobs/ui-designer) (possible CXO)
+- [PT/FT Director of User-Testing](/jobs/user-testing) (Co-Founder)
+- [PT Senior or Near Senior level Golang Web App Developer](/jobs/web-developer)
+- [PT/FT Marketing Director](/jobs/marketing-director) (Co-Founder)
 
 ### **CURRENT STATUS:**
 
