@@ -66,37 +66,50 @@ gitDir = leRoot + '.git'
 if os.path.exists(gitDir):
     shutil.rmtree(gitDir) 
 
-# replace favicon
-srcFavicon = 'golden/wwimages/favicon.ico'
-destFavicon = leRoot + 'static/favicon.ico'
+srcIndex = 'golden/layouts/index.html'
+destIndex = leRoot + 'layouts/index.html'
 from shutil import copyfile
-shutil.copyfile(srcFavicon,destFavicon)
+shutil.copyfile(srcIndex,destIndex)
 
 ########################
 # layout replacements
 ########################
 
-srcIndex = 'golden/layouts/index.html'
-destIndex = leRoot + '/layouts/index.html'
-from shutil import copyfile
-shutil.copyfile(srcIndex,destIndex)
+# replace favicon ###
 
-srcIndex = 'golden/layouts/partials/footer.html'
-destIndex = leRoot + '/layouts/partials/footer.html'
+srcFavicon = 'golden/wwimages/favicon.ico'
+destFavicon = leRoot + 'static/favicon.ico'
 from shutil import copyfile
-shutil.copyfile(srcIndex,destIndex)
+shutil.copyfile(srcFavicon,destFavicon)
 
-headerHtml = leRoot + '/layouts/partials/header.html'
+### header partial only
+
+# replace logo and alt text
+headerHtml = leRoot + 'layouts/partials/header.html'
 oldLogo = '/images/letsencrypt-logo-horizontal.svg'
 newLogo = goldenImages + 'logo-main.png'
+oldAlt = 'Let\'s Encrypt'
+newAlt = 'WinWisely'
 try:
   with open(headerHtml) as header:
-    replaceLogo = header.read().replace(oldLogo, newLogo)
+    replaceHeader = header.read().replace(oldLogo, newLogo).replace(oldAlt, newAlt)
   with open(headerHtml, 'w') as header:
-    header.write(replaceLogo)
+    header.write(replaceHeader)
 except IOError:
   print(headerHtml + ' not accessible.')
 
+# remove funding link
+with open(headerHtml) as header:
+  soup = BeautifulSoup(header, 'html.parser')
+  removeFundLink = soup.find("div", {'class': 'linux-foundation-link'})
+  statusLink = bool(removeFundLink)
+if statusLink:
+  removeFundLink.decompose()
+  goneFundLink = str(soup)
+  with open(headerHtml, 'w') as header:
+    header.write(goneFundLink)
+
+#replace banner on homepage
 mainCss = leRoot + 'static/css/main.min.css'
 oldBanner = '/images/3.jpg'
 newBanner = '../' + goldenImages + 'banners/1.jpg'
@@ -108,28 +121,8 @@ try:
 except IOError:
   print(mainCss + ' not accessible.')
 
-headerHtml = leRoot + '/layouts/partials/header.html'
-oldLogo = '/images/letsencrypt-logo-horizontal.svg'
-newLogo = goldenImages + 'logo-main.png'
-try:
-  with open(headerHtml) as header:
-    replaceLogo = header.read().replace(oldLogo, newLogo)
-  with open(headerHtml, 'w') as header:
-    header.write(replaceLogo)
-except IOError:
-  print(headerHtml + ' not accessible.')
-
-oldAlt = 'Let\'s Encrypt'
-newAlt = 'WinWisely'
-try:
-  with open(headerHtml) as header:
-    replaceAlt = header.read().replace(oldAlt, newAlt)
-  with open(headerHtml, 'w') as header:
-    header.write(replaceAlt)
-except IOError:
-  print(headerHtml + ' not accessible.')
-
-heroHtml = leRoot + '/layouts/partials/hero.html'
+#replace banner child pages
+heroHtml = leRoot + 'layouts/partials/hero.html'
 oldHero = 'images/%d.jpg'
 newHero = 'wwimages/banners/%d.jpg'
 try:
@@ -145,15 +138,7 @@ except IOError:
 # content replacements
 ########################
 
-with open(headerHtml) as header:
-  soup = BeautifulSoup(header, 'html.parser')
-  removeFundLink = soup.find("div", {'class': 'linux-foundation-link'})
-  statusLink = bool(removeFundLink)
-if statusLink:
-  removeFundLink.decompose()
-  goneFundLink = str(soup)
-  with open(headerHtml, 'w') as header:
-    header.write(goneFundLink)
+
 
 
 print "done"
