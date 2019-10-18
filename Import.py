@@ -53,18 +53,6 @@ else:
     shutil.copytree(srcConfigDir,destConfigDir)
     print('Golden config directory updated successfully!')
 
-# make a copy of the i18n folders
-srcI18nDir = 'golden/i18n'
-destI18nDir = leRoot + 'i18n'
-
-if not os.path.exists(destI18nDir):
-    shutil.copytree(srcI18nDir,destI18nDir)
-    print('Golden i18n directory updated successfully!')
-else:
-    shutil.rmtree(destI18nDir)           
-    shutil.copytree(srcI18nDir,destI18nDir)
-    print('Golden i18n directory updated successfully!')
-
 # delete LE git directory, it doesnt need to be there
 gitDir = leRoot + '.git'
 
@@ -163,30 +151,19 @@ except IOError:
 
 
 ###################################
-# configuration files
+# 118n files - EN only
 ###################################
 
-### config file #####
-
-# replace contact footer text
-configFile = leRoot + 'config/_default/config.toml'
-oldBaseURL = 'https://letsencrypt.org/'
-newBaseUrl = ''
-oldSocial1 = 'letsencrypt'
-newSocial1 = 'winwisely99'
-oldSocial2 = 'letsencrypt'
-newSocial2 = 'winwisely'
-oldSocial3 = 'https://www.generosity.com/community-fundraising/make-a-more-secure-web-with-let-s-encrypt'
-
+i18nEN = leRoot + 'i18n/en.toml'
+oldHeroTitle = 'Let&rsquo;s Encrypt is a <span>free</span>, <span>automated</span>, and <span>open</span> Certificate Authority.'
+newHeroTitle = '<span>WinWisely</span><br>It&rsquo;s A Numbers Game'
 try:
-  with open(configFile) as config:
-    replaceFooter = config.read().replace(oldBaseURL,newBaseUrl).replace(oldSocial1,newSocial1).replace(oldSocial2,newSocial2).replace(oldSocial3,'')
-  with open(configFile, 'w') as config:
-    config.write(replaceFooter)
+  with open(i18nEN) as en:
+    replaceEN = en.read().replace(oldHeroTitle,newHeroTitle)
+  with open(i18nEN, 'w') as en:
+    en.write(replaceEN )
 except IOError:
-  print(configFile + ' not accessible.')
-
-
+  print(i18nEN + ' not accessible.')
 
 
 print "done"

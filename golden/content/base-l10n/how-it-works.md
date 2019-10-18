@@ -1,18 +1,19 @@
 ---
-title: How It Works
-linkTitle: "How It Works"
+title: Why WinWisely
+linkTitle: "Why WinWisely"
 slug: how-it-works
 top_graphic: 4
 no_donate_footer: false
 lastmod: 2019-09-18
 menu:
   main:
-    weight: 20
+    weight: 40
     parent: how-it-works
 ---
 
 <center>
-## HOW DOES WINWISELY ACTUALLY WORK?
+
+## How Does WINWISELY WORK?
 
 ### In 4 ways using 4  motivators (or “Easifying” tools) 
 
