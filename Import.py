@@ -161,18 +161,21 @@ def writeToLine(lines, lineNum, appendText):
 with open(homeHtml) as home:
   soup = BeautifulSoup(home, 'html.parser')
   homeContent = str(soup)
-with open(indexHtml, 'r') as txtfile:
-  lines = txtfile.readlines()
-# index is 15 for 16th line
-writeToLine(lines, 15, homeContent)
-with open(indexHtml, 'w') as txtfile:
-  txtfile.writelines(lines)
-txtfile.close()
 
-# Hide Sponsors and Blog for now
-with open(mainCss, 'a') as c:
-  c.write('.pure-g.home {display:none !important}')
+with open(indexHtml) as index:
+  soup2 = BeautifulSoup(index, 'html.parser')
+  indexContent = str(soup)
+  isDivThere = soup2.find("div", {'class': 'home-content'})
+  statusDiv = bool(isDivThere) 
+if not statusDiv:
+  with open(indexHtml, 'r') as txtfile:
+    lines = txtfile.readlines()
+    # index is 15 for 16th line
+    writeToLine(lines, 15, homeContent)
+  with open(indexHtml, 'w') as txtfile:
+    txtfile.writelines(lines)
+  with open(mainCss, 'a') as c:
+    c.write('.pure-g.home {display:none !important}')
 
-    
 
 print "done"
