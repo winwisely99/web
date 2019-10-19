@@ -14,45 +14,83 @@ Super Duper Importer
 
 leRoot = 'source/github.com/letsencrypt/website/'
 leImages = 'source/github.com/letsencrypt/website/static/images/'
-
-# Replace the Golden WW IMAGE dir into the LE 'static' dir
-srcImgDir = 'golden/wwimages'
-destImgDir = leRoot + 'static/wwimages'
-if not os.path.exists(destImgDir):
-    shutil.copytree(srcImgDir,destImgDir)
-    print('Golden image directory updated successfully!')
-else:
-    shutil.rmtree(destImgDir)           
-    shutil.copytree(srcImgDir,destImgDir)
-    print('Golden image directory updated successfully!')
 goldenImages = 'wwimages/'
 
+###################################
+# Main Functions
+###################################
+
+# Copy directory
+def placeDirectory(nameDir, srcDir, destDir):
+  if not os.path.exists(destDir):
+    shutil.copytree(srcDir,destDir)
+  else:
+    shutil.rmtree(destDir)
+    shutil.copytree(srcDir,destDir)
+  print(nameDir + 'directory updated successfully!')
+
+# Delete directory
+def deleteDirectory(nameDir,rmDir):
+  if os.path.exists(rmDir):
+    shutil.rmtree(rmDir)
+    print(nameDir + 'directory deleted successfuly!')
+
+# Copy file
+def placeFile(nameFile, srcFile, destFile):
+  from shutil import copyfile
+  shutil.copyfile(srcFile,destFile)
+  print(nameFile + 'file updated successfully!')
+
+# Replace strings in file
+def replaceString(file, oldLine, newLine):
+  try:
+    with open(file) as f:
+      replaceThis = f.read().replace(oldLine, newLine)
+    with open(file, 'w') as f:
+      f.write(replaceThis)
+  except IOError:
+    print(file + ' not accessible.')
+
+# Remove HTML element
+def deleteElement(file, tag, selector, value):
+  with open(file) as f:
+    soup = BeautifulSoup(f, 'html.parser')
+    removeThis = soup.find(tag, {selector : value})
+    status = bool(removeThis)
+  if status:
+    removeThis.decompose()
+    newHtml = str(soup)
+    with open(file, 'w') as f:
+      f.write(newHtml)
+
+# Append Data
+def writeToLine(lines, lineNum, appendText):
+  lines[lineNum] = lines[lineNum].replace('\n', '') + appendText + '\n'
+
+
+
+###################################
+# Directory Structure
+###################################
+
+# Replace the Golden WW IMAGE dir into the LE 'static' dir
+srcImages = 'golden/wwimages'
+destImages = leRoot + 'static/wwimages'
+placeDirectory('wwimages',srcImages,destImages)
+
 # Replace the Golden LE CONTENT/EN dir with the WW CONTENT/EN dir only
-srcContentDir = 'golden/content/en'
-destContentDir = leRoot + 'content/en'
-if not os.path.exists(destContentDir):
-    shutil.copytree(srcContentDir,destContentDir)
-    print('Golden content directory updated successfully!')
-else:
-    shutil.rmtree(destContentDir)           
-    shutil.copytree(srcContentDir,destContentDir)
-    print('Golden content directory updated successfully!')
+srcContent = 'golden/content/en'
+destContent = leRoot + 'content/en'
+placeDirectory('content',srcContent,destContent)
 
 # Replace the Golden LE CONFIG dir with the WW content dir
-srcConfigDir = 'golden/config'
-destConfigDir = leRoot + 'config'
-if not os.path.exists(destConfigDir):
-    shutil.copytree(srcConfigDir,destConfigDir)
-    print('Golden config directory updated successfully!')
-else:
-    shutil.rmtree(destConfigDir)           
-    shutil.copytree(srcConfigDir,destConfigDir)
-    print('Golden config directory updated successfully!')
+srcConfig = 'golden/config'
+destConfig = leRoot + 'config'
+placeDirectory('content',srcConfig,destConfig)
 
 # Delete LE git directory, it doesnt need to be there
 gitDir = leRoot + '.git'
-if os.path.exists(gitDir):
-    shutil.rmtree(gitDir) 
+deleteDirectory('LE Git folder',gitDir)
 
 
 ###################################
@@ -62,8 +100,7 @@ if os.path.exists(gitDir):
 # Replace file favicon
 srcFavicon = 'golden/wwimages/favicon.ico'
 destFavicon = leRoot + 'static/favicon.ico'
-from shutil import copyfile
-shutil.copyfile(srcFavicon,destFavicon)
+placeFile('Favicon', srcFavicon, destFavicon)
 
 ### Header Partial #####
 
@@ -73,60 +110,29 @@ oldLogo = '/images/letsencrypt-logo-horizontal.svg'
 newLogo = goldenImages + 'logo-main.png'
 oldAlt = 'Let\'s Encrypt'
 newAlt = 'WinWisely'
-try:
-  with open(headerHtml) as header:
-    replaceHeader = header.read().replace(oldLogo, newLogo).replace(oldAlt, newAlt)
-  with open(headerHtml, 'w') as header:
-    header.write(replaceHeader)
-except IOError:
-  print(headerHtml + ' not accessible.')
+replaceString(headerHtml, oldLogo, newLogo)
+replaceString(headerHtml, oldAlt, newAlt)
 
 # Remove hideous foundation link
-with open(headerHtml) as header:
-  soup = BeautifulSoup(header, 'html.parser')
-  removeFundLink = soup.find("div", {'class': 'linux-foundation-link'})
-  statusLink = bool(removeFundLink)
-if statusLink:
-  removeFundLink.decompose()
-  goneFundLink = str(soup)
-  with open(headerHtml, 'w') as header:
-    header.write(goneFundLink)
+deleteElement(headerHtml, 'div', 'class', 'linux-foundation-link')
 
 # Replace banner on homepage
 mainCss = leRoot + 'static/css/main.min.css'
 oldBanner = '/images/3.jpg'
 newBanner = '../' + goldenImages + 'banners/1-dark.jpg'
-try:
-  with open(mainCss) as css:
-    replaceBanner = css.read().replace(oldBanner, newBanner)
-  with open(mainCss, 'w') as css:
-    css.write(replaceBanner)
-except IOError:
-  print(mainCss + ' not accessible.')
+replaceString(mainCss, oldBanner, newBanner)
 
 # Replace banner on child pages
 heroHtml = leRoot + 'layouts/partials/hero.html'
 oldHero = 'images/%d.jpg'
 newHero = 'wwimages/banners/%d.jpg'
-try:
-  with open(heroHtml) as header:
-    replaceHero = header.read().replace(oldHero, newHero)
-  with open(heroHtml, 'w') as header:
-    header.write(replaceHero)
-except IOError:
-  print(heroHtml + ' not accessible.')
+replaceString(heroHtml, oldHero, newHero)
 
 # Change banner text
 i18nEN = leRoot + 'i18n/en.toml'
 oldHeroTitle = 'Let&rsquo;s Encrypt is a <span>free</span>, <span>automated</span>, and <span>open</span> Certificate Authority.'
 newHeroTitle = '<span>WinWisely</span><br>It&rsquo;s A Numbers Game'
-try:
-  with open(i18nEN) as en:
-    replaceEN = en.read().replace(oldHeroTitle,newHeroTitle)
-  with open(i18nEN, 'w') as en:
-    en.write(replaceEN )
-except IOError:
-  print(i18nEN + ' not accessible.')
+replaceString(i18nEN, oldHeroTitle, newHeroTitle)
 
 ### Footer Partial #####
 
@@ -138,13 +144,14 @@ oldAddress2 = 'San Francisco,'
 oldAddress3 = 'CA'
 oldAddress4 = '94129'
 linuxLink = '{{ i18n "linux_foundation_trademark" }}'
-try:
-  with open(footerHtml) as footer:
-    replaceFooter = footer.read().replace(oldAddress1,newAddress1).replace(oldAddress2,'').replace(oldAddress3,'').replace(oldAddress4,'').replace(linuxLink,'')
-  with open(footerHtml, 'w') as footer:
-    footer.write(replaceFooter)
-except IOError:
-  print(footerHtml + ' not accessible.')
+
+replaceString(footerHtml, oldAddress1, newAddress1)
+replaceString(footerHtml, oldAddress2, '')
+replaceString(footerHtml, oldAddress3, '')
+replaceString(footerHtml, oldAddress4, '')
+replaceString(footerHtml, linuxLink, '')
+
+
 
 
 ###################################
@@ -154,9 +161,6 @@ except IOError:
 # Append Home Content to Index
 homeHtml = 'golden/layouts/home.html'
 indexHtml = leRoot + 'layouts/index.html'
-
-def writeToLine(lines, lineNum, appendText):
-    lines[lineNum] = lines[lineNum].replace('\n', '') + appendText + '\n'
 
 with open(homeHtml) as home:
   soup = BeautifulSoup(home, 'html.parser')
@@ -189,6 +193,9 @@ try:
     i.write(replaceHeader)
 except IOError:
   print(indexHtml + ' not accessible.')
+
+replaceString(indexHtml, oldButtonLink, newButtonLink)
+replaceString(indexHtml, oldButtonText, newButtonText)
 
 
 print "done"
