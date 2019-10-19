@@ -15,7 +15,7 @@ Super Duper Importer
 leRoot = 'source/github.com/letsencrypt/website/'
 leImages = 'source/github.com/letsencrypt/website/static/images/'
 
-# Make a copy of the GOLDEN image dir into the LE 'static' dir
+# Replace the Golden WW IMAGE dir into the LE 'static' dir
 srcImgDir = 'golden/wwimages'
 destImgDir = leRoot + 'static/wwimages'
 if not os.path.exists(destImgDir):
@@ -27,7 +27,7 @@ else:
     print('Golden image directory updated successfully!')
 goldenImages = 'wwimages/'
 
-# Replace the LE CONTENT dir with the WW content dir
+# Replace the Golden LE CONTENT/EN dir with the WW CONTENT/EN dir only
 srcContentDir = 'golden/content/en'
 destContentDir = leRoot + 'content/en'
 if not os.path.exists(destContentDir):
@@ -38,7 +38,7 @@ else:
     shutil.copytree(srcContentDir,destContentDir)
     print('Golden content directory updated successfully!')
 
-# Replace the LE CONFIG dir with the WW content dir
+# Replace the Golden LE CONFIG dir with the WW content dir
 srcConfigDir = 'golden/config'
 destConfigDir = leRoot + 'config'
 if not os.path.exists(destConfigDir):
@@ -60,10 +60,10 @@ if os.path.exists(gitDir):
 ###################################
 
 # Replace the Index - Need to change
-srcIndex = 'golden/layouts/index.html'
-destIndex = leRoot + 'layouts/index.html'
-from shutil import copyfile
-shutil.copyfile(srcIndex,destIndex)
+# srcIndex = 'golden/layouts/index.html'
+# destIndex = leRoot + 'layouts/index.html'
+# from shutil import copyfile
+# shutil.copyfile(srcIndex,destIndex)
 
 # Replace file favicon
 srcFavicon = 'golden/wwimages/favicon.ico'
@@ -154,9 +154,27 @@ except IOError:
 
 
 ###################################
-# 118n files - EN only
+# Homepage Foolery
 ###################################
 
+# Append Home Content to Index
+homeHtml = 'golden/layouts/home.html'
+indexHtml = leRoot + 'layouts/index.html'
 
+def writeToLine(lines, lineNo, appendTxt):
+    lines[lineNo] = lines[lineNo].replace('\n', '') + appendTxt + '\n'
+
+with open(homeHtml) as home:
+  soup = BeautifulSoup(home, 'html.parser')
+  homeContent = str(soup)
+with open(indexHtml, 'r') as txtfile:
+    lines = txtfile.readlines()
+# index is 15 for 16th line
+writeToLine(lines, 15, homeContent)
+with open(indexHtml, 'w') as txtfile:
+    txtfile.writelines(lines)
+txtfile.close()
+
+    
 
 print "done"
