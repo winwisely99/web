@@ -59,12 +59,6 @@ if os.path.exists(gitDir):
 # Layout Only
 ###################################
 
-# Replace the Index - Need to change
-# srcIndex = 'golden/layouts/index.html'
-# destIndex = leRoot + 'layouts/index.html'
-# from shutil import copyfile
-# shutil.copyfile(srcIndex,destIndex)
-
 # Replace file favicon
 srcFavicon = 'golden/wwimages/favicon.ico'
 destFavicon = leRoot + 'static/favicon.ico'
@@ -154,26 +148,30 @@ except IOError:
 
 
 ###################################
-# Homepage Foolery
+# Homepage Adhoc
 ###################################
 
 # Append Home Content to Index
 homeHtml = 'golden/layouts/home.html'
 indexHtml = leRoot + 'layouts/index.html'
 
-def writeToLine(lines, lineNo, appendTxt):
-    lines[lineNo] = lines[lineNo].replace('\n', '') + appendTxt + '\n'
+def writeToLine(lines, lineNum, appendText):
+    lines[lineNum] = lines[lineNum].replace('\n', '') + appendText + '\n'
 
 with open(homeHtml) as home:
   soup = BeautifulSoup(home, 'html.parser')
   homeContent = str(soup)
 with open(indexHtml, 'r') as txtfile:
-    lines = txtfile.readlines()
+  lines = txtfile.readlines()
 # index is 15 for 16th line
 writeToLine(lines, 15, homeContent)
 with open(indexHtml, 'w') as txtfile:
-    txtfile.writelines(lines)
+  txtfile.writelines(lines)
 txtfile.close()
+
+# Hide Sponsors and Blog for now
+with open(mainCss, 'a') as c:
+  c.write('.pure-g.home {display:none !important}')
 
     
 
