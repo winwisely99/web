@@ -177,5 +177,18 @@ if not statusDiv:
   with open(mainCss, 'a') as c:
     c.write('.pure-g.home {display:none !important}')
 
+# Change Button and Link on Banner
+oldButtonLink = 'become-a-sponsor'
+newButtonLink = 'donate'
+oldButtonText = 'home_hero_sponsor'
+newButtonText = 'home_hero_donate'
+try:
+  with open(indexHtml) as i:
+    replaceHeader = i.read().replace(oldButtonLink,newButtonLink).replace(oldButtonText, newButtonText)
+  with open(indexHtml, 'w') as i:
+    i.write(replaceHeader)
+except IOError:
+  print(indexHtml + ' not accessible.')
+
 
 print "done"
