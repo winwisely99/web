@@ -2,7 +2,7 @@
 title: The WinWisely Team
 linkTitle: "The Team"
 slug: team
-top_graphic: 5
+top_graphic: 7
 no_donate_footer: false
 lastmod: 2019-09-18
 menu:

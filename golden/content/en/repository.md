@@ -1,7 +1,7 @@
 ---
 title: Policy and Legal Repository
 slug: repository
-top_graphic: 5
+top_graphic: 7
 menu:
   main:
     weight: 40

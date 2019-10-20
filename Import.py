@@ -14,7 +14,7 @@ Super Duper Importer
 
 leRoot = 'source/github.com/letsencrypt/website/'
 leImages = 'source/github.com/letsencrypt/website/static/images/'
-goldenImages = 'wwimages/'
+goldenImages = '/wwimages/'
 
 ###################################
 # Main Functions
@@ -119,13 +119,13 @@ deleteElement(headerHtml, 'div', 'class', 'linux-foundation-link')
 # Replace banner on homepage
 mainCss = leRoot + 'static/css/main.min.css'
 oldBanner = '/images/3.jpg'
-newBanner = '../' + goldenImages + 'banners/1-dark.jpg'
+newBanner = '..' + goldenImages + 'banners/1.jpg'
 replaceString(mainCss, oldBanner, newBanner)
 
 # Replace banner on child pages
 heroHtml = leRoot + 'layouts/partials/hero.html'
 oldHero = 'images/%d.jpg'
-newHero = 'wwimages/banners/%d.jpg'
+newHero = goldenImages +'banners/%d.jpg'
 replaceString(heroHtml, oldHero, newHero)
 
 # Change banner text
@@ -144,28 +144,29 @@ oldAddress2 = 'San Francisco,'
 oldAddress3 = 'CA'
 oldAddress4 = '94129'
 linuxLink = '{{ i18n "linux_foundation_trademark" }}'
-
 replaceString(footerHtml, oldAddress1, newAddress1)
 replaceString(footerHtml, oldAddress2, '')
 replaceString(footerHtml, oldAddress3, '')
 replaceString(footerHtml, oldAddress4, '')
 replaceString(footerHtml, linuxLink, '')
 
-
-
+# Replace content in donate footer
+enFile = leRoot + 'i18n/en.toml'
+oldDonateBox = 'Support a more secure and privacy-respecting Web.'
+newDonateBox = 'Support us and help scale courage!'
+replaceString(enFile, oldDonateBox, newDonateBox)
 
 ###################################
 # Homepage Adhoc
 ###################################
 
 # Append Home Content to Index
-homeHtml = 'golden/layouts/home.html'
+homeHtml = 'golden/layouts/home.txt'
 indexHtml = leRoot + 'layouts/index.html'
 
 with open(homeHtml) as home:
   soup = BeautifulSoup(home, 'html.parser')
   homeContent = str(soup)
-
 with open(indexHtml) as index:
   soup2 = BeautifulSoup(index, 'html.parser')
   indexContent = str(soup)
@@ -179,20 +180,13 @@ if not statusDiv:
   with open(indexHtml, 'w') as txtfile:
     txtfile.writelines(lines)
   with open(mainCss, 'a') as c:
-    c.write('.pure-g.home {display:none !important}')
+    c.write('.pure-g.home {display:none !important;} .pure-menu-children {-webkit-box-shadow: 2px 2px 15px 0px rgba(50,50,50,.1); -moz-box-shadow: 2px 2px 15px 0px rgba(50,50,50,.1); box-shadow: 2px 2px 15px 0px rgba(50,50,50,.1); }')
 
 # Change Button and Link on Banner
 oldButtonLink = 'become-a-sponsor'
 newButtonLink = 'donate'
 oldButtonText = 'home_hero_sponsor'
 newButtonText = 'home_hero_donate'
-try:
-  with open(indexHtml) as i:
-    replaceHeader = i.read().replace(oldButtonLink,newButtonLink).replace(oldButtonText, newButtonText)
-  with open(indexHtml, 'w') as i:
-    i.write(replaceHeader)
-except IOError:
-  print(indexHtml + ' not accessible.')
 
 replaceString(indexHtml, oldButtonLink, newButtonLink)
 replaceString(indexHtml, oldButtonText, newButtonText)

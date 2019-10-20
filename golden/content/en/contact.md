@@ -2,7 +2,7 @@
 title: Contact
 linkTitle: "Contact"
 slug: contact
-top_graphic: 3
+top_graphic: 7
 no_donate_footer: false
 lastmod: 2019-09-18
 menu:
