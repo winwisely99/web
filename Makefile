@@ -8,9 +8,8 @@
 
 LIB_NAME=website
 LIB=github.com/letsencrypt/$(LIB_NAME)
-LIB_BRANCH=desktop
-#LIB_BRANCH=flutter_web
-#LIB_BRANCH=master
+LIB_BRANCH=dev
+
 LIB_FSPATH=$(GOPATH)/src/$(LIB)
 
 
