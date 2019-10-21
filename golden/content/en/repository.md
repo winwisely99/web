@@ -12,11 +12,11 @@ do_not_translate: 1
 <!-- Note for translators: do NOT translate this file -->
 
 
-# Let's Encrypt Privacy Policy
+# WinWisely Privacy Policy
 
-* [September 19, 2019](/privacy/)
+* [October 21, 2019](/privacy/)
 
-# Let's Encrypt Trademark Policy
+# WinWisely Trademark Policy
 
 * [Current Trademark Policy](/trademarks/)
 
