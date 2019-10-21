@@ -63,7 +63,15 @@ def deleteElement(file, tag, selector, value):
     with open(file, 'w') as f:
       f.write(newHtml)
 
-# Append Data
+# Append data to end of file
+def appendToFile(source, file, content):
+  with open(source) as f:
+    soup = BeautifulSoup(f, 'html.parser')
+  with open(file, 'a') as f:
+    f.write(content)
+
+
+# Append data to specific line of file
 def writeToLine(lines, lineNum, appendText):
   lines[lineNum] = lines[lineNum].replace('\n', '') + appendText + '\n'
 
@@ -119,7 +127,7 @@ deleteElement(headerHtml, 'div', 'class', 'linux-foundation-link')
 # Replace banner on homepage
 mainCss = leRoot + 'static/css/main.min.css'
 oldBanner = '/images/3.jpg'
-newBanner = '..' + goldenImages + 'banners/1.jpg'
+newBanner = '..' + goldenImages + 'banners/1-dark.jpg'
 replaceString(mainCss, oldBanner, newBanner)
 
 # Replace banner on child pages
@@ -162,16 +170,20 @@ replaceString(enFile, oldDonateBox, newDonateBox)
 
 # Append Home Content to Index
 homeHtml = 'golden/layouts/home.txt'
+addCss = 'golden/layouts/css.txt'
 indexHtml = leRoot + 'layouts/index.html'
 
 with open(homeHtml) as home:
   soup = BeautifulSoup(home, 'html.parser')
   homeContent = str(soup)
+with open (addCss) as css:
+  soup2 = BeautifulSoup(css, 'html.parser')
+  cssContent = str(soup2)
 with open(indexHtml) as index:
-  soup2 = BeautifulSoup(index, 'html.parser')
-  indexContent = str(soup)
-  isDivThere = soup2.find("div", {'class': 'home-content'})
-  statusDiv = bool(isDivThere) 
+  soup3 = BeautifulSoup(index, 'html.parser')
+  indexContent = str(soup3)
+  isDivThere = soup3.find("div", {'class': 'home-content'})
+  statusDiv = bool(isDivThere)
 if not statusDiv:
   with open(indexHtml, 'r') as txtfile:
     lines = txtfile.readlines()
@@ -179,8 +191,7 @@ if not statusDiv:
     writeToLine(lines, 15, homeContent)
   with open(indexHtml, 'w') as txtfile:
     txtfile.writelines(lines)
-  with open(mainCss, 'a') as c:
-    c.write('.pure-g.home {display:none !important;} .pure-menu-children {-webkit-box-shadow: 2px 2px 15px 0px rgba(50,50,50,.1); -moz-box-shadow: 2px 2px 15px 0px rgba(50,50,50,.1); box-shadow: 2px 2px 15px 0px rgba(50,50,50,.1); }')
+  appendToFile(addCss, mainCss, '.pure-g.home {display:none !important;} .pure-menu-children {-webkit-box-shadow: 2px 2px 15px 0px rgba(50,50,50,.1); -moz-box-shadow: 2px 2px 15px 0px rgba(50,50,50,.1); box-shadow: 2px 2px 15px 0px rgba(50,50,50,.1); }')
 
 # Change Button and Link on Banner
 oldButtonLink = 'become-a-sponsor'

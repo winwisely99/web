@@ -11,6 +11,8 @@ menu:
     parent: how-it-works
 ---
 
-## HOW DO YOU GET STARTED?
+## Ready to see where and how you can help save the planet?
 
-Get started here.
+Download the **WinWisely** app on your mobile and on your desktop now.
+
+**Links to downloads for devices 
