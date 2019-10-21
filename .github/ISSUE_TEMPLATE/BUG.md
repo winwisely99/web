@@ -27,7 +27,7 @@ Template:
 
 Whats wrong: The button called "Submit" (at the bottom at the page) should not be shown yet because they first must fill out their telephone number.
 
-Where: One the page called "blah blah"
+Where: Url such as https://www.domain.com/pagex/pagey
 
 
 ## Steps to Reproduce
