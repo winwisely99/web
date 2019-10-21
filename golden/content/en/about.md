@@ -2,7 +2,7 @@
 title: About WinWisely
 linkTitle: "WinWisely"
 slug: about
-top_graphic: 7
+top_graphic: 6
 no_donate_footer: false
 lastmod: 2019-09-18
 menu:
