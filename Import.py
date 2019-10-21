@@ -70,7 +70,6 @@ def appendToFile(source, file, content):
   with open(file, 'a') as f:
     f.write(content)
 
-
 # Append data to specific line of file
 def writeToLine(lines, lineNum, appendText):
   lines[lineNum] = lines[lineNum].replace('\n', '') + appendText + '\n'
@@ -172,8 +171,13 @@ replaceString(enFile, oldDonateBox, newDonateBox)
 customHome = 'golden/layouts/home.txt'
 customCss = 'golden/layouts/css.txt'
 customHead = 'golden/layouts/google.txt'
+customFirebase = 'golden/layouts/firebase.txt'
+
 indexPartial = leRoot + 'layouts/index.html'
 headPartial = leRoot + 'layouts/partials/head.html'
+basePartial = leRoot + 'layouts/_default/baseof.html'
+blankPartial = leRoot + 'layouts/_default/blank.html'
+postPartial = leRoot + 'layouts/post/baseof.html'
 
 with open(customHome) as home:
   soup = BeautifulSoup(home, 'html.parser')
@@ -184,17 +188,35 @@ with open(customCss) as css:
 with open(customHead) as head:
   soup = BeautifulSoup(head, 'html.parser')
   newHeadContent = str(soup)
+with open(customFirebase) as base:
+  soup = BeautifulSoup(base, 'html.parser')
+  newFirebaseContent = str(soup)
 
 with open(indexPartial) as i:
   soup = BeautifulSoup(i, 'html.parser')
   indexContent = str(soup)
   isDivThere = soup.find('div', {'class': 'home-content'})
   statusDiv = bool(isDivThere)
-with open(headPartial) as h:
-  soup = BeautifulSoup(h, 'html.parser')
+with open(headPartial) as p:
+  soup = BeautifulSoup(p, 'html.parser')
   headContent = str(soup)
-  isHeadThere = soup.find('script')
-  statusScript = bool(isHeadThere)
+  isScriptThere = soup.find('script')
+  statusScript = bool(isScriptThere)
+with open(basePartial) as p:
+  soup = BeautifulSoup(p, 'html.parser')
+  baseContent = str(soup)
+  isScriptThere = soup.find('script')
+  statusScript1 = bool(isScriptThere)
+with open(blankPartial) as p:
+  soup = BeautifulSoup(p, 'html.parser')
+  blankContent = str(soup)
+  isScriptThere = soup.find('script')
+  statusScript2 = bool(isScriptThere)
+with open(postPartial) as p:
+  soup = BeautifulSoup(p, 'html.parser')
+  postContent = str(soup)
+  isScriptThere = soup.find('script')
+  statusScript3 = bool(isScriptThere)
 
 if not statusDiv:
   with open(indexPartial, 'r') as i:
@@ -203,13 +225,35 @@ if not statusDiv:
     writeToLine(lines, 15, newHomeContent)
   with open(indexPartial, 'w') as i:
     i.writelines(lines)
-  appendToFile(customCss, mainCss, '.pure-g.home {display:none !important;} .pure-menu-children {-webkit-box-shadow: 2px 2px 15px 0px rgba(50,50,50,.1); -moz-box-shadow: 2px 2px 15px 0px rgba(50,50,50,.1); box-shadow: 2px 2px 15px 0px rgba(50,50,50,.1); }')
+  appendToFile(customCss, mainCss, newCssContent)
+
+# Import Scripts
+
 if not statusScript:
   with open(headPartial, 'r') as h:
     lines = h.readlines()
     writeToLine(lines, 1, newHeadContent)
   with open(headPartial, 'w') as h:
     h.writelines(lines)
+
+  with open(basePartial, 'r') as h:
+    lines = h.readlines()
+    writeToLine(lines, 16, newFirebaseContent)
+  with open(basePartial, 'w') as h:
+    h.writelines(lines)
+
+  with open(blankPartial, 'r') as h:
+    lines = h.readlines()
+    writeToLine(lines, 4, newFirebaseContent)
+  with open(blankPartial, 'w') as h:
+    h.writelines(lines)
+
+  with open(postPartial, 'r') as h:
+    lines = h.readlines()
+    writeToLine(lines, 13, newFirebaseContent)
+  with open(postPartial, 'w') as h:
+    h.writelines(lines)
+
 
 # Change Button and Link on Banner
 oldButtonLink = 'become-a-sponsor'
