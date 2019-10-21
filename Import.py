@@ -168,30 +168,48 @@ replaceString(enFile, oldDonateBox, newDonateBox)
 # Homepage Adhoc
 ###################################
 
-# Append Home Content to Index
-homeHtml = 'golden/layouts/home.txt'
-addCss = 'golden/layouts/css.txt'
-indexHtml = leRoot + 'layouts/index.html'
+# Append custom home content and css to corresponding files
+customHome = 'golden/layouts/home.txt'
+customCss = 'golden/layouts/css.txt'
+customHead = 'golden/layouts/google.txt'
+indexPartial = leRoot + 'layouts/index.html'
+headPartial = leRoot + 'layouts/partials/head.html'
 
-with open(homeHtml) as home:
+with open(customHome) as home:
   soup = BeautifulSoup(home, 'html.parser')
-  homeContent = str(soup)
-with open (addCss) as css:
-  soup2 = BeautifulSoup(css, 'html.parser')
-  cssContent = str(soup2)
-with open(indexHtml) as index:
-  soup3 = BeautifulSoup(index, 'html.parser')
-  indexContent = str(soup3)
-  isDivThere = soup3.find("div", {'class': 'home-content'})
+  newHomeContent = str(soup)
+with open(customCss) as css:
+  soup = BeautifulSoup(css, 'html.parser')
+  newCssContent = str(soup)
+with open(customHead) as head:
+  soup = BeautifulSoup(head, 'html.parser')
+  newHeadContent = str(soup)
+
+with open(indexPartial) as i:
+  soup = BeautifulSoup(i, 'html.parser')
+  indexContent = str(soup)
+  isDivThere = soup.find('div', {'class': 'home-content'})
   statusDiv = bool(isDivThere)
+with open(headPartial) as h:
+  soup = BeautifulSoup(h, 'html.parser')
+  headContent = str(soup)
+  isHeadThere = soup.find('script')
+  statusScript = bool(isHeadThere)
+
 if not statusDiv:
-  with open(indexHtml, 'r') as txtfile:
-    lines = txtfile.readlines()
+  with open(indexPartial, 'r') as i:
+    lines = i.readlines()
     # index is 15 for 16th line
-    writeToLine(lines, 15, homeContent)
-  with open(indexHtml, 'w') as txtfile:
-    txtfile.writelines(lines)
-  appendToFile(addCss, mainCss, '.pure-g.home {display:none !important;} .pure-menu-children {-webkit-box-shadow: 2px 2px 15px 0px rgba(50,50,50,.1); -moz-box-shadow: 2px 2px 15px 0px rgba(50,50,50,.1); box-shadow: 2px 2px 15px 0px rgba(50,50,50,.1); }')
+    writeToLine(lines, 15, newHomeContent)
+  with open(indexPartial, 'w') as i:
+    i.writelines(lines)
+  appendToFile(customCss, mainCss, '.pure-g.home {display:none !important;} .pure-menu-children {-webkit-box-shadow: 2px 2px 15px 0px rgba(50,50,50,.1); -moz-box-shadow: 2px 2px 15px 0px rgba(50,50,50,.1); box-shadow: 2px 2px 15px 0px rgba(50,50,50,.1); }')
+if not statusScript:
+  with open(headPartial, 'r') as h:
+    lines = h.readlines()
+    writeToLine(lines, 1, newHeadContent)
+  with open(headPartial, 'w') as h:
+    h.writelines(lines)
 
 # Change Button and Link on Banner
 oldButtonLink = 'become-a-sponsor'
@@ -199,8 +217,8 @@ newButtonLink = 'donate'
 oldButtonText = 'home_hero_sponsor'
 newButtonText = 'home_hero_donate'
 
-replaceString(indexHtml, oldButtonLink, newButtonLink)
-replaceString(indexHtml, oldButtonText, newButtonText)
+replaceString(indexPartial, oldButtonLink, newButtonLink)
+replaceString(indexPartial, oldButtonText, newButtonText)
 
 
 print "done"
