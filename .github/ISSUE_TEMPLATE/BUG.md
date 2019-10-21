@@ -1,5 +1,5 @@
 ---
-name: I have a problem with the App.
+name: I have a problem with the website.
 about: nature of problem.
 ---
 
