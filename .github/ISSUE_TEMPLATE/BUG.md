@@ -7,11 +7,13 @@ about: nature of problem.
 
 ## OS version
 
-<!-- Please tell us which Operating system and Module you are using. -->
+<!-- Please tell us which Operating system and Browser you are using. -->
 
 Operating System:  Windows, Mac, Linix, Android, IOS
 
-Module • chat, enrollment, other.
+Browser:  Chrome, Firefox, other.
+
+Browser version: ** normally in the About section of the app **
 
 
 ## What is wrong and where ?
