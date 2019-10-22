@@ -5,13 +5,21 @@
 # SOURCE
 # https://github.com/letsencrypt/website
 
-#GOPATH=[your own project path]
+
 LIB_NAME=website
 LIB=github.com/letsencrypt/$(LIB_NAME)
+<<<<<<< HEAD
 LIB_BRANCH=dev
+
+LIB_FSPATH=$(GOPATH)/src/$(LIB)
+=======
+#LIB_BRANCH=desktop
+LIB_BRANCH=le
 #LIB_BRANCH=flutter_web
 #LIB_BRANCH=master
-#LIB_FSPATH=$(GOPATH)/source/$(LIB)
+#LIB_FSPATH=$(GOPATH)/src/$(LIB)
+LIB_FSPATH=/Users/dyan/Sites/Clients/winwisely.org/web/source/$(LIB)
+>>>>>>> dev
 
 
 
@@ -60,8 +68,18 @@ dep:
 	brew cask install google-cloud-sdk
 
 modify:
-	# This invokes the monster modification script
-	./myscript.py
+	# This is the monester modification script.
+
+	# delete all LE stuff we dont want
+	# - languages other then EN
+
+	# copy our markdown in to the LE file system path
+	# - copy into the various place needed
+	# google analytics
+
+	## logos, images, favicon.
+
+	## Please see Import.py !!
 
 
 ### deploy ( not using )
@@ -77,7 +95,7 @@ deploy-gc:
 	#cd $(LIB_FSPATH) && hugo deploy -h
 
 # Deploy to Firebase ( using this for ease for now )
-FB_PROJ_ID=winwisely-letsencrypt-web
+FB_PROJ_ID=winwisely-web-letencrypt
 FB_PROJ_CONSOLEURL=https://console.firebase.google.com/project/$(FB_PROJ_ID)
 deploy-fb:
 	# 1. ONE TIME: make the project here:https://console.firebase.google.com/

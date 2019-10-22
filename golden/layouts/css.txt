@@ -1,0 +1,159 @@
+<!-- Begin Home Custom -->
+<style>
+  .testimonials {
+    margin: 0 auto 30px auto;
+    padding: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.25);
+    position: relative;
+    font-size: .9em;
+    max-height: 400px;
+    overflow-x: auto;
+    max-width: 800px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .testimonials > div {
+    margin: 40px;
+  }
+  .testimonials p {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  h2 {
+    text-align: center;
+  }
+  hr {
+    margin: 30px 0;
+  }
+  .hero.tall .container {
+    top: 20px;
+    position: relative;
+    background-color: transparent !important;
+    border: 0 !important;
+    color: #fff !important;
+  }
+  .hero.tall .container h1,
+  .hero.tall .container span {
+    color: #fff !important;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(50,50,50,.8);
+  } 
+  .hero.tall .buttons.flex {
+    position: relative;
+    top: 20px;
+  }
+  .hero.tall .buttons.flex .dib {
+    background-color: rgba(254,254,254,0.7);
+  }
+  .hero.tall .container h1 span {
+    font-size:62px;
+  }
+  .page-content .wrapper {
+    margin-top: 0px;
+  }
+</style>
+<div class="home-content">
+<h2>Kickstarter + Peer-Bonding Meets Movement Organizing</h2>
+<p>Climate collapse is knocking on our door, and most of us know that something must be done to change the system that continues to destroy our home. </p>
+<p>History has repeatedly shown that to win the biggest battles for systematic social change takes massive nonviolent civil resistance. This time it’s a matter of life or death on this planet and action is needed ASAP. Voting is now totally insufficient.</p>
+<p>To defeat our catastrophic climate collapse and horrific species extinction trajectories 
+  will take lots more than big protests. It will take several million volunteers—though a total of only about 2% of the general public— willing to risk arrest and/or engage in massive long-lasting strikes.</p>
+<p>This will take courage. However, without brilliant organization this seed for change is likely to go to waste. </p>
+<p>Organizations like Sunrise Movement, Extinction Rebellion, and FridaysforFuture have given us hope in the power of people organizing. They have shown us that we CAN come together to make waves and have our voices heard. To speak on behalf of all beings and the planet. </p>
+<p>We saw that the current momentum was not matching the urgency for change, so we created WinWisely.</p>
+<p>
+    WinWisely is a one stop app that allows you to easily get involved in a climate action near you! Whether it be standing on the frontline, helping someone get to the event, or lifting the vibes by throwing an afterparty, we can help you fight in the most important battle of our time. 
+  </p>
+<hr>
+<h2><a href="/how-it-works">How does WinWisely actually work?</a></h2>
+<center>
+<a href="/how-it-works"><img src="/wwimages/how-it-works/new-phone-demo.png"/></a>
+</center>
+<hr>
+<h2>Testimonials</h2>
+<div class="testimonials">
+<div>
+<p>“The most innovative and needed app I've yet seen, and I vet 10 app proposals on average per day!”
+      <br><sub>— Ed Bell, Head of tech innovation vetting for Leonardo DiCaprio's foundation</sub></br></p>
+</div>
+<div>
+<p>“Absolutely Awesome! WinWisely makes it possible for virtually everyone to get involved at some level.”
+      <br><sub>— Dolores Huerta, Cofounder of United Farm Workers; President of Dolores Huerta Foundation</sub></br></p>
+</div>
+<div>
+<p>So the unique and brilliant thing about WinWisely is that it provides a simple and quick way for a campaign to ID not only much larger numbers of potential volunteers willing to do NVDA (or in an electoral version, other major time-consuming, albeit legal activities), but to ID the barriers for each such potential volunteer, which if removed, and at usually no cost,  would massively improve numbers able to be recruited and committed.
+      <br><sub>— Wade Rathke, Chief Organizer of ACORN International, and founder of ACORN, once largest most effective community organizing operation in the USA</sub></br></p>
+</div>
+<div>
+<p>“After viewing the WinWisely demo, I'm sold. I love not just the crowdacting tool, but the social rewards and peer-bonding tools as well, which might be even more important for electoral campaigns than the crowdacting. I can't wait for them to get the funding they need so we can beta test this to help our own campaign win back Dem control of the NY State Senate.”
+      <br><sub>— Blake Morris, Democratic candidate for NY State Senate</sub></br></p>
+</div>
+<div>
+<p>“Loved the WinWisely demo! Wish it was coded and we had it a month ago! I especially like its advanced features for creating peer bonds and thereby its power to engage more people and paste, and at the same time, to thereby reduce the flake out problem. Its social rewards features is also a great idea.”
+      <br><sub>— Michael Carter, Deputy Campaign Manager for Ocasio2018 (NY 14th Congressional District/ Bronx and Queens)</sub></br></p>
+</div>
+<div>
+<p>“I am excited about the potential of WinWisely to significantly improve the recruitment and commitment powers of leading progressive organizations today.”
+      <br><sub>— Josh Nussbaum, Senior Data Advisor, Indivisible National</sub></br></p>
+</div>
+<div>
+<p>“WinWisely is the only solution I've seen that would enable us to recruit and support the numbers of canvassers and phone bankers we need to win the strong election protection legislative victories we urgently need in every state to save democracy before it's too late.”
+      <br><sub>— John Brakey, Executive Director, AUDIT-AZ</sub></br></p>
+</div>
+<div>
+<p>“Brilliant and Simple!”
+      <br><sub>— Joel Segal, Co-Director of North Carolinians for Clean Energy</sub></br></p>
+</div>
+<div>
+<p>“For me, organizing and moving people through leadership has always been for me about one-on-one engagement. So, I really like this [WinWisely], because it seems that the human interaction doesn't go away. It's a tech tool that works with organizers. I also like it because there are a lot of people who self-select as activists but have no idea how to get involved.”
+      <br><sub>— Walker Foley, Southern California Organizer, Food &amp; Water Watch</sub></br></p>
+</div>
+<div>
+<p>“Fantastic idea! Much needed. I'll start making some introductions for you.”
+      <br><sub>— Wesley Clark Jr.</sub></br></p>
+</div>
+<div>
+<p>“WinWisely's unique crowdacting functionality is a clever use of technology to amass the activists we need to advocate for and pass strong climate change legislation. We really like the simple, user-friendly design... We would be eager to try it out as soon as the software is ready and available. We believe the app could help us significantly to identify new activists in the San Diego area, and their specific interest in specific campaigns such as climate action plans, adoption of community choice energy, and keeping oil in the ground.”
+      <br><sub>— Joint Statement, San Diego 350 Steering Committee</sub></br></p>
+</div>
+<div>
+<p>“WinWisely is an innovative app that I think has the power to change the way we approach and support rapid mobilization of people in-person on a range of social justice issues. The design team is refreshingly open to suggestions and looking to build a useful product for social justice leaders of the day.”
+      <br><sub>— Aditi Juneja, Co-Founder of ResistanceManual.org, OurStates, and the Self Care Sundays Podcast</sub></br></p>
+</div>
+<div>
+<p>“In a state like Colorado, with a huge battle fighting the oil and gas industries encroachment on our health and homes, Win Wisely could be a fantastic tool to help communities on the front lines stay engaged and motivated for the long-haul. Frankly, I wish we had this application [WinWisely] last summer to better be able to recruit the petition gatherers we needed, and then, had we been successful in getting on the ballot, the massive numbers of canvassers &amp; phone bankers we'd then need to pass the two anti-fracking initiatives.”
+      <br><sub>— Lisa Trope, Senior Colorado Organizer, Food &amp; Water Watch</sub></br></p>
+</div>
+<div>
+<p>“Exactly what the progressive movement needs to expand our capacity for major victories, channeling the frustrated energy that saturates anyone with a conscious these days and guiding them to action.”
+      <br><sub>— Greg Schwedock, IT head for TheClimateMobilization</sub></br></p>
+</div>
+<div>
+<p>“This application has the potential to raise the effectiveness of involving people into the most important struggle of our times: stopping the fossil fuel monster from destroying our home planet…It can also be an important step towards taking political power back from corporate elites into the hands of the people.”
+      <br><sub>— Kjell Kühne, Leave it in the Ground Initiative (LINGO)</sub></br></p>
+</div>
+<div>
+<p>“WinWisely is very thorough and offers solutions and support for many different aspects of how to run winning campaigns in the Medicare For All movement. I'm excited to make introduction to some national organizers.”
+      <br><sub>— Katie Robbins, Executive Director, PNHPNY (Physicians for a National Health Program-New York Metro Chapter)</sub></br></p>
+</div>
+<div>
+<p>“We can see how Win Wisely's crowd acting and anti-flake-out functionalities could be a uniquely valuable organizing toolset for many of the collective actions needed to confront policies that threaten public health, fracking in particular. The entrenched interests promoting fracking in Pennsylvania are formidable. So we welcome a tool that could be used to mobilize many more volunteers than usual to rally against pipelines and fracking, especially health professionals who are our target group. And therefore we are open to trying out WinWisely once it is on line and free of bugs as an organizing tool for PSR Philadelphia and suspect it will become a valuable as well as for lots of groups fighting fracking in PA.”
+      <br><sub>— Walter Tsau, Executive Director, Physicians for Social Responsibility-Philadelphia</sub></br></p>
+</div>
+<div>
+<p>“The world is ripe for an app like this if you get it right. It seems like you are pursuing a really productive vein.”
+      <br><sub>— Dan Sherrell, Campaign Coordinator, NY Renews</sub></br></p>
+</div>
+<div>
+<p>“Really cool. This could be really helpful.”
+      <br><sub>— Micah Parkin, Director 350Colorado</sub></br></p>
+</div>
+<div>
+<p>“We really appreciate how WinWisely recognizes that the strength of an organization lies in both its numbers and how well organized it is. So, we are really excited for the opportunity to beta test WinWisely for three reasons: 1) its well thought out platform helps organizers get better organized 2) it enables, for the first time ever, those people who wait until a movement hits critical mass before signing on to immediately self-identify and be drawn into the organization much faster, and 3) it cleverly allows those potential participants who want to be involved away from the front lines to participate in a variety of roles behind the scenes.”
+      <br><sub>— Pramilla Malick, Chair, Protect Orange County</sub></br></p>
+</div>
+</div>
+</hr></hr></div>
+<!-- End Home Custom -->

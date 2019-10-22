@@ -1,0 +1,24 @@
+{
+  "name": "css-compiler",
+  "version": "1.0.0",
+  "description": "compile sass and minify",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path src/github.com/letsencrypt/website/src/css src/github.com/letsencrypt/website/src/css/main.scss src/github.com/letsencrypt/website/static/css/main.min.css --output-style compressed",
+    "watch-css": "nodemon -e src/github.com/letsencrypt/website/src/css -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/winwisely99/web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/winwisely99/web/issues"
+  },
+  "homepage": "https://github.com/winwisely99/web#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.4"
+  }
+}
