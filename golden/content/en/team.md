@@ -31,7 +31,7 @@ Rosie brings the team together with her communication skills and empathic reason
 
 ### **Dyan Bitan, UI/UX Designer**
 
-Dyan has over 8 years of experience as a front-end web developer and is now traveling the world as a freelancer.  She has worked on projects for Disney Infinity, Marvel XP, Family Guy, Pokemon, and IBM.  Her current focus is to use her resourcefulness and technical skills to help others get their soul-aligned services or businesses online.  
+Dyan has over 13 years of experience as a front-end web developer and is now traveling the world as a freelancer.  She has worked on projects for Disney Infinity, Marvel XP, Family Guy, Pokemon, and IBM.  Her current focus is to use her resourcefulness and technical skills to help others get their soul-aligned services or businesses online.  
 
 ### **Kerre Dubinsky, Cofounder & Chief Native App Developer** 
 

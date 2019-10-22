@@ -13,6 +13,4 @@ menu:
 
 ## Ready to see where and how you can help save the planet?
 
-Download the **WinWisely** app on your mobile and on your desktop now.
-
-**Links to downloads for devices 
+Check back to download the **WinWisely** app on your mobile and on your desktop soon!

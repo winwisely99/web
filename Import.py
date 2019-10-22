@@ -27,19 +27,19 @@ def placeDirectory(nameDir, srcDir, destDir):
   else:
     shutil.rmtree(destDir)
     shutil.copytree(srcDir,destDir)
-  print(nameDir + 'directory updated successfully!')
+  print(nameDir + ' directory updated successfully!')
 
 # Delete directory
 def deleteDirectory(nameDir,rmDir):
   if os.path.exists(rmDir):
     shutil.rmtree(rmDir)
-    print(nameDir + 'directory deleted successfuly!')
+    print(nameDir + ' directory deleted successfuly!')
 
 # Copy file
 def placeFile(nameFile, srcFile, destFile):
   from shutil import copyfile
   shutil.copyfile(srcFile,destFile)
-  print(nameFile + 'file updated successfully!')
+  print(nameFile + ' file updated successfully!')
 
 # Replace strings in file
 def replaceString(file, oldLine, newLine):
@@ -83,17 +83,17 @@ def writeToLine(lines, lineNum, appendText):
 # Replace the Golden WW IMAGE dir into the LE 'static' dir
 srcImages = 'golden/wwimages'
 destImages = leRoot + 'static/wwimages'
-placeDirectory('wwimages',srcImages,destImages)
+placeDirectory('Images',srcImages,destImages)
 
 # Replace the Golden LE CONTENT/EN dir with the WW CONTENT/EN dir only
 srcContent = 'golden/content/en'
 destContent = leRoot + 'content/en'
-placeDirectory('content',srcContent,destContent)
+placeDirectory('Content',srcContent,destContent)
 
 # Replace the Golden LE CONFIG dir with the WW content dir
 srcConfig = 'golden/config'
 destConfig = leRoot + 'config'
-placeDirectory('content',srcConfig,destConfig)
+placeDirectory('Config',srcConfig,destConfig)
 
 # Delete LE git directory, it doesnt need to be there
 gitDir = leRoot + '.git'

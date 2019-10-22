@@ -96,7 +96,9 @@ If you’d like to use the WinWisely Marks in a way that’s not covered by this
 
 ## Files
 
-### WinWisely Standard
+Coming soon!
+
+<!-- ### WinWisely Standard
 
 Our standard logo and text. Outside of a few exceptions, this is the default, go-to version.
 
@@ -115,4 +117,4 @@ The wide version of our logo and text. Use this in contexts where vertical space
 Our logo alone. Use this only when the "WinWisely" word mark is clearly visible or has been well established elsewhere on the page or in the design. (When in doubt, use a different format.)
 
 <p><img src="/images/le-logo-lockonly.png" alt="lock only logo" height=125></p>
-<p><a href="/images/le-logo-lockonly.eps">EPS</a> <a href="/images/le-logo-lockonly.svg">SVG</a> <a href="/images/le-logo-lockonly.png">PNG</a>
+<p><a href="/images/le-logo-lockonly.eps">EPS</a> <a href="/images/le-logo-lockonly.svg">SVG</a> <a href="/images/le-logo-lockonly.png">PNG</a> -->
