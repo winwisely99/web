@@ -1,0 +1,14 @@
+[en]
+title = "WinWisely.org - Help Scale Courage Now"
+contentDir = "content/en"
+languageName ="English"
+languageCode= "en-us"
+#if colon ":" must be prefixed with a space : "&nbsp;" (example in [fr])
+beforeColon= ""
+# Weight used for sorting. (alphabetical order using languageCode, with English first)
+weight = 10
+description = """
+  WinWisely is a free, mobile friendly, open source, volunteer recruitment app that aims to help climate justice campaigns to organize and commit strikers on a mass scale. 
+"""
+
+

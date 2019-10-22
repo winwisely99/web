@@ -1,0 +1,15 @@
+[[main]]
+name = "How It Works"
+weight = 20
+identifier = "how-it-works"
+url = "/how-it-works/"
+[[main]]
+name = "Donate"
+weight = 40
+identifier = "donate"
+url = "/donate/"
+[[main]]
+name = "About Us"
+weight = 50
+identifier = "about"
+url = "/about/"
