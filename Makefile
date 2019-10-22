@@ -61,7 +61,7 @@ dep:
 
 modify:
 	# This invokes the monster modification script
-	./myscript.py
+	./Import.py
 
 
 ### deploy ( not using )
