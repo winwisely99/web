@@ -64,8 +64,8 @@ def deleteElement(file, tag, selector, value):
       f.write(newHtml)
 
 # Append data to end of file
-def appendToFile(resources, file, content):
-  with open(resources) as f:
+def appendToFile(source, file, content):
+  with open(source) as f:
     soup = BeautifulSoup(f, 'html.parser')
   with open(file, 'a') as f:
     f.write(content)
