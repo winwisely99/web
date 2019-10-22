@@ -5,13 +5,14 @@
 # SOURCE
 # https://github.com/letsencrypt/website
 
-#GOPATH=[your own project path]
+#Change this before proceding to reflect environment
+GOPATH=/Users/dyan/Sites/Clients/winwisely.org/web
+
 LIB_NAME=website
-LIB=github.com/letsencrypt/$(LIB_NAME)
+LIB=source/github.com/letsencrypt/$(LIB_NAME)
 LIB_BRANCH=dev
 #LIB_BRANCH=flutter_web
-#LIB_BRANCH=master
-#LIB_FSPATH=$(GOPATH)/source/$(LIB)
+LIB_FSPATH=$(GOPATH)/$(LIB)
 
 
 
@@ -83,10 +84,11 @@ deploy-fb:
 	# 1. ONE TIME: make the project here:https://console.firebase.google.com/
 	# web console:  https://console.firebase.google.com/project/winwisely-web-letencrypt/overview
 	#brew install firebase-cli
+
 	#firebase init 
 
 	firebase login --no-localhost
 	
-	# iterate...
 	cd $(LIB_FSPATH) & hugo
-	cp $(LIB_FSPATH)/public ./public
+	cp -R $(LIB_FSPATH)/public ./public
+	firebase deploy
