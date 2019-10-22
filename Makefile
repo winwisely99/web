@@ -9,7 +9,7 @@
 GOPATH=/Users/dyan/Sites/Clients/winwisely.org/web
 
 LIB_NAME=website
-LIB=source/github.com/letsencrypt/$(LIB_NAME)
+LIB=resources/github.com/letsencrypt/$(LIB_NAME)
 LIB_BRANCH=dev
 #LIB_BRANCH=flutter_web
 LIB_FSPATH=$(GOPATH)/$(LIB)
@@ -90,5 +90,6 @@ deploy-fb:
 	firebase login --no-localhost
 	
 	cd $(LIB_FSPATH) & hugo
+	rm -R ./public
 	cp -R $(LIB_FSPATH)/public ./public
 	firebase deploy

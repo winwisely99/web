@@ -12,8 +12,8 @@ Super Duper Importer
 # Paths and Directories
 ###################################
 
-leRoot = 'source/github.com/letsencrypt/website/'
-leImages = 'source/github.com/letsencrypt/website/static/images/'
+leRoot = 'resources/github.com/letsencrypt/website/'
+leImages = 'resources/github.com/letsencrypt/website/static/images/'
 goldenImages = '/wwimages/'
 
 ###################################
@@ -64,8 +64,8 @@ def deleteElement(file, tag, selector, value):
       f.write(newHtml)
 
 # Append data to end of file
-def appendToFile(source, file, content):
-  with open(source) as f:
+def appendToFile(resources, file, content):
+  with open(resources) as f:
     soup = BeautifulSoup(f, 'html.parser')
   with open(file, 'a') as f:
     f.write(content)
