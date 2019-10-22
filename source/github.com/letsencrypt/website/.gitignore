@@ -3,6 +3,6 @@ _site/
 .jekyll-metadata
 js/*.tsv
 Gemfile.lock
-public/
+# public/
 nohup.out
 /node_modules
