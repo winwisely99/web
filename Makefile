@@ -63,6 +63,14 @@ dep:
 	## gcloud
 	brew cask install google-cloud-sdk
 
+	## python ( https://docs.python-guide.org/starting/install3/osx/)
+	
+	brew install python
+	# python3 --version
+	
+	# pip
+	pip3 install BeautifulSoup4
+
 modify:
 	# This invokes the monster modification script
 	./Import.py
