@@ -23,10 +23,10 @@ We'll be open source & free to most nonprofits and expect to play a major role t
 
 ### **AVAILABLE POSITIONS AT WINWISELY:**
 
-- [PT Project Manager](/careers/project-manager) (option to combine with Director/User Testing)
-- [PT/FT UI/UX Designer](/careers/ui-designer) (possible CXO)
-- [PT/FT Director of User-Testing](/careers/user-testing) (Co-Founder)
 - [PT Senior or Near Senior level Golang Web App Developer](/careers/web-developer)
+- [PT/FT Frontend Flutter Developer/UI Designer](/careers/ui-designer) (possible CXO)
+- [PT Project Manager](/careers/project-manager) (option to combine with Director/User Testing)
+- [PT/FT Director of User-Testing](/careers/user-testing) (Co-Founder)
 - [PT/FT Marketing Director](/careers/marketing-director) (Co-Founder)
 
 ### **CURRENT STATUS:**
@@ -43,6 +43,6 @@ We'll be open source & free to most nonprofits and expect to play a major role t
 
   * Product director (defacto Chief Innovation Officer) is PhD psychologist and original founder and CEO of CoupleWise.com, which is expected to be serving 100-200,000 couples by June 2020,  for which he was often the PM as well. CoupleWise has won two national and two international startup awards.
 
-  * Only $25,000 available so far for development and testing, but finding new major donor leads every week, and currently being considered by two foundations for $50k each. 
+  * Only $25,000 available so far for development and testing, but finding new major donor leads every week, and currently being considered by two foundations for $20k and $80K. 
 
   * Answers to most questions can be found on [our FAQ](https://bit.ly/WinWiselyFAQ)

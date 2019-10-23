@@ -10,6 +10,8 @@
 #GOPATH=/Users/dyan/Sites/Clients/winwisely.org/web
 # joe
 #GOPATH=/Users/apple/workspace/go/src/github.com/winwisely99/web
+# rosie
+GOPATH=/Users/rosiehoberg/workspace/winwisely/web
 
 LIB_NAME=website
 LIB=resources/github.com/letsencrypt/$(LIB_NAME)

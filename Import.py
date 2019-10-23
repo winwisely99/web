@@ -278,6 +278,3 @@ replaceString(indexPartial, oldButtonText, newButtonText)
 
 
 
-
-
-print "done"
