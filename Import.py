@@ -120,7 +120,7 @@ placeFile('Favicon', srcFavicon, destFavicon)
 # Replace logo and alt text
 headerHtml = leRoot + 'layouts/partials/header.html'
 oldLogo = '/images/letsencrypt-logo-horizontal.svg'
-newLogo = goldenRoot + '/images/logo-main.png'
+newLogo = '/images/logo-main.png'
 oldAlt = 'Let\'s Encrypt'
 newAlt = 'WinWisely'
 replaceString(headerHtml, oldLogo, newLogo)
@@ -132,14 +132,14 @@ deleteElement(headerHtml, 'div', 'class', 'linux-foundation-link')
 # Replace banner on homepage
 mainCss = leRoot + 'static/css/main.min.css'
 oldBanner = '/images/3.jpg'
-newBanner = '..' + goldenRoot + 'images/1-dark.jpg'
+newBanner = '/images/1-dark.jpg'
 replaceString(mainCss, oldBanner, newBanner)
 
 # Replace banner on child pages
 heroHtml = leRoot + 'layouts/partials/hero.html'
-oldHero = 'images/%d.jpg'
-newHero = goldenRoot +'images/%d.jpg'
-replaceString(heroHtml, oldHero, newHero)
+# oldHero = 'images/%d.jpg'
+# newHero = 'images/%d.jpg'
+# replaceString(heroHtml, oldHero, newHero)
 
 # Change banner text
 i18nEN = leRoot + 'i18n/en.toml'
