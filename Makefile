@@ -7,7 +7,7 @@
 
 #Change this before proceding to reflect environment
 # dyan
-GOPATH=/Users/dyan/Sites/Clients/winwisely.org/web
+#GOPATH=/Users/dyan/Sites/Clients/winwisely.org/web
 # joe
 #GOPATH=/Users/apple/workspace/go/src/github.com/winwisely99/web
 
