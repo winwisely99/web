@@ -12,9 +12,10 @@ Super Duper Importer
 # Paths and Directories
 ###################################
 
+goldenRoot = 'golden/'
 leRoot = 'resources/github.com/letsencrypt/website/'
 leImages = 'resources/github.com/letsencrypt/website/static/images/'
-goldenImages = '/wwimages/'
+
 
 ###################################
 # Main Functions
@@ -39,7 +40,6 @@ def deleteDirectory(nameDir,rmDir):
 def placeFile(nameFile, srcFile, destFile):
   from shutil import copyfile
   shutil.copyfile(srcFile,destFile)
-  print(nameFile + ' file updated successfully!')
 
 # Replace strings in file
 def replaceString(file, oldLine, newLine):
@@ -80,10 +80,16 @@ def writeToLine(lines, lineNum, appendText):
 # Directory Structure
 ###################################
 
-# Replace the Golden WW IMAGE dir into the LE 'static' dir
-srcImages = 'golden/wwimages'
-destImages = leRoot + 'static/wwimages'
-placeDirectory('Images',srcImages,destImages)
+# Copy the Golden IMAGE files into the LE 'static' dir
+src = goldenRoot + 'images/'
+dest = leImages
+srcFiles = os.listdir(src)
+
+for file in srcFiles:
+  srcFile = os.path.join(src, file)
+  destFile = os.path.join(dest, file)
+  shutil.copyfile(srcFile, destFile)
+  print(file + ' updated successfully!')
 
 # Replace the Golden LE CONTENT/EN dir with the WW CONTENT/EN dir only
 srcContent = 'golden/content/en'
@@ -105,7 +111,7 @@ deleteDirectory('LE Git folder',gitDir)
 ###################################
 
 # Replace file favicon
-srcFavicon = 'golden/wwimages/favicon.ico'
+srcFavicon = 'golden/images/favicon.ico'
 destFavicon = leRoot + 'static/favicon.ico'
 placeFile('Favicon', srcFavicon, destFavicon)
 
@@ -114,7 +120,7 @@ placeFile('Favicon', srcFavicon, destFavicon)
 # Replace logo and alt text
 headerHtml = leRoot + 'layouts/partials/header.html'
 oldLogo = '/images/letsencrypt-logo-horizontal.svg'
-newLogo = goldenImages + 'logo-main.png'
+newLogo = goldenRoot + '/images/logo-main.png'
 oldAlt = 'Let\'s Encrypt'
 newAlt = 'WinWisely'
 replaceString(headerHtml, oldLogo, newLogo)
@@ -126,13 +132,13 @@ deleteElement(headerHtml, 'div', 'class', 'linux-foundation-link')
 # Replace banner on homepage
 mainCss = leRoot + 'static/css/main.min.css'
 oldBanner = '/images/3.jpg'
-newBanner = '..' + goldenImages + 'banners/1-dark.jpg'
+newBanner = '..' + goldenRoot + 'images/1-dark.jpg'
 replaceString(mainCss, oldBanner, newBanner)
 
 # Replace banner on child pages
 heroHtml = leRoot + 'layouts/partials/hero.html'
 oldHero = 'images/%d.jpg'
-newHero = goldenImages +'banners/%d.jpg'
+newHero = goldenRoot +'images/%d.jpg'
 replaceString(heroHtml, oldHero, newHero)
 
 # Change banner text
@@ -263,6 +269,15 @@ newButtonText = 'home_hero_donate'
 
 replaceString(indexPartial, oldButtonLink, newButtonLink)
 replaceString(indexPartial, oldButtonText, newButtonText)
+
+
+
+
+
+
+
+
+
 
 
 print "done"
