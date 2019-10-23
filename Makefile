@@ -6,15 +6,16 @@
 # https://github.com/letsencrypt/website
 
 #Change this before proceding to reflect environment
+
 # dyan
-#GOPATH=/Users/dyan/Sites/Clients/winwisely.org/web
+GOPATH=/Users/dyan/Sites/Clients/winwisely.org
 # joe
 #GOPATH=/Users/apple/workspace/go/src/github.com/winwisely99/web
 # rosie
-GOPATH=/Users/rosiehoberg/workspace/winwisely/web
+#GOPATH=/Users/rosiehoberg/workspace/winwisely/web
 
 LIB_NAME=website
-LIB=resources/github.com/letsencrypt/$(LIB_NAME)
+LIB=resources/$(LIB_NAME)
 LIB_BRANCH=dev
 #LIB_BRANCH=flutter_web
 LIB_FSPATH=$(GOPATH)/$(LIB)
@@ -109,7 +110,8 @@ deploy-fb:
 
 	firebase login --no-localhost
 	
-	cd $(LIB_FSPATH) & hugo
+	cd $(LIB_FSPATH)
+	hugo
 	rm -R ./public
 	cp -R $(LIB_FSPATH)/public ./public
 	firebase deploy
