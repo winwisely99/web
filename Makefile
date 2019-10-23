@@ -6,7 +6,10 @@
 # https://github.com/letsencrypt/website
 
 #Change this before proceding to reflect environment
-GOPATH=/Users/dyan/Sites/Clients/winwisely.org/web
+# dyan
+#GOPATH=/Users/dyan/Sites/Clients/winwisely.org/web
+# joe
+GOPATH=/Users/apple/workspace/go/src/github.com/winwisely99/web
 
 LIB_NAME=website
 LIB=resources/github.com/letsencrypt/$(LIB_NAME)
@@ -56,9 +59,19 @@ dep:
 	brew install hugo
 
 	# firebase cli
+	brew install firebase-cli
 
 	## gcloud
 	brew cask install google-cloud-sdk
+
+	## python ( https://docs.python-guide.org/starting/install3/osx/)
+	brew install python
+	# python3 --version
+	
+	# pip
+	pip3 install BeautifulSoup4
+
+	
 
 modify:
 	# This invokes the monster modification script
@@ -78,14 +91,19 @@ deploy-gc:
 	#cd $(LIB_FSPATH) && hugo deploy -h
 
 # Deploy to Firebase ( using this for ease for now )
+
+# PROD
+PROD_FB_PROJ_ID=winwisely-getcourage-org
+# DEV
 FB_PROJ_ID=winwisely-letsencrypt-web
-FB_PROJ_CONSOLEURL=https://console.firebase.google.com/project/$(FB_PROJ_ID)
+
+FB_PROJ_CONSOLEURL=https://console.firebase.google.com/project/$(PROD_FB_PROJ_ID)
 deploy-fb:
 	# 1. ONE TIME: make the project here:https://console.firebase.google.com/
 	# web console:  https://console.firebase.google.com/project/winwisely-web-letencrypt/overview
-	#brew install firebase-cli
+	#
 
-	#firebase init 
+	firebase init 
 
 	firebase login --no-localhost
 	
