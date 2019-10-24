@@ -6,7 +6,7 @@ This is a small business template built with [Hugo](https://github.com/gohugoio/
 
 ## Getting started
 
-- Clone [WinWisely](https://github.com/winwisely99/web.git) into your local workspace
+Clone [WinWisely](https://github.com/winwisely99/web.git) into your local workspace
 
 - Run 'git fetch' and 'git checkout dev' to be on the correct branch
 
