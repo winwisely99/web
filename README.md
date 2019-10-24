@@ -34,7 +34,7 @@ From the checked out root for this project, type:
 Configuration/Customization
 ===========================
 
-All edits should be done in 'golden' folder only.
-Run 'Makefile modify' in console to see changes
+All content edits should be done in 'golden' folder only.
+Run 'Makefile modify' in console to see in local installation
 
 

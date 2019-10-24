@@ -13,8 +13,8 @@ Super Duper Importer
 ###################################
 
 goldenRoot = 'golden/'
-leRoot = 'resources/github.com/letsencrypt/website/'
-leImages = 'resources/github.com/letsencrypt/website/static/images/'
+leRoot = 'resources/website/'
+leImages = 'resources/website/static/images/'
 
 
 ###################################
@@ -270,7 +270,7 @@ newButtonText = 'home_hero_donate'
 replaceString(indexPartial, oldButtonLink, newButtonLink)
 replaceString(indexPartial, oldButtonText, newButtonText)
 
-
+print("Done")
 
 
 

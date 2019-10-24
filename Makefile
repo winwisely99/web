@@ -1,7 +1,3 @@
-
-
-
-
 # SOURCE
 # https://github.com/letsencrypt/website
 
@@ -19,7 +15,6 @@ LIB=resources/$(LIB_NAME)
 LIB_BRANCH=dev
 #LIB_BRANCH=flutter_web
 LIB_FSPATH=$(GOPATH)/$(LIB)
-
 
 
 print:
@@ -74,11 +69,10 @@ dep:
 	# pip
 	pip3 install BeautifulSoup4
 
-	
 
 modify:
 	# This invokes the monster modification script
-	./Import.py
+	python $(GOPATH)/Import.py
 
 
 ### deploy ( not using )
@@ -101,6 +95,7 @@ PROD_FB_PROJ_ID=winwisely-getcourage-org
 FB_PROJ_ID=winwisely-letsencrypt-web
 
 FB_PROJ_CONSOLEURL=https://console.firebase.google.com/project/$(PROD_FB_PROJ_ID)
+
 deploy-fb:
 	# 1. ONE TIME: make the project here:https://console.firebase.google.com/
 	# web console:  https://console.firebase.google.com/project/winwisely-web-letencrypt/overview
