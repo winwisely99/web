@@ -45,4 +45,4 @@ We'll be open source & free to most nonprofits and expect to play a major role t
 
   * Only $25,000 available so far for development and testing, but finding new major donor leads every week, and currently being considered by two foundations for $20k and $80K. 
 
-  * Answers to most questions can be found on [our FAQ](https://bit.ly/WinWiselyFAQ)
+  * Answers to most questions can be found on [our FAQ](/faqs)
