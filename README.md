@@ -22,10 +22,10 @@ Clone [WinWisely](https://github.com/winwisely99/web.git) into your local worksp
 
 By default it will try to replace:
 
--- config files
--- content i18n files
--- images
--- specific strings in the layout directory 
+  - config files
+  - content i18n files
+  - images
+  - specific strings in the layout directory 
 
 - Run 'make build' to build after importing WinWisely content into Let's Encrypt base
 
@@ -39,23 +39,23 @@ By default it will try to replace:
 
 The _golden_ directory contains:
 - _hidden
--- Let's Encrypt files that we are not using
+  - Let's Encrypt files that we are not using
 - config
--- General configuration settings
--- Languages
--- Menu
+  - General configuration settings
+  - Languages
+  - Menu
 - content
--- All the markdown files for the content.  Structure matters. (Please only add directories or files if intended for publishing.)
+  - All the markdown files for the content.  Structure matters. (Please only add directories or files if intended for publishing.)
 - images
--- These images will be copied into the build
+  - These images will be copied into the build
 - layouts
--- The files here are used for custom HTML, CSS, Script that need to be injected or appened into appropriate partials. (See Import.py for usage)
+  - The files here are used for custom HTML, CSS, Script that need to be injected or appened into appropriate partials. (See Import.py for usage)
 
 ## Deployment
 
 - Run 'make modify' to import all changes into Let's Encrypt base
 - Run 'make build' to rebuild Hugo
 - If first time deploying:
--- Run 'make deploy-fb-init'
+  - Run 'make deploy-fb-init'
 - Run 'make deploy-fb' to deploy to DEV server located at [WinWisely Firebase](https://winwisely-letsencrypt-web.firebaseapp.com/)
 
