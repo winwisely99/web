@@ -8,34 +8,36 @@ This is a small business template built with [Hugo](https://github.com/gohugoio/
 
 - Run 'git fetch' and 'git checkout dev' to be on the correct branch
 
-#### Runtime dependencies
- * `Python <http://python.org/>`_ 2.6, 2.7, ???
- * `Beautiful soup <http://www.crummy.com/software/BeautifulSoup/>`_ : Parsing and downloading of post images/attachments (python)
-
-#### Manually installing dependencies in ubuntu/debian, mac
-   ``$ apt-get install python-bs4 (for Python 2)``
-   
-   ``$ apt-get install python3-bs4 (for Python 3)``
-
-#### Manually installing dependencies in mac
-
-   ``$ brew install python-bs4``
-
-####  Manually installing Python dependencies using python package installer (pip)
-
-From the checked out root for this project, type:
-
-   ``$ sudo pip install --upgrade  -r Import_requirements.txt``
-
 ## Local Development
 
 *Makefile* has all the commands necessary for building, starting server, and deploying to Firebase.
 
 - Change $GOPATH variable in *Makefile* to match your local checked out directory of [WinWisely](https://github.com/winwisely99/web.git)
 
-- Run `$ make dep` to install all dependencies
+From the checked out root for this project, type:
 
-- Run `$ make git-clean'` to clean Let's Encrypt base directory when necessary
+- Run `$ make dep` to install all dependencies 
+   
+  #### Runtime dependencies
+  
+   * `Python <http://python.org/>`_ 2.6, 2.7, ???
+   * `Beautiful soup <http://www.crummy.com/software/BeautifulSoup/>`_ : Parsing and downloading of post images/attachments (python)
+
+  #### Manually installing dependencies in ubuntu/debian, mac
+  
+   ``$ apt-get install python-bs4 (for Python 2)``
+   
+   ``$ apt-get install python3-bs4 (for Python 3)``
+
+  #### Manually installing dependencies in mac
+
+   ``$ brew install python-bs4``
+
+  ####  Manually installing Python dependencies using python package installer (pip)
+  
+   ``$ sudo pip install --upgrade  -r Import_requirements.txt``
+
+- Run `$ make git-clean` to clean Let's Encrypt base directory when necessary
   - Run `$ make git-upstream` to pull Let's Encrypt repo if base directory is cleaned
 - Or run `$ make git-update` to update Let's Encrypt's base directory
 
