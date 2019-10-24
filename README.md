@@ -14,6 +14,7 @@ This is a small business template built with [Hugo](https://github.com/gohugoio/
 
 #### Manually installing dependencies in ubuntu/debian, mac
    ``$ apt-get install python-bs4 (for Python 2)``
+   
    ``$ apt-get install python3-bs4 (for Python 3)``
 
 #### Manually installing dependencies in mac
@@ -28,7 +29,7 @@ From the checked out root for this project, type:
 
 ## Local Development
 
-*Makefile* has all the commands necessary for building, starting server, and deploying to Firebase.  CD into the checked out directory of [WinWisely](https://github.com/winwisely99/web.git)
+*Makefile* has all the commands necessary for building, starting server, and deploying to Firebase.
 
 - Change $GOPATH variable in *Makefile* to match your local checked out directory of [WinWisely](https://github.com/winwisely99/web.git)
 
