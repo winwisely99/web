@@ -10,9 +10,9 @@ This is a small business template built with [Hugo](https://github.com/gohugoio/
 
 ## Local Development
 
-*Makefile* has all the commands necessary for building, starting server, and deploying to Firebase.
+*Makefile* has all the commands necessary for building, starting server, and deploying to Firebase and must be executed in root directory of [WinWisely](https://github.com/winwisely99/web.git)
 
-- Change $GOPATH variable in *Makefile* to match your local checked out path of [WinWisely](https://github.com/winwisely99/web.git)
+- Change $GOPATH variable in *Makefile* to match your local checked out path
 
 From the checked out root, type in terminal or command line:
 
@@ -50,7 +50,7 @@ From the checked out root, type in terminal or command line:
   - Run `$ make git-upstream` to pull Let's Encrypt repo if codebase directory is cleaned
 - Or run `$ make git-update` to update Let's Encrypt's codebase directory
 
-In checked out root of WinWisely:
+To import WinWisely content into the Let's Encrypt codebase:
 
 - Run `$ make modify` to invoke Import.py script. 
 
@@ -83,10 +83,12 @@ The _golden_ directory contains:
   - These images will be copied into the build
 - layouts:
   - The files here are used for custom HTML, CSS, Script that need to be injected or appended into appropriate partials. (See Import.py for usage)
+  
+After every change, add, or delete:
+- Run `$ make modify` to import all changes into Let's Encrypt base
 
 ## Deployment
 
-- Run `$ make modify` to import all changes into Let's Encrypt base
 - Run `$ make build` to rebuild Hugo
 - If first time deploying:
   - Run `$ make deploy-fb-init`
