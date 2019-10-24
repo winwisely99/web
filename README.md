@@ -46,21 +46,21 @@ From the checked out root, type in terminal or command line:
       ``$ sudo pip install --upgrade  -r Import_requirements.txt``
 
 
-- Run `$ make git-clean` to clean Let's Encrypt base directory when necessary
-  - Run `$ make git-upstream` to pull Let's Encrypt repo if base directory is cleaned
-- Or run `$ make git-update` to update Let's Encrypt's base directory
+- Run `$ make git-clean` to clean Let's Encrypt codebase directory when necessary
+  - Run `$ make git-upstream` to pull Let's Encrypt repo if codebase directory is cleaned
+- Or run `$ make git-update` to update Let's Encrypt's codebase directory
 
 In checked out root of WinWisely:
 
 - Run `$ make modify` to invoke Import.py script. 
 
-  By default it will try to replace:
+  By default it will replace, overwrite, or append to Let's Encrypt codebase:
     - config files
     - content i18n files
     - images
     - specific strings in the layout directory 
 
-- Run `$ make build` to build after importing WinWisely content into Let's Encrypt base
+- Run `$ make build` to build after importing WinWisely content into Let's Encrypt codebase
 
 - Run `$ make run` to start the server
 
