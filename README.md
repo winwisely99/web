@@ -4,19 +4,19 @@ This is a small business template built with [Hugo](https://github.com/gohugoio/
 
 ## Getting started
 
-`Download <https://github.com/winwisely99/web/>`_ or clone using ``$ git clone https://github.com/winwisely99/web.git``
+Download `[https://github.com/winwisely99/web/]https://github.com/winwisely99/web/)` or clone using ``$ git clone https://github.com/winwisely99/web.git``
 
 - Run `$ git fetch` and `$ git checkout dev` to be on the correct branch
 
 ## Local Development
 
-*Makefile* has all the commands necessary for building, starting server, and deploying to Firebase and must be executed in root directory of [WinWisely](https://github.com/winwisely99/web.git)
+*Makefile* has all the commands necessary for building, starting server, and deploying to Firebase and must be executed from the checked out root directory of [WinWisely](https://github.com/winwisely99/web.git)
 
-- Change $GOPATH variable in *Makefile* to match your local checked out path
+- Change **$GOPATH** variable in *Makefile* to match your local checked out path
 
-From the checked out root, type in terminal or command line:
+To install all dependencies:
 
-- Run `$ make dep` to install all dependencies 
+- Run `$ make dep` 
    
   - #### Runtime dependencies (if 'make dep' fails)
   
