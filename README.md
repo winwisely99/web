@@ -12,33 +12,35 @@ This is a small business template built with [Hugo](https://github.com/gohugoio/
  * `Python <http://python.org/>`_ 2.6, 2.7, ???
  * `Beautiful soup <http://www.crummy.com/software/BeautifulSoup/>`_ : Parsing and downloading of post images/attachments (python)
 
-#### Installing dependencies in ubuntu/debian
+#### Manually installing dependencies in ubuntu/debian, mac
    ``$ apt-get install python-bs4 (for Python 2)``
    ``$ apt-get install python3-bs4 (for Python 3)``
 
-#### Installing dependencies in mac
+#### Manually installing dependencies in mac
 
    ``$ brew install python-bs4``
 
-#### Installing Python dependencies using python package installer (pip)
+####  Manually installing Python dependencies using python package installer (pip)
 
 From the checked out root for this project, type:
 
-   ``sudo pip install --upgrade  -r Import_requirements.txt``
+   ``$ sudo pip install --upgrade  -r Import_requirements.txt``
 
 ## Local Development
 
 *Makefile* has all the commands necessary for building, starting server, and deploying to Firebase.  CD into the checked out directory of [WinWisely](https://github.com/winwisely99/web.git)
 
-- Change $GOPATH variable to match your local checked out directory of [WinWisely](https://github.com/winwisely99/web.git)
+- Change $GOPATH variable in *Makefile* to match your local checked out directory of [WinWisely](https://github.com/winwisely99/web.git)
 
-- Run 'make git-clean' to clean Let's Encrypt base directory when necessary
-  - Run 'make git-upstream' to pull Let's Encrypt repo if base directory is cleaned
-- Or run 'make git-update' to update Let's Encrypt's repo
+- Run `$ make dep` to install all dependencies
+
+- Run `$ make git-clean'` to clean Let's Encrypt base directory when necessary
+  - Run `$ make git-upstream` to pull Let's Encrypt repo if base directory is cleaned
+- Or run `$ make git-update` to update Let's Encrypt's repo
 
 In checked out root of WinWisely:
 
-- Run 'make modify' to invoke Import.py script. 
+- Run `$ make modify` to invoke Import.py script. 
 
   By default it will try to replace:
     - config files
@@ -46,11 +48,11 @@ In checked out root of WinWisely:
     - images
     - specific strings in the layout directory 
 
-- Run 'make build' to build after importing WinWisely content into Let's Encrypt base
+- Run `$ make build` to build after importing WinWisely content into Let's Encrypt base
 
-- Run 'make run' to start the server
+- Run `$ make run` to start the server
 
-- Run 'make open' to launch browser to see the build locally
+- Run `$ make open` to launch browser to see the build locally
 
 ## Modifying Content
 
@@ -72,9 +74,9 @@ The _golden_ directory contains:
 
 ## Deployment
 
-- Run 'make modify' to import all changes into Let's Encrypt base
-- Run 'make build' to rebuild Hugo
+- Run `$ make modify` to import all changes into Let's Encrypt base
+- Run `$ make build` to rebuild Hugo
 - If first time deploying:
-  - Run 'make deploy-fb-init'
-- Run 'make deploy-fb' to deploy build to Dev server located at [https://winwisely-letsencrypt-web.firebaseapp.com/](https://winwisely-letsencrypt-web.firebaseapp.com/)
+  - Run `$ make deploy-fb-init`
+- Run `$ make deploy-fb` to deploy build to Dev server located at [https://winwisely-letsencrypt-web.firebaseapp.com/](https://winwisely-letsencrypt-web.firebaseapp.com/)
 
