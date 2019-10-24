@@ -37,9 +37,6 @@ Dyan has over 13 years of experience as a front-end web developer and is now tra
 
 Though originally an attorney, Kerre now has more than 5 years of experience as both an IOS and Android native app developer with sterling references, and is a joy to work with.
 
-### **Ashraf Rahal, UI/UX Designer**
-
-Ashraf is a highly experienced UI and UX designer and advocate for social, environmental and economic systems change. Based in Europe he has been chief UI and UX designer for several multinational corporate clients, garnering A+ ratings. As the designer of Win Wisely, his job is to make it easy and engaging for folks to join up with causes one feels strongly about, and connect with others nearby to form communities of vision, and to create the sort of tipping point that we so urgently need for massive systems change.
 
 ### **Dan Newmark, Presentation Specialist** 
 
