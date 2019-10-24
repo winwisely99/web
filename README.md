@@ -12,7 +12,11 @@ Clone [WinWisely](https://github.com/winwisely99/web.git) into your local worksp
 
 - Change $GOPATH variable to match your local checked out directory of [WinWisely](https://github.com/winwisely99/web.git)
 
-- Run 'make git-clone' to clone Let's Encrypt's build into checked out directory of [WinWisely](https://github.com/winwisely99/web.git)
+- Run 'make git-clean' to clean Let's Encrypt base directory when necessary
+  - Run 'make git-upstream' to pull Let's Encrypt repo if base directory is cleaned
+- Or run 'make git-update' to update Let's Encrypt's repo
+
+Run 'make git-clone' to clone Let's Encrypt's build into checked out directory of [WinWisely](https://github.com/winwisely99/web.git)
 
 ## Local Development
 
