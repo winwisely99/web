@@ -14,14 +14,15 @@ This is a small business template built with [Hugo](https://github.com/gohugoio/
 
 - Change $GOPATH variable in *Makefile* to match your local checked out directory of [WinWisely](https://github.com/winwisely99/web.git)
 
-From the checked out root for this project, type:
+From the checked out root for this project, type in terminal or command line:
 
 - Run `$ make dep` to install all dependencies 
    
-  - #### Runtime dependencies
+  - #### Runtime dependencies (if 'make dep' fails)
   
-   - * `Python <http://python.org/>`_ 2.6, 2.7, ???
-   - * `Beautiful soup <http://www.crummy.com/software/BeautifulSoup/>`_ : Parsing and downloading of post images/attachments (python)
+   * `Python <http://python.org/>`_ 2.6, 2.7, ???
+   * `Beautiful soup <http://www.crummy.com/software/BeautifulSoup/>`_ : Parsing HTML/Text/Css files (python)
+   * `Firebase <https://firebase.google.com/>`
 
   - #### Manually installing dependencies in ubuntu/debian, mac
   
@@ -36,6 +37,7 @@ From the checked out root for this project, type:
   - ####  Manually installing Python dependencies using python package installer (pip)
   
       ``$ sudo pip install --upgrade  -r Import_requirements.txt``
+
 
 - Run `$ make git-clean` to clean Let's Encrypt base directory when necessary
   - Run `$ make git-upstream` to pull Let's Encrypt repo if base directory is cleaned
