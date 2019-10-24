@@ -12,7 +12,7 @@ This is a small business template built with [Hugo](https://github.com/gohugoio/
 
 *Makefile* has all the commands necessary for building, starting server, and deploying to Firebase.
 
-- Change $GOPATH variable in *Makefile* to match your local checked out directory of [WinWisely](https://github.com/winwisely99/web.git)
+- Change $GOPATH variable in *Makefile* to match your local checked out path of [WinWisely](https://github.com/winwisely99/web.git)
 
 From the checked out root for this project, type in terminal or command line:
 
@@ -23,6 +23,7 @@ From the checked out root for this project, type in terminal or command line:
    * `Python <http://python.org/>`_ 2.6, 2.7, ???
    * `Beautiful soup <http://www.crummy.com/software/BeautifulSoup/>`_ : Parsing HTML/Text/Css files (python)
    * `Firebase <https://firebase.google.com/>`
+   * `Hugo <https://gohugo.io/getting-started/installing/>`
 
   - #### Manually installing dependencies in ubuntu/debian, mac
   
@@ -31,8 +32,14 @@ From the checked out root for this project, type in terminal or command line:
       ``$ apt-get install python3-bs4 (for Python 3)``
 
   - #### Manually installing dependencies in mac
-
-      ``$ brew install python-bs4``
+  
+      ``$ brew install hugo``
+      
+      ``$ brew install firebase-cli``
+      
+      ``$ brew install python3``
+      
+      ``$ pip3 install BeautifulSoup4``      
 
   - ####  Manually installing Python dependencies using python package installer (pip)
   
