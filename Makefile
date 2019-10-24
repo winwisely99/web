@@ -99,17 +99,33 @@ FB_PROJ_CONSOLEURL=https://console.firebase.google.com/project/$(PROD_FB_PROJ_ID
 test:
 	cd $(LIB_FSPATH) & hugo
 
-deploy-fb:
+
+
+# Deploy to Firebase ( using this for ease for now )
+
+# TOGGLE environment:
+# PROD
+PROD_FB_PROJ_ID=winwisely-getcourage-org
+# DEV
+DEV_FB_PROJ_ID=winwisely-letsencrypt-web
+
+FB_PROJ_CONSOLEURL=https://console.firebase.google.com/project/$(PROD_FB_PROJ_ID)
+deplyo-fb-init:
 	# 1. ONE TIME: make the project here:https://console.firebase.google.com/
 	# web console:  https://console.firebase.google.com/project/winwisely-web-letencrypt/overview
-	#
 
 	firebase init 
 
+	# firebase login
 	firebase login --no-localhost
+
+deploy-fb:
 	
-	cd $(LIB_FSPATH)
-	hugo
+	
+	cd $(LIB_FSPATH) & hugo
 	rm -R ./public
 	cp -R $(LIB_FSPATH)/public ./public
 	firebase deploy
+
+
+
