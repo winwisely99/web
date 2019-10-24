@@ -56,5 +56,5 @@ The _golden_ directory contains:
 - Run 'make build' to rebuild Hugo
 - If first time deploying:
   - Run 'make deploy-fb-init'
-- Run 'make deploy-fb' to deploy to DEV server located at [WinWisely Firebase](https://winwisely-letsencrypt-web.firebaseapp.com/)
+- Run 'make deploy-fb' to deploy build to Dev server located at [https://winwisely-letsencrypt-web.firebaseapp.com/](https://winwisely-letsencrypt-web.firebaseapp.com/)
 
