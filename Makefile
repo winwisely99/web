@@ -4,7 +4,9 @@
 #Change this before proceding to reflect environment
 
 # dyan
-GOPATH=/Users/dyan/Sites/Clients/winwisely.org
+#GOPATH=/Users/dyan/Sites/Clients/winwisely.org
+
+GOPATH=/Users/dyan/Sites/Test/web
 # joe
 #GOPATH=/Users/apple/workspace/go/src/github.com/winwisely99/web
 # rosie
@@ -18,9 +20,6 @@ LIB_BRANCH=dev
 LIB_FSPATH=$(GOPATH)/$(LIB)
 LE_REPO=https://github.com/letsencrypt/website.git
 
-
-#/Users/dyan/Sites/Clients/winwisely.org/website
-
 print:
 	@echo
 	@echo LIB_NAME: $(LIB_NAME)
@@ -31,20 +30,16 @@ print:
 
 git-print:
 	cd $(LIB_FSPATH) && git status
-# git-clone:
-# 	mkdir -p $(LIB_FSPATH)
-# 	cd $(LIB_FSPATH) && cd .. && rm -rf $(LIB_NAME) && git clone https://git@$(LIB).git
-# 	cd $(LIB_FSPATH) && git checkout -b $(LIB_BRANCH)
 
-git-clone:
-	cd $(GOPATH) && git clone LE_REPO
-
-git-pull:
-	cd $(LIB_FSPATH) && git pull
 git-clean:
 	rm -rf $(LIB_FSPATH)
 
+git-upstream:
+	cd $(GOPATH)/resources && git clone $(LE_REPO)
 
+git-update:
+	cd $(LIB_FSPATH) && git pull origin master
+	
 code:
 	code $(LIB_FSPATH)
 
