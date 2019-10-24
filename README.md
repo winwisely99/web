@@ -45,6 +45,7 @@ To install all dependencies:
   
       ``$ sudo pip install --upgrade  -r Import_requirements.txt``
 
+To clean or update Let's Encrypt codebase:
 
 - Run `$ make git-clean` to clean Let's Encrypt codebase directory when necessary
   - Run `$ make git-upstream` to pull Let's Encrypt repo if codebase directory is cleaned
