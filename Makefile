@@ -10,12 +10,16 @@ GOPATH=/Users/dyan/Sites/Clients/winwisely.org
 # rosie
 #GOPATH=/Users/rosiehoberg/workspace/winwisely/web
 
+
 LIB_NAME=website
 LIB=resources/$(LIB_NAME)
 LIB_BRANCH=dev
 #LIB_BRANCH=flutter_web
 LIB_FSPATH=$(GOPATH)/$(LIB)
+LE_REPO=https://github.com/letsencrypt/website.git
 
+
+#/Users/dyan/Sites/Clients/winwisely.org/website
 
 print:
 	@echo
@@ -27,14 +31,19 @@ print:
 
 git-print:
 	cd $(LIB_FSPATH) && git status
+# git-clone:
+# 	mkdir -p $(LIB_FSPATH)
+# 	cd $(LIB_FSPATH) && cd .. && rm -rf $(LIB_NAME) && git clone https://git@$(LIB).git
+# 	cd $(LIB_FSPATH) && git checkout -b $(LIB_BRANCH)
+
 git-clone:
-	mkdir -p $(LIB_FSPATH)
-	cd $(LIB_FSPATH) && cd .. && rm -rf $(LIB_NAME) && git clone https://git@$(LIB).git
-	cd $(LIB_FSPATH) && git checkout -b $(LIB_BRANCH)
+	cd $(GOPATH) && git clone LE_REPO
+
 git-pull:
 	cd $(LIB_FSPATH) && git pull
 git-clean:
 	rm -rf $(LIB_FSPATH)
+
 
 code:
 	code $(LIB_FSPATH)
