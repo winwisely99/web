@@ -119,13 +119,15 @@ deplyo-fb-init:
 	# firebase login
 	firebase login --no-localhost
 
+deploy-fb-cosole:
+	# opens the web console.
+	open $(FB_PROJ_CONSOLEURL)
+
 deploy-fb:
-	
-	
+	# does the actual push deplyo to their server.
 	cd $(LIB_FSPATH) & hugo
 	rm -R ./public
 	cp -R $(LIB_FSPATH)/public ./public
 	firebase deploy
-
 
 
