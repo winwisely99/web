@@ -36,7 +36,7 @@ In checked out root of WinWisely:
 
 ## Modifying Content
 
-*All content changes, adding languages, modifying menu, etc. must be done in _golden_ directory.*
+**All content changes, adding languages, modifying menu, etc. must be done in _golden_ directory.**
 
 The _golden_ directory contains:
 - _hidden:
