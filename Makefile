@@ -41,14 +41,9 @@ code:
 
 run:
 	cd $(LIB_FSPATH) && hugo server -F
-build:
-	cd $(LIB_FSPATH) && hugo
-	ls -al $(LIB_FSPATH)/public
 
 open:
 	open http://localhost:1313/
-
-
 
 ###
 
@@ -74,6 +69,10 @@ modify:
 	# This invokes the monster modification script
 	python $(GOPATH)/Import.py
 
+build:
+	cd $(LIB_FSPATH) && hugo
+	ls -al $(LIB_FSPATH)/public
+
 
 ### deploy ( not using )
 GCLOUD_PROJ_ID=winwisely-web-example-letencrypt
@@ -87,24 +86,36 @@ deploy-gc:
 
 	#cd $(LIB_FSPATH) && hugo deploy -h
 
+
+
 # Deploy to Firebase ( using this for ease for now )
 
+# TOGGLE environment:
 # PROD
 PROD_FB_PROJ_ID=winwisely-getcourage-org
 # DEV
-FB_PROJ_ID=winwisely-letsencrypt-web
+DEV_FB_PROJ_ID=winwisely-letsencrypt-web
 
 FB_PROJ_CONSOLEURL=https://console.firebase.google.com/project/$(PROD_FB_PROJ_ID)
 
-
-deploy-fb:
+deploy-fb-init:
 	# 1. ONE TIME: make the project here:https://console.firebase.google.com/
 	# web console:  https://console.firebase.google.com/project/winwisely-web-letencrypt/overview
-	#
 
 	#firebase init 
-	#firebase login --no-localhost
-	
+	firebase init 
+
+	# firebase login
+	firebase login --no-localhost
+
+deploy-fb-console:
+	# opens the web console.
+	open $(FB_PROJ_CONSOLEURL)
+
+deploy-fb:
+	# does the actual push deploy to their server.
 	rm -R ./public
 	cp -R $(LIB_FSPATH)/public ./public
 	firebase deploy
+
+
