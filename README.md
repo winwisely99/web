@@ -12,9 +12,13 @@ This is a small business template built with [Hugo](https://github.com/gohugoio/
  * `Python <http://python.org/>`_ 2.6, 2.7, ???
  * `Beautiful soup <http://www.crummy.com/software/BeautifulSoup/>`_ : Parsing and downloading of post images/attachments (python)
 
-#### Installing dependencies in ubuntu/debian, mac terminal
+#### Installing dependencies in ubuntu/debian
+   ``$ apt-get install python-bs4 (for Python 2)``
+   ``$ apt-get install python3-bs4 (for Python 3)``
 
-   ``brew install python-bs4``
+#### Installing dependencies in mac
+
+   ``$ brew install python-bs4``
 
 #### Installing Python dependencies using python package installer (pip)
 
