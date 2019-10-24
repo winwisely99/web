@@ -1,5 +1,5 @@
 ---
-title: Frontend Flutter Developer/UI Designer CoFounder (Possible CXO)
+title: Frontend Flutter Developer and/or UI Designer CoFounder (Possible CXO)
 linkTitle: "UI/UX Designer CoFounder (Possible CXO)"
 slug: ui-designer
 top_graphic: 7
@@ -7,7 +7,7 @@ no_donate_footer: true
 lastmod: 2019-09-18
 ---
 
-**WANTED:** Frontend Flutter Developer/UI Designer CoFounder (Possible CXO)
+**WANTED:** Frontend Flutter Developer and/or UI Designer CoFounder (Possible CXO)
 
 **WHO YOU ARE:** You must be deeply concerned about what is happening to the planet and to society and have a huge yearning to use your talents to make a huge difference, even if it means temporarily major reduction in your salary, to make what could be the most important social change tool of 2019 and 2020, arguably “the absolutely most critical time in our species history” (Carl Sagan)  before it will be too late according to most scientific estimates.
 

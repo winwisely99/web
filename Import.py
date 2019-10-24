@@ -119,6 +119,7 @@ placeFile('Favicon', srcFavicon, destFavicon)
 
 # Replace logo and alt text
 headerHtml = leRoot + 'layouts/partials/header.html'
+footerHtml = leRoot + 'layouts/partials/footer.html'
 oldLogo = '/images/letsencrypt-logo-horizontal.svg'
 newLogo = '/images/logo-main.png'
 oldAlt = 'Let\'s Encrypt'
@@ -128,6 +129,9 @@ replaceString(headerHtml, oldAlt, newAlt)
 
 # Remove hideous foundation link
 deleteElement(headerHtml, 'div', 'class', 'linux-foundation-link')
+
+# Remove their LE GA link
+replaceString(footerHtml,'<script async src="https://www.googletagmanager.com/gtag/js?id=UA-56433935-1&aip=1"></script>','')
 
 # Replace banner on homepage
 mainCss = leRoot + 'static/css/main.min.css'

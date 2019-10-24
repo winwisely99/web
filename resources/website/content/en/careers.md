@@ -23,8 +23,8 @@ We'll be open source & free to most nonprofits and expect to play a major role t
 
 ### **AVAILABLE POSITIONS AT WINWISELY:**
 
-- [PT Senior or Near Senior level Golang Web App Developer](/careers/web-developer)
-- [PT/FT Frontend Flutter Developer/UI Designer](/careers/ui-designer) (possible CXO)
+- [PT Senior or Near Senior-Level Golang Web App Developer](/careers/web-developer)
+- [PT/FT Frontend Flutter Developer and/or UI Designer](/careers/ui-designer) (possible CXO)
 - [PT Project Manager](/careers/project-manager) (option to combine with Director/User Testing)
 - [PT/FT Director of User-Testing](/careers/user-testing) (Co-Founder)
 - [PT/FT Marketing Director](/careers/marketing-director) (Co-Founder)
