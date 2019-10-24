@@ -21,10 +21,10 @@ In checked out root of WinWisely:
 - Run 'make modify' to invoke Import.py script. 
 
 By default it will try to replace:
-- config files
-- content i18n files
-- images
-- specific strings in the layout directory 
+  - config files
+  - content i18n files
+  - images
+  - specific strings in the layout directory 
 
 - Run 'make build' to build after importing WinWisely content into Let's Encrypt base
 
