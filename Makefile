@@ -114,7 +114,7 @@ deploy-fb-console:
 
 deploy-fb:
 	# rebuilds hugo and copies output directory to root of deployment
-	cd $(LIB_FSPATH) && hugo
+	cd $(LIB_FSPATH) && hugo -D
 	ls -al $(LIB_FSPATH)/public
 	# does the actual push deploy to their server.
 	rm -R ./public
