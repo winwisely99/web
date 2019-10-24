@@ -6,7 +6,8 @@ This is a small business template built with [Hugo](https://github.com/gohugoio/
 
 Download `[https://github.com/winwisely99/web/]https://github.com/winwisely99/web/)` or clone using ``$ git clone https://github.com/winwisely99/web.git``
 
-- Run `$ git fetch` and `$ git checkout dev` to be on the correct branch
+- Run `$ git fetch`
+- Run `$ git checkout dev` to be on the correct branch
 
 ## Local Development
 
@@ -15,10 +16,10 @@ Download `[https://github.com/winwisely99/web/]https://github.com/winwisely99/we
 - Change **$GOPATH** variable in *Makefile* to match your local checked out path
 
 To install all dependencies:
-
+``
 - Run `$ make dep` 
    
-  - #### Runtime dependencies (if 'make dep' fails)
+  - #### Runtime dependencies (if `$ make dep` fails)
   
     - `Python <http://python.org/>`_ 2.6, 2.7, ???
     - `Beautiful soup <http://www.crummy.com/software/BeautifulSoup/>`_ : Parsing HTML/Text/Css files (python)
@@ -85,8 +86,8 @@ The _golden_ directory contains:
 - layouts:
   - The files here are used for custom HTML, CSS, Script that need to be injected or appended into appropriate partials. (See _Import.py_ for usage)
   
-After every change, add, or delete:
-- Run `$ make modify` to import all changes into Let's Encrypt codebase
+To import all changes, adds, or deletes from _golden_ folder into Let's Encrypt codebase:
+- Run `$ make modify` 
 
 ## Deployment
 
