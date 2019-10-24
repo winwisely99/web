@@ -14,7 +14,7 @@ This is a small business template built with [Hugo](https://github.com/gohugoio/
 
 - Change $GOPATH variable in *Makefile* to match your local checked out path of [WinWisely](https://github.com/winwisely99/web.git)
 
-From the checked out root for this project, type in terminal or command line:
+From the checked out root, type in terminal or command line:
 
 - Run `$ make dep` to install all dependencies 
    
