@@ -42,7 +42,7 @@ code:
 run:
 	cd $(LIB_FSPATH) && hugo server -F
 build:
-	cd $(LIB_FSPATH) && hugo server -D
+	cd $(LIB_FSPATH) && hugo
 	ls -al $(LIB_FSPATH)/public
 
 open:
@@ -102,9 +102,8 @@ deploy-fb:
 	# web console:  https://console.firebase.google.com/project/winwisely-web-letencrypt/overview
 	#
 
-	firebase init 
-
-	firebase login --no-localhost
+	#firebase init 
+	#firebase login --no-localhost
 	
 	rm -R ./public
 	cp -R $(LIB_FSPATH)/public ./public
