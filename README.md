@@ -35,7 +35,11 @@ From the checked out root for this project, type:
 
 - Run `$ make dep` to install all dependencies
 
+<<<<<<< HEAD
 - Run `$ make git-clean` to clean Let's Encrypt base directory when necessary
+=======
+- Run `$ make git-clean'` to clean Let's Encrypt base directory when necessary
+>>>>>>> dev
   - Run `$ make git-upstream` to pull Let's Encrypt repo if base directory is cleaned
 - Or run `$ make git-update` to update Let's Encrypt's repo
 
