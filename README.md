@@ -82,10 +82,10 @@ The _golden_ directory contains:
 - images:
   - These images will be copied into the build
 - layouts:
-  - The files here are used for custom HTML, CSS, Script that need to be injected or appended into appropriate partials. (See Import.py for usage)
+  - The files here are used for custom HTML, CSS, Script that need to be injected or appended into appropriate partials. (See _Import.py_ for usage)
   
 After every change, add, or delete:
-- Run `$ make modify` to import all changes into Let's Encrypt base
+- Run `$ make modify` to import all changes into Let's Encrypt codebase
 
 ## Deployment
 
