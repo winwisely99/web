@@ -96,8 +96,6 @@ FB_PROJ_ID=winwisely-letsencrypt-web
 
 FB_PROJ_CONSOLEURL=https://console.firebase.google.com/project/$(PROD_FB_PROJ_ID)
 
-test:
-	cd $(LIB_FSPATH) & hugo
 
 deploy-fb:
 	# 1. ONE TIME: make the project here:https://console.firebase.google.com/
@@ -108,8 +106,6 @@ deploy-fb:
 
 	firebase login --no-localhost
 	
-	cd $(LIB_FSPATH)
-	hugo
 	rm -R ./public
 	cp -R $(LIB_FSPATH)/public ./public
 	firebase deploy
