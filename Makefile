@@ -4,9 +4,8 @@
 #Change this before proceding to reflect environment
 
 # dyan
-#GOPATH=/Users/dyan/Sites/Clients/winwisely.org
+GOPATH=/Users/dyan/Sites/Clients/winwisely.org
 
-GOPATH=/Users/dyan/Sites/Test/web
 # joe
 #GOPATH=/Users/apple/workspace/go/src/github.com/winwisely99/web
 # rosie
@@ -87,10 +86,7 @@ deploy-gc:
 	gcloud projects create $(GCLOUD_PROJ_ID)
 	gcloud config set project $(GCLOUD_PROJ_ID)
 	gsutil mb gs://example.winwisely.org/
-
 	#cd $(LIB_FSPATH) && hugo deploy -h
-
-
 
 # Deploy to Firebase ( using this for ease for now )
 
