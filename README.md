@@ -4,7 +4,7 @@ This is a small business template built with [Hugo](https://github.com/gohugoio/
 
 ## Getting started
 
-`Download <https://github.com/winwisely99/web/dev>`_ or clone using ``git clone https://github.com/winwisely99/web.git``
+`Download <https://github.com/winwisely99/web/>`_ or clone using ``git clone https://github.com/winwisely99/web.git``
 
 - Run 'git fetch' and 'git checkout dev' to be on the correct branch
 
