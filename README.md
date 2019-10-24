@@ -4,9 +4,25 @@ This is a small business template built with [Hugo](https://github.com/gohugoio/
 
 ## Getting started
 
-Clone [WinWisely](https://github.com/winwisely99/web.git) into your local workspace
+`Download <https://github.com/winwisely99/web/dev>`_ or clone using ``git clone https://github.com/winwisely99/web.git``
 
 - Run 'git fetch' and 'git checkout dev' to be on the correct branch
+
+#### Runtime dependencies
+ * `Python <http://python.org/>`_ 2.6, 2.7, ???
+ * `Beautiful soup <http://www.crummy.com/software/BeautifulSoup/>`_ : Parsing and downloading of post images/attachments (python)
+
+#### Installing dependencies in ubuntu/debian, mac terminal
+
+   ``brew install python-bs4``
+
+#### Installing Python dependencies using python package installer (pip)
+
+From the checked out root for this project, type:
+
+   ``sudo pip install --upgrade  -r Import_requirements.txt``
+
+## Local Development
 
 *Makefile* has all the commands necessary for building, starting server, and deploying to Firebase.  CD into the checked out directory of [WinWisely](https://github.com/winwisely99/web.git)
 
@@ -15,8 +31,6 @@ Clone [WinWisely](https://github.com/winwisely99/web.git) into your local worksp
 - Run 'make git-clean' to clean Let's Encrypt base directory when necessary
   - Run 'make git-upstream' to pull Let's Encrypt repo if base directory is cleaned
 - Or run 'make git-update' to update Let's Encrypt's repo
-
-## Local Development
 
 In checked out root of WinWisely:
 
