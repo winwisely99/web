@@ -20,10 +20,10 @@ From the checked out root for this project, type in terminal or command line:
    
   - #### Runtime dependencies (if 'make dep' fails)
   
-   * `Python <http://python.org/>`_ 2.6, 2.7, ???
-   * `Beautiful soup <http://www.crummy.com/software/BeautifulSoup/>`_ : Parsing HTML/Text/Css files (python)
-   * `Firebase <https://firebase.google.com/>`
-   * `Hugo <https://gohugo.io/getting-started/installing/>`
+   - `Python <http://python.org/>`_ 2.6, 2.7, ???
+   - `Beautiful soup <http://www.crummy.com/software/BeautifulSoup/>`_ : Parsing HTML/Text/Css files (python)
+   - `Firebase <https://firebase.google.com/>`
+   - `Hugo <https://gohugo.io/getting-started/installing/>`
 
   - #### Manually installing dependencies in ubuntu/debian, mac
   
