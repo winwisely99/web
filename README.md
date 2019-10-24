@@ -1,40 +1,60 @@
-######
-WinWisely Squarespace-to-Hugo Migration Project
-######
+# WinWisely Squarespace-to-Hugo Migration Project
 
-Import.py is for migrating original WinWisely squarespace content into the Let's Encrypt Hugo Template `<https://github.com/letsencrypt/website>`
+This is a small business template built with [Hugo](https://github.com/gohugoio/hugo) based on [Let's Encrypt](https://github.com/letsencrypt) using content exported from Squarespace.  
 
-By default it will try to replace:
-- config files
-- content i18n files
-- images
-- specific strings in the layout directory
+## Getting started
 
-Getting started
-===============
- * Run Makefile in the console from the checked out root of WinWisely
+Clone [WinWisely](https://github.com/winwisely99/web.git) into your local workspace
 
-Runtime dependencies
-====================
- * `Python <http://python.org/>`_ 2.6, 2.7, ???
- * `Beautiful soup <http://www.crummy.com/software/BeautifulSoup/>`_ : Parsing and downloading of post images/attachments (python)
+- Run 'git fetch' and 'git checkout dev' to be on the correct branch
 
-Installing dependencies in ubuntu/debian, mac terminal
-----------------------------------------
+*Makefile* has all the commands necessary for building, starting server, and deploying to Firebase.  CD into the checked out directory of [WinWisely](https://github.com/winwisely99/web.git)
 
-   ``sudo apt-get install python-bs4``
+- Change $GOPATH variable to match your local checked out directory of [WinWisely](https://github.com/winwisely99/web.git)
 
-Installing Python dependencies using python package installer (pip)
--------------------------------------------------------------------
+- Run 'make git-clone' to clone Let's Encrypt's build into checked out directory of [WinWisely](https://github.com/winwisely99/web.git)
 
-From the checked out root for this project, type:
+## Local Development
 
-   ``sudo pip install --upgrade  -r Import_requirements.txt``
+In checked out root of WinWisely:
 
-Configuration/Customization
-===========================
+- Run 'make modify' to invoke Import.py script. 
 
-All content edits should be done in 'golden' folder only.
-Run 'Makefile modify' in console to see in local installation
+  By default it will try to replace:
+    - config files
+    - content i18n files
+    - images
+    - specific strings in the layout directory 
 
+- Run 'make build' to build after importing WinWisely content into Let's Encrypt base
+
+- Run 'make run' to start the server
+
+- Run 'make open' to launch browser to see the build locally
+
+## Modifying Content
+
+*All content changes, adding languages, modifying menu, etc. must be done in _golden_ directory.*
+
+The _golden_ directory contains:
+- _hidden:
+  - Let's Encrypt files that we are not using
+- config:
+  - General configuration settings
+  - Languages
+  - Menu
+- content:
+  - All the markdown files for the content.  Structure matters. (Please only add directories or files if intended for publishing.)
+- images:
+  - These images will be copied into the build
+- layouts:
+  - The files here are used for custom HTML, CSS, Script that need to be injected or appened into appropriate partials. (See Import.py for usage)
+
+## Deployment
+
+- Run 'make modify' to import all changes into Let's Encrypt base
+- Run 'make build' to rebuild Hugo
+- If first time deploying:
+  - Run 'make deploy-fb-init'
+- Run 'make deploy-fb' to deploy build to Dev server located at [https://winwisely-letsencrypt-web.firebaseapp.com/](https://winwisely-letsencrypt-web.firebaseapp.com/)
 
