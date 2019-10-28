@@ -4,12 +4,12 @@
 #Change this before proceding to reflect environment
 
 # dyan
-GOPATH=/Users/dyan/Sites/Clients/winwisely.org
+GOPATH=/Users/dyan/Sites/Clients/getcourage.org
 
 # joe
 #GOPATH=/Users/apple/workspace/go/src/github.com/winwisely99/web
 # rosie
-#GOPATH=/Users/rosiehoberg/workspace/winwisely/web
+#GOPATH=/Users/rosiehoberg/workspace/winwisely`/web
 
 
 LIB_NAME=website
@@ -78,29 +78,29 @@ build:
 
 
 ### deploy ( not using )
-GCLOUD_PROJ_ID=winwisely-web-example-letencrypt
+GCLOUD_PROJ_ID=getcourage-web-example-letencrypt
 deploy-gc:
 	# see: https://stephenmann.io/post/hosting-a-hugo-site-in-a-google-bucket/
 	
 	# create proj
 	gcloud projects create $(GCLOUD_PROJ_ID)
 	gcloud config set project $(GCLOUD_PROJ_ID)
-	gsutil mb gs://example.winwisely.org/
+	gsutil mb gs://example.getcouragenow.org/
 	#cd $(LIB_FSPATH) && hugo deploy -h
 
 # Deploy to Firebase ( using this for ease for now )
 
 # TOGGLE environment:
 # PROD
-PROD_FB_PROJ_ID=winwisely-getcourage-org
+PROD_FB_PROJ_ID=getcourage-getcourage-org
 # DEV
-DEV_FB_PROJ_ID=winwisely-letsencrypt-web
+DEV_FB_PROJ_ID=getcourage-letsencrypt-web
 
 FB_PROJ_CONSOLEURL=https://console.firebase.google.com/project/$(PROD_FB_PROJ_ID)
 
 deploy-fb-init:
 	# 1. ONE TIME: make the project here:https://console.firebase.google.com/
-	# web console:  https://console.firebase.google.com/project/winwisely-web-letencrypt/overview
+	# web console:  https://console.firebase.google.com/project/getcourage-web-letencrypt/overview
 
 	#firebase init 
 	firebase init 

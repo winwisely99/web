@@ -1,7 +1,7 @@
 ---
-title: Why WinWisely
-linkTitle: "Why WinWisely"
-slug: why-winwisely
+title: Why GetCourage
+linkTitle: "Why GetCourage"
+slug: why-getcourage
 top_graphic: 4
 no_donate_footer: false
 lastmod: 2019-09-18
@@ -15,7 +15,7 @@ menu:
 
 **Pondering whether to sign up to a strike or a nonviolent direct action, but not quite ready to commit? _No Problem!_** 
 
-WinWisely will: 
+GetCourage will: 
 
 - Show you all of the campaigns happening in your area
 

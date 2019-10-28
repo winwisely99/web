@@ -13,4 +13,4 @@ menu:
 
 ## Ready to see where and how you can help save the planet?
 
-Check back to download the **WinWisely** app on your mobile and on your desktop soon!
+Check back to download the **GetCourage** app on your mobile and on your desktop soon!

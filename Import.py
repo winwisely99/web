@@ -123,7 +123,7 @@ footerHtml = leRoot + 'layouts/partials/footer.html'
 oldLogo = '/images/letsencrypt-logo-horizontal.svg'
 newLogo = '/images/logo-main.png'
 oldAlt = 'Let\'s Encrypt'
-newAlt = 'WinWisely'
+newAlt = 'GetCourage'
 replaceString(headerHtml, oldLogo, newLogo)
 replaceString(headerHtml, oldAlt, newAlt)
 
@@ -148,7 +148,7 @@ heroHtml = leRoot + 'layouts/partials/hero.html'
 # Change banner text
 i18nEN = leRoot + 'i18n/en.toml'
 oldHeroTitle = 'Let&rsquo;s Encrypt is a <span>free</span>, <span>automated</span>, and <span>open</span> Certificate Authority.'
-newHeroTitle = '<span>WinWisely</span><br>It&rsquo;s A Numbers Game'
+newHeroTitle = '<span>GetCourage</span><br>It&rsquo;s A Numbers Game'
 replaceString(i18nEN, oldHeroTitle, newHeroTitle)
 
 ### Footer Partial #####
@@ -156,7 +156,7 @@ replaceString(i18nEN, oldHeroTitle, newHeroTitle)
 # Replace contact footer text
 footerHtml = leRoot + 'layouts/partials/footer.html'
 oldAddress1 = '1 Letterman Drive, Suite D4700,'
-newAddress1 = '(650) 383 8435 | gary@winwisely.org'
+newAddress1 = '(650) 383 8435 | gary@getcouragenow.org'
 oldAddress2 = 'San Francisco,'
 oldAddress3 = 'CA'
 oldAddress4 = '94129'

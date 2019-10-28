@@ -17,4 +17,4 @@ Our team members are based in different parts of the world.
 
 ## Contact Us
 
-If you have any questions that need immediate answers, please email Gary Krane at <a href="mailto:gary@winsisely">gary@winwisely.org</a>.
+If you have any questions that need immediate answers, please email Gary Krane at <a href="mailto:gary@winsisely">gary@getcouragenow.org</a>.

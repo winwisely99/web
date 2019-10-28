@@ -11,5 +11,5 @@ menu:
 
 ### Coming soon!
 
-If you have immediate questions, please email [gary@winwisely.org](email:gary@winwisely.org)
+If you have immediate questions, please email [gary@getcouragenow.org](email:gary@getcouragenow.org)
 

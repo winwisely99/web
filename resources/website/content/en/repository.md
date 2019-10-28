@@ -12,11 +12,11 @@ do_not_translate: 1
 <!-- Note for translators: do NOT translate this file -->
 
 
-# WinWisely Privacy Policy
+# GetCourage Privacy Policy
 
 * [October 21, 2019](/privacy/)
 
-# WinWisely Trademark Policy
+# GetCourage Trademark Policy
 
 * [Current Trademark Policy](/trademarks/)
 

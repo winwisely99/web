@@ -13,11 +13,11 @@ menu:
 
 <center>
 
-## How Does WinWisely Work?
+## How Does GetCourage Work?
 
 ### In 4 ways using 4  motivators (or “Easifying” tools) 
 
-![WinWisely Phone Demo!](/images/new-phone-demo.png "WinWisely Phone Demo")
+![GetCourage Phone Demo!](/images/new-phone-demo.png "GetCourage Phone Demo")
 </center>
 
 <table>

@@ -19,6 +19,6 @@ Major and rapid change is desperately needed, meaning that voting, a slow and of
 
 Currently, grassroots organizations are lacking the power to recruit, commit, support, and cleverly organize the huge numbers of volunteers needed to create momentum for change quicker than is currently happening. We are failing to meet the needs and urgency of the current environmental crisis. Organizations are calling this ‘the mother of all challenges’. 
 
-We saw this challenge and came up with a solution that nobody else has. It is called WinWisely. See the Why WinWisely page for details on how we plan to solve this ‘mother of all challenges’ by uniting the people and giving them a strong enough voice to create real change. 
+We saw this challenge and came up with a solution that nobody else has. It is called GetCourage. See the Why GetCourage page for details on how we plan to solve this ‘mother of all challenges’ by uniting the people and giving them a strong enough voice to create real change. 
 
-### [How does WinWisely actually work?](/how-it-works)
+### [How does GetCourage actually work?](/how-it-works)

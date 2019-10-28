@@ -73,23 +73,23 @@ modify:
 
 
 ### deploy ( not using )
-GCLOUD_PROJ_ID=winwisely-web-example-letencrypt
+GCLOUD_PROJ_ID=getcourage-web-example-letencrypt
 deploy-gc:
 	# see: https://stephenmann.io/post/hosting-a-hugo-site-in-a-google-bucket/
 	
 	# create proj
 	gcloud projects create $(GCLOUD_PROJ_ID)
 	gcloud config set project $(GCLOUD_PROJ_ID)
-	gsutil mb gs://example.winwisely.org/
+	gsutil mb gs://example.getcouragenow.org/
 
 	#cd $(LIB_FSPATH) && hugo deploy -h
 
 # Deploy to Firebase ( using this for ease for now )
-FB_PROJ_ID=winwisely-web-letencrypt
+FB_PROJ_ID=getcourage-web-letencrypt
 FB_PROJ_CONSOLEURL=https://console.firebase.google.com/project/$(FB_PROJ_ID)
 deploy-fb:
 	# 1. ONE TIME: make the project here:https://console.firebase.google.com/
-	# web console:  https://console.firebase.google.com/project/winwisely-web-letencrypt/overview
+	# web console:  https://console.firebase.google.com/project/getcourage-web-letencrypt/overview
 	#brew install firebase-cli
 	#firebase init 
 

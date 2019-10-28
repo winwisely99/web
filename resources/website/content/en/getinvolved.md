@@ -19,7 +19,7 @@ menu:
 
   * Completed demo (though will be further improved to better describe more powerful Peer-bonding and behavioral economics features). Ask us for this
 
-  * Alpha native apps (IOS and Android) created for an electoral version of WinWisely for 2018 American midterms to help take back the Senate
+  * Alpha native apps (IOS and Android) created for an electoral version of GetCourage for 2018 American midterms to help take back the Senate
 
   * Over 20 reviews from top organizers and tech activists
 
@@ -27,4 +27,4 @@ menu:
 
   * Only $25,000 available so far for development and testing, but finding new major donor leads every week, and currently being considered by two foundations for $50k each. 
 
-  * Answers to most questions can be found on [our FAQ](https://bit.ly/WinWiselyFAQ)
+  * Answers to most questions can be found on [our FAQ](https://bit.ly/GetCourageFAQ)
