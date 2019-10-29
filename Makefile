@@ -9,7 +9,7 @@ GOPATH=/Users/dyan/Sites/Clients/getcourage.org
 # joe
 #GOPATH=/Users/apple/workspace/go/src/github.com/winwisely99/web
 # rosie
-#GOPATH=/Users/rosiehoberg/workspace/winwisely`/web
+#GOPATH=/Users/rosiehoberg/workspace/winwisely/web
 
 
 LIB_NAME=website
