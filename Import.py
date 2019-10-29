@@ -115,6 +115,16 @@ srcFavicon = 'golden/images/favicon.ico'
 destFavicon = leRoot + 'static/favicon.ico'
 placeFile('Favicon', srcFavicon, destFavicon)
 
+### Head Partial #####
+
+headHtml = leRoot + 'layouts/partials/head.html'
+oldMetaTwitter = '@letsencrypt'
+newMetaTwitter = '@winwisely'
+oldMetaLogo = 'images/le-logo-twitter.png'
+newMetaLogo = 'wwimages/logo-main.png'
+replaceString(headHtml, oldMetaTwitter, newMetaTwitter)
+replaceString(headHtml, oldMetaLogo, newMetaLogo)
+
 ### Header Partial #####
 
 # Replace logo and alt text
