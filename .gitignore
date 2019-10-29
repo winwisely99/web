@@ -14,3 +14,5 @@
 
 # firebase
 .firebase
+
+*.DS_Store
