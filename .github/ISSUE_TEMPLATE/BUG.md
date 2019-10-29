@@ -3,7 +3,7 @@ name: I have a problem with the website.
 about: nature of problem.
 ---
 
-<!-- Thank you for trying GetCourage! -->
+<!-- Thank you for trying GetCourageNow! -->
 
 ## OS version
 

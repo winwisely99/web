@@ -13,12 +13,12 @@ wordpress_id: 16
 
 
   
-      [![](https://images.squarespace-cdn.com/content/v1/5985dfd0b8a79b27663a4a57/1539667287433-MULWSGJCQT6V3DETVCGC/ke17ZwdGBToddI8pDm48kM8gjLDDGRTmNdyX_GmpY79Zw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVGzqP_v8q_hAxVlCx0CTos0AJR8Srl7crQ_bAF1DdiEg8Y7NDhP2oKiM3zyEiUrQlM/GetCourage+-+App+Store+Button300.jpg?format=original)](https://l.facebook.com/l.php?u=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Fwinwisely%2Fid1412145042%3Fmt%3D8&h=AT1oN0yXQvgbEE3zQoHYhuweRtcU-ZORcM9hH_y3LCg_u1czmZOYNr6oqsRjQjpHtXAm11zcRuGSY0MyGp45R0zc7lifivY6q26Xf6DRDtJjq2X6Av1beRE)
+      [![](https://images.squarespace-cdn.com/content/v1/5985dfd0b8a79b27663a4a57/1539667287433-MULWSGJCQT6V3DETVCGC/ke17ZwdGBToddI8pDm48kM8gjLDDGRTmNdyX_GmpY79Zw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVGzqP_v8q_hAxVlCx0CTos0AJR8Srl7crQ_bAF1DdiEg8Y7NDhP2oKiM3zyEiUrQlM/GetCourageNow+-+App+Store+Button300.jpg?format=original)](https://l.facebook.com/l.php?u=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Fwinwisely%2Fid1412145042%3Fmt%3D8&h=AT1oN0yXQvgbEE3zQoHYhuweRtcU-ZORcM9hH_y3LCg_u1czmZOYNr6oqsRjQjpHtXAm11zcRuGSY0MyGp45R0zc7lifivY6q26Xf6DRDtJjq2X6Av1beRE)
   
 
 
   
-      [![](https://images.squarespace-cdn.com/content/v1/5985dfd0b8a79b27663a4a57/1539667328496-E1BSCTB4T3XR02JNFQZG/ke17ZwdGBToddI8pDm48kM8gjLDDGRTmNdyX_GmpY79Zw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVGzqP_v8q_hAxVlCx0CTos0AJR8Srl7crQ_bAF1DdiEg8Y7NDhP2oKiM3zyEiUrQlM/GetCourage+-+Google+Play+Button+1300.jpg?format=original)](https://l.facebook.com/l.php?u=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.getcourage.getcourage&h=AT1oN0yXQvgbEE3zQoHYhuweRtcU-ZORcM9hH_y3LCg_u1czmZOYNr6oqsRjQjpHtXAm11zcRuGSY0MyGp45R0zc7lifivY6q26Xf6DRDtJjq2X6Av1beRE)
+      [![](https://images.squarespace-cdn.com/content/v1/5985dfd0b8a79b27663a4a57/1539667328496-E1BSCTB4T3XR02JNFQZG/ke17ZwdGBToddI8pDm48kM8gjLDDGRTmNdyX_GmpY79Zw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVGzqP_v8q_hAxVlCx0CTos0AJR8Srl7crQ_bAF1DdiEg8Y7NDhP2oKiM3zyEiUrQlM/GetCourageNow+-+Google+Play+Button+1300.jpg?format=original)](https://l.facebook.com/l.php?u=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.getcourage.getcourage&h=AT1oN0yXQvgbEE3zQoHYhuweRtcU-ZORcM9hH_y3LCg_u1czmZOYNr6oqsRjQjpHtXAm11zcRuGSY0MyGp45R0zc7lifivY6q26Xf6DRDtJjq2X6Av1beRE)
   
 
 
@@ -34,9 +34,9 @@ wordpress_id: 16
 
 
 
-## GetCourage has partnered with Autumn Zemke to help take back Nevada.
+## GetCourageNow has partnered with Autumn Zemke to help take back Nevada.
 
-## What is GetCourage? GetCourage is an app designed to help you:
+## What is GetCourageNow? GetCourageNow is an app designed to help you:
 
   * ## Identify important campaigns convenient to your location
 
@@ -46,7 +46,7 @@ wordpress_id: 16
 
   * ## Team up with people who share your interests
 
-## ...and if you can’t help directly, GetCourage will provide you with ways to support those who can.
+## ...and if you can’t help directly, GetCourageNow will provide you with ways to support those who can.
 
 “In the battle between the forces of good and evil, greed and compassion, only one thing has consistently made the difference—organizing”  
 — KURT VONNEGUT

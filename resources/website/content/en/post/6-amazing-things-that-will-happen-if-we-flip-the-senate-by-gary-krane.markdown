@@ -19,7 +19,7 @@ Please keep in mind that if the Dems retake the Senate, as well as the House, he
 
 
 
-  1. Congress will be likely to pass Medicare for all, especially if enough American have GetCourage or an equally powerful mobilization and commitment tool to pressure the moderate and conservative Dems and moderate GOPers to do the right thing.
+  1. Congress will be likely to pass Medicare for all, especially if enough American have GetCourageNow or an equally powerful mobilization and commitment tool to pressure the moderate and conservative Dems and moderate GOPers to do the right thing.
 
   2. Congress, again given enough pressure on moderate and conservative Dems and moderate GOPers, will be able to make significant cuts in our bloated $700B+ military budget and use those funds for a Green Marshall Plan (Green New Deal) to massively accelerate our transformation to an 80- 100% renewable energy economy in the next 10-15 years, and in the process, create 10M well paying jobs.
 
@@ -31,18 +31,18 @@ Please keep in mind that if the Dems retake the Senate, as well as the House, he
 
   6. And LAST but not Least, the Senate will be at worst only 3 votes away from what they will need in the Senate to Impeach Trump, and very likely less than that, because the "3 votes" figure was based on a Newsweek story a year ago, when 12 GOP Senators were identified as willing to seriously consider impeaching Trump. Given all that has since been uncovered and likely to soon be exposed by the Mueller investigation, that number might now be 16 Republican Senators, the number the Dems would need to have the 2/3 majority to convict.
 
-For all this to happen, in the neck and neck US Senate race states, it's not enough to vote. Download the free GetCourage app from GetCourageNow.org to make it easier than ever to do much more than just vote, even if you feel too busy.
+For all this to happen, in the neck and neck US Senate race states, it's not enough to vote. Download the free GetCourageNow app from GetCourageNow.org to make it easier than ever to do much more than just vote, even if you feel too busy.
 
-## Download the free GetCourage app to find local volunteer opportunities that fit your schedule and your priorities. It’s availible on the Apple App Store and on Google Play.
-
-
-  
-      ![](https://images.squarespace-cdn.com/content/v1/5985dfd0b8a79b27663a4a57/1540023163876-ESS83XAY2AFSDJIZWOTI/ke17ZwdGBToddI8pDm48kMZdhK24nuiy7pDeU5QmfE7lfiSMXz2YNBs8ylwAJx2qrCLSIWAQvdC7iWmC9HNtRXCH3e9MpGhDvhq91guy70itSSBcvge6QCMNGwS9N-FH_pHgOPV6AIkk6MjJFk8smw/GetCourage+-+App+Store+Button270.png?format=original)
-  
+## Download the free GetCourageNow app to find local volunteer opportunities that fit your schedule and your priorities. It’s availible on the Apple App Store and on Google Play.
 
 
   
-      ![](https://images.squarespace-cdn.com/content/v1/5985dfd0b8a79b27663a4a57/1540023178773-YZDC0V58W4AOHYLO15WO/ke17ZwdGBToddI8pDm48kMZdhK24nuiy7pDeU5QmfE7lfiSMXz2YNBs8ylwAJx2qrCLSIWAQvdC7iWmC9HNtRXCH3e9MpGhDvhq91guy70itSSBcvge6QCMNGwS9N-FH_pHgOPV6AIkk6MjJFk8smw/GetCourage+-+Google+Play+Button+1270.png?format=original)
+      ![](https://images.squarespace-cdn.com/content/v1/5985dfd0b8a79b27663a4a57/1540023163876-ESS83XAY2AFSDJIZWOTI/ke17ZwdGBToddI8pDm48kMZdhK24nuiy7pDeU5QmfE7lfiSMXz2YNBs8ylwAJx2qrCLSIWAQvdC7iWmC9HNtRXCH3e9MpGhDvhq91guy70itSSBcvge6QCMNGwS9N-FH_pHgOPV6AIkk6MjJFk8smw/GetCourageNow+-+App+Store+Button270.png?format=original)
+  
+
+
+  
+      ![](https://images.squarespace-cdn.com/content/v1/5985dfd0b8a79b27663a4a57/1540023178773-YZDC0V58W4AOHYLO15WO/ke17ZwdGBToddI8pDm48kMZdhK24nuiy7pDeU5QmfE7lfiSMXz2YNBs8ylwAJx2qrCLSIWAQvdC7iWmC9HNtRXCH3e9MpGhDvhq91guy70itSSBcvge6QCMNGwS9N-FH_pHgOPV6AIkk6MjJFk8smw/GetCourageNow+-+Google+Play+Button+1270.png?format=original)
   
 
 

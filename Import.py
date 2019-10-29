@@ -133,7 +133,7 @@ footerHtml = leRoot + 'layouts/partials/footer.html'
 oldLogo = '/images/letsencrypt-logo-horizontal.svg'
 newLogo = '/images/logo-main.png'
 oldAlt = 'Let\'s Encrypt'
-newAlt = 'GetCourage'
+newAlt = 'GetCourageNow'
 replaceString(headerHtml, oldLogo, newLogo)
 replaceString(headerHtml, oldAlt, newAlt)
 
@@ -158,7 +158,7 @@ heroHtml = leRoot + 'layouts/partials/hero.html'
 # Change banner text
 i18nEN = leRoot + 'i18n/en.toml'
 oldHeroTitle = 'Let&rsquo;s Encrypt is a <span>free</span>, <span>automated</span>, and <span>open</span> Certificate Authority.'
-newHeroTitle = '<span>GetCourage</span><br>It&rsquo;s A Numbers Game'
+newHeroTitle = '<span>GetCourageNow</span><br>It&rsquo;s A Numbers Game'
 replaceString(i18nEN, oldHeroTitle, newHeroTitle)
 
 ### Footer Partial #####

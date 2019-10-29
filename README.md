@@ -1,4 +1,4 @@
-# GetCourage Squarespace-to-Hugo Migration Project
+# GetCourageNow Squarespace-to-Hugo Migration Project
 
 This is a small business template built with [Hugo](https://github.com/gohugoio/hugo) based on [Let's Encrypt](https://github.com/letsencrypt) using content exported from Squarespace.  
 
@@ -11,7 +11,7 @@ Download `[https://github.com/winwisely99/web/]https://github.com/winwisely99/we
 
 ## Local Development
 
-*Makefile* has all the commands necessary for building, starting server, and deploying to Firebase and must be executed from the checked out root directory of [GetCourage](https://github.com/winwisely99/web.git)
+*Makefile* has all the commands necessary for building, starting server, and deploying to Firebase and must be executed from the checked out root directory of [GetCourageNow](https://github.com/winwisely99/web.git)
 
 - Change **$GOPATH** variable in *Makefile* to match your local checked out path
 
@@ -52,7 +52,7 @@ To clean or update Let's Encrypt codebase:
   - Run `$ make git-upstream` to pull Let's Encrypt repo if codebase directory is cleaned
 - Or run `$ make git-update` to update Let's Encrypt's codebase directory
 
-To import GetCourage content into the Let's Encrypt codebase:
+To import GetCourageNow content into the Let's Encrypt codebase:
 
 - Run `$ make modify` to invoke Import.py script. 
 
@@ -62,7 +62,7 @@ To import GetCourage content into the Let's Encrypt codebase:
     - images
     - specific strings in the layout directory 
 
-- Run `$ make build` to build after importing GetCourage content into Let's Encrypt codebase
+- Run `$ make build` to build after importing GetCourageNow content into Let's Encrypt codebase
 
 - Run `$ make run` to start the server
 

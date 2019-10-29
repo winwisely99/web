@@ -15,13 +15,13 @@ Our mission is to answer what most grass roots organizers often call the _mother
 
 ### How can the progressive grassroots organizations of today recruit, commit, support and cleverly organize massively larger numbers of volunteers than we can right now, to do much bigger impact tasks--before it is too late to save democracy and mother nature as we know it? And conversely, how can the still untapped 3-6 million potential activists out there yearning for major change quickly find the right campaign to join, and the right role that fits their skills and preferences?
 
-Drawing from latest research in behavioral economics and evidence based organizing, GetCourage is based on a unique integration of four functionalities, one of which is called _crowdacting_ (not crowdfunding). So think: 
+Drawing from latest research in behavioral economics and evidence based organizing, GetCourageNow is based on a unique integration of four functionalities, one of which is called _crowdacting_ (not crowdfunding). So think: 
 
 **_"Kickstarter and more meets movement organizing."_** 
 
 We'll be open source & free to most nonprofits and expect to play a major role to enable XRebellion, Fridays for Future, Sunrise Movement, Childrens Strike for the Environment to recruit the vast numbers they need to take on the necessary resistor and striker roles in order to succeed.
 
-### **AVAILABLE POSITIONS AT GetCourage:**
+### **AVAILABLE POSITIONS AT GetCourageNow:**
 
 - [PT Senior or Near Senior-Level Golang Web App Developer](/careers/web-developer)
 - [PT/FT Frontend Flutter Developer and/or UI Designer](/careers/ui-designer) (possible CXO)
@@ -37,7 +37,7 @@ We'll be open source & free to most nonprofits and expect to play a major role t
 
   * Completed demo (though will be further improved to better describe more powerful Peer-bonding and behavioral economics features). Ask us for this
 
-  * Alpha native apps (IOS and Android) created for an electoral version of GetCourage for 2018 American midterms to help take back the Senate
+  * Alpha native apps (IOS and Android) created for an electoral version of GetCourageNow for 2018 American midterms to help take back the Senate
 
   * Over 20 reviews from top organizers and tech activists
 

@@ -12,11 +12,11 @@ do_not_translate: 1
 <!-- Note for translators: do NOT translate this file -->
 
 
-# GetCourage Privacy Policy
+# GetCourageNow Privacy Policy
 
 * [October 21, 2019](/privacy/)
 
-# GetCourage Trademark Policy
+# GetCourageNow Trademark Policy
 
 * [Current Trademark Policy](/trademarks/)
 

@@ -5,7 +5,7 @@ date: 2019-10-16 10:26:01.044062
 layout: page
 link: /getcourage-midterm-volunteer-tshirt-giveaway
 slug: getcourage-midterm-volunteer-tshirt-giveaway
-title: GetCourage Midterm Volunteer Tshirt Giveaway
+title: GetCourageNow Midterm Volunteer Tshirt Giveaway
 wordpress_id: 15
 ---
 
@@ -13,9 +13,9 @@ Want to put the cherry on top of that oh-so-good feeling of volunteering? Why no
 
 From now until the end of the 2018 midterm elections we will be giving away a T-shirt to anyone who meets the following criteria:
 
-  1. You must like the GetCourage Facebook Page.
+  1. You must like the GetCourageNow Facebook Page.
 
-  2. You must download the GetCourage app.
+  2. You must download the GetCourageNow app.
 
   3. You must volunteer to any of the campaigns or causes we currently have on our app.
 

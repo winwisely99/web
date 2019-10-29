@@ -13,11 +13,11 @@ menu:
 
 <center>
 
-## How Does GetCourage Work?
+## How Does GetCourageNow Work?
 
 ### In 4 ways using 4  motivators (or “Easifying” tools) 
 
-![GetCourage Phone Demo!](/images/new-phone-demo.png "GetCourage Phone Demo")
+![GetCourageNow Phone Demo!](/images/new-phone-demo.png "GetCourageNow Phone Demo")
 </center>
 
 <table>

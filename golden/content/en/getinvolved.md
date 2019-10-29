@@ -19,7 +19,7 @@ menu:
 
   * Completed demo (though will be further improved to better describe more powerful Peer-bonding and behavioral economics features). Ask us for this
 
-  * Alpha native apps (IOS and Android) created for an electoral version of GetCourage for 2018 American midterms to help take back the Senate
+  * Alpha native apps (IOS and Android) created for an electoral version of GetCourageNow for 2018 American midterms to help take back the Senate
 
   * Over 20 reviews from top organizers and tech activists
 

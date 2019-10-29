@@ -32,18 +32,18 @@ If you are the parent who takes your kids to soccer or piano practice, you'll ag
 
 Finally, you also will have missed the opportunity to achieve the highest purpose (beyond food and shelter) of being a parent--the chance to imbue your kids with the most important of all values--to have the courage to stand up against injustice--by modeling that for them, by simply taking you kid(s) with you as you knock on doors, provide rides, provide supporter housing for activists willing to come from out of state who need free housing, etc and btw, when you knock on a stranger's door with your kid by your side, that stranger is several times more likely to open the door and actually have a polite, even life-changing, conversation with you. And if your kid is over 7, he or she might soon want to try their hand at talking, thereby developing his poise and self confidence. 
 
-_ - by Gary Krane co-founder of GetCourage  _
+_ - by Gary Krane co-founder of GetCourageNow  _
 
-## Start doing more then just casting a vote. Start donating your time. Download GetCourage today. 
-
-
-  
-      [![](https://images.squarespace-cdn.com/content/v1/5985dfd0b8a79b27663a4a57/1539847840262-VAGGYWW6OON9BOK3HONV/ke17ZwdGBToddI8pDm48kMZdhK24nuiy7pDeU5QmfE7lfiSMXz2YNBs8ylwAJx2qrCLSIWAQvdC7iWmC9HNtRXCH3e9MpGhDvhq91guy70itSSBcvge6QCMNGwS9N-FH_pHgOPV6AIkk6MjJFk8smw/GetCourage+-+App+Store+Button270.png?format=original)](https://itunes.apple.com/us/app/getcourage/id1412145042)
-  
+## Start doing more then just casting a vote. Start donating your time. Download GetCourageNow today. 
 
 
   
-      [![](https://images.squarespace-cdn.com/content/v1/5985dfd0b8a79b27663a4a57/1539847910729-RXLA0ZK6I5D9BXWFOJMC/ke17ZwdGBToddI8pDm48kMZdhK24nuiy7pDeU5QmfE7lfiSMXz2YNBs8ylwAJx2qrCLSIWAQvdC7iWmC9HNtRXCH3e9MpGhDvhq91guy70itSSBcvge6QCMNGwS9N-FH_pHgOPV6AIkk6MjJFk8smw/GetCourage+-+Google+Play+Button+1270.png?format=original)](https://play.google.com/store/apps/details?id=com.getcourage.getcourage)
+      [![](https://images.squarespace-cdn.com/content/v1/5985dfd0b8a79b27663a4a57/1539847840262-VAGGYWW6OON9BOK3HONV/ke17ZwdGBToddI8pDm48kMZdhK24nuiy7pDeU5QmfE7lfiSMXz2YNBs8ylwAJx2qrCLSIWAQvdC7iWmC9HNtRXCH3e9MpGhDvhq91guy70itSSBcvge6QCMNGwS9N-FH_pHgOPV6AIkk6MjJFk8smw/GetCourageNow+-+App+Store+Button270.png?format=original)](https://itunes.apple.com/us/app/getcourage/id1412145042)
+  
+
+
+  
+      [![](https://images.squarespace-cdn.com/content/v1/5985dfd0b8a79b27663a4a57/1539847910729-RXLA0ZK6I5D9BXWFOJMC/ke17ZwdGBToddI8pDm48kMZdhK24nuiy7pDeU5QmfE7lfiSMXz2YNBs8ylwAJx2qrCLSIWAQvdC7iWmC9HNtRXCH3e9MpGhDvhq91guy70itSSBcvge6QCMNGwS9N-FH_pHgOPV6AIkk6MjJFk8smw/GetCourageNow+-+Google+Play+Button+1270.png?format=original)](https://play.google.com/store/apps/details?id=com.getcourage.getcourage)
   
 
 

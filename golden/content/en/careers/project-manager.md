@@ -13,7 +13,7 @@ lastmod: 2019-09-18
 
 **YOUR RESPONSIBILITIES:**
 
-Job description forthcoming. For now email us you interest to (GetCourage@protonmail.com).
+Job description forthcoming. For now email us you interest to (GetCourageNow@protonmail.com).
 
 **LOCATION:**
 
@@ -29,7 +29,7 @@ Project Based and based on funding able to raise. We have enough at the moment t
 
 **HOW TO APPLY:**
 
-GetCourage believes a diverse, inclusive staff makes us a stronger company and better partner for our clients. We’re committed to hiring people of all races, ethnicities, ages, sex, genders, sexual orientation or gender identities, marital status, religions, and disabilities. Women, people of color, LGBTQ individuals, and members of other minority or marginalized groups are encouraged to apply.
+GetCourageNow believes a diverse, inclusive staff makes us a stronger company and better partner for our clients. We’re committed to hiring people of all races, ethnicities, ages, sex, genders, sexual orientation or gender identities, marital status, religions, and disabilities. Women, people of color, LGBTQ individuals, and members of other minority or marginalized groups are encouraged to apply.
 
   1. First, read our [demo package](http://bit.ly/GetCouragePrep). Please make sure to also watch the 3-Minute ["Crowdacting" video](http://bit.ly/crowdacting) and our 10-Minute [demo video](http://bit.ly/GetCourageZoomDemo6).
 
