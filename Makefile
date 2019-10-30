@@ -4,7 +4,7 @@
 #Change this before proceding to reflect environment
 
 # dyan
-GOPATH=/Users/dyan/Sites/Clients/getcourage.org
+GOPATH=/Users/dyan/Sites/Clients/getcourage.org/web
 
 # joe
 #GOPATH=/Users/apple/workspace/go/src/github.com/winwisely99/web
