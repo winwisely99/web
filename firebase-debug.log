@@ -1,0 +1,15 @@
+[debug] [2019-11-01T00:09:41.479Z] ----------------------------------------------------------------------
+[debug] [2019-11-01T00:09:41.481Z] Command:       /usr/local/bin/node /usr/local/bin/firebase login --reauth
+[debug] [2019-11-01T00:09:41.481Z] CLI Version:   7.6.2
+[debug] [2019-11-01T00:09:41.481Z] Platform:      darwin
+[debug] [2019-11-01T00:09:41.481Z] Node Version:  v12.12.0
+[debug] [2019-11-01T00:09:41.482Z] Time:          Thu Oct 31 2019 18:09:41 GMT-0600 (Central Standard Time)
+[debug] [2019-11-01T00:09:41.482Z] ----------------------------------------------------------------------
+[debug] [2019-11-01T00:09:41.482Z] 
+[info] i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=938403469&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...

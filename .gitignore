@@ -14,5 +14,5 @@
 
 # firebase
 .firebase
-
+*log
 *.DS_Store
