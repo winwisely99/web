@@ -65,7 +65,7 @@ menu:
 <table>
 <tr>
   <td style="width: 60%">
-    <h3>4. Finally we help you find and develop some peer support.</h3>
+    <h3>4. Finally we help you find and grow some peer support.</h3>
     <p>
     Whether from friends you already have, or by helping you connect and develop friendships (real not Facebook) with those in your neighborhood that also share one or more hobbies or major interests of yours, as well as deep values around joining the campaign
     </p>

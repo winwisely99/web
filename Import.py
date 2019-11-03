@@ -191,7 +191,6 @@ replaceString(enFile, oldDonateBox, newDonateBox)
 customHome = 'golden/layouts/home.txt'
 customCss = 'golden/layouts/css.txt'
 customHead = 'golden/layouts/google.txt'
-customFirebase = 'golden/layouts/firebase.txt'
 
 indexPartial = leRoot + 'layouts/index.html'
 headPartial = leRoot + 'layouts/partials/head.html'
@@ -208,9 +207,6 @@ with open(customCss) as css:
 with open(customHead) as head:
   soup = BeautifulSoup(head, 'html.parser')
   newHeadContent = str(soup)
-with open(customFirebase) as base:
-  soup = BeautifulSoup(base, 'html.parser')
-  newFirebaseContent = str(soup)
 
 with open(indexPartial) as i:
   soup = BeautifulSoup(i, 'html.parser')
@@ -254,24 +250,6 @@ if not statusScript:
     lines = h.readlines()
     writeToLine(lines, 1, newHeadContent)
   with open(headPartial, 'w') as h:
-    h.writelines(lines)
-
-  with open(basePartial, 'r') as h:
-    lines = h.readlines()
-    writeToLine(lines, 16, newFirebaseContent)
-  with open(basePartial, 'w') as h:
-    h.writelines(lines)
-
-  with open(blankPartial, 'r') as h:
-    lines = h.readlines()
-    writeToLine(lines, 4, newFirebaseContent)
-  with open(blankPartial, 'w') as h:
-    h.writelines(lines)
-
-  with open(postPartial, 'r') as h:
-    lines = h.readlines()
-    writeToLine(lines, 13, newFirebaseContent)
-  with open(postPartial, 'w') as h:
     h.writelines(lines)
 
 
