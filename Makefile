@@ -44,6 +44,7 @@ code:
 
 run:
 	cd $(LIB_FSPATH) && hugo server -F
+	#if this doesn't work, try 'hugo server -D'
 
 open:
 	open http://localhost:1313/
