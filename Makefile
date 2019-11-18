@@ -4,10 +4,10 @@
 #Change this before proceding to reflect environment
 
 # dyan
-GOPATH=/Users/dyan/Sites/Clients/getcourage.org/web
+#GOPATH=/Users/dyan/Sites/Clients/getcourage.org/web
 
 # joe
-#GOPATH=/Users/apple/workspace/go/src/github.com/winwisely99/web
+GOPATH=/Users/apple/workspace/go/src/github.com/winwisely99/web
 # rosie
 #GOPATH=/Users/rosiehoberg/workspace/winwisely/web
 
@@ -44,7 +44,10 @@ code:
 
 run:
 	cd $(LIB_FSPATH) && hugo server -F
+
 	#if this doesn't work, try 'hugo server -D'
+	#cd $(LIB_FSPATH) && hugo server -D
+	
 
 open:
 	open http://localhost:1313/
