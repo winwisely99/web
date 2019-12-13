@@ -7,11 +7,13 @@
 #GOPATH=/Users/dyan/Sites/Clients/getcourage.org/web
 
 # joe
-#GOPATH=/Users/apple/workspace/go/src/github.com/winwisely99/web
+GOPATH=/Users/apple/workspace/go/src/github.com/winwisely99/web
 # rosie
 #GOPATH=/Users/rosiehoberg/workspace/winwisely/web
 # idir
-GOPATH=${HOME}/go/src/web
+
+
+#GOPATH=${HOME}/go/src/web
 
 
 LIB_NAME=website
@@ -26,7 +28,14 @@ help:  ## Display this help
 
 
 print: ## print
+
 	@echo
+	@echo TODO. Fix this so its generic for everyone
+	@echo GOPATH: $(GOPATH)
+	@echo
+
+	@echo
+	@echo SOURCE Hugo Web site:
 	@echo LIB_NAME: $(LIB_NAME)
 	@echo LIB: $(LIB)
 	@echo LIB_BRANCH: $(LIB_BRANCH)
@@ -48,15 +57,7 @@ git-update:
 code:
 	code $(LIB_FSPATH)
 
-run:
-	cd $(LIB_FSPATH) && hugo server -F
 
-	#if this doesn't work, try 'hugo server -D'
-	#cd $(LIB_FSPATH) && hugo server -D
-	
-
-open:
-	open http://localhost:1313/
 
 ###
 
@@ -88,10 +89,18 @@ modify: ## modify
 	# Call the golang code
 	go run import.go
 
-build:
+hugo-build: ## hugo-build
 	cd $(LIB_FSPATH) && hugo
 	ls -al $(LIB_FSPATH)/public
 
+hugo-run: ## hugo-run
+	cd $(LIB_FSPATH) && hugo server -F
+
+	#if this doesn't work, try 'hugo server -D'
+	#cd $(LIB_FSPATH) && hugo server -D
+	
+hugo-open: ## hugo-open
+	open http://localhost:1313/
 
 ### deploy ( not using )
 GCLOUD_PROJ_ID=getcourage-web-example-letencrypt
