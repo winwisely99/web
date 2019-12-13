@@ -7,9 +7,11 @@
 #GOPATH=/Users/dyan/Sites/Clients/getcourage.org/web
 
 # joe
-GOPATH=/Users/apple/workspace/go/src/github.com/winwisely99/web
+#GOPATH=/Users/apple/workspace/go/src/github.com/winwisely99/web
 # rosie
 #GOPATH=/Users/rosiehoberg/workspace/winwisely/web
+# idir
+GOPATH=${HOME}/go/src/web
 
 
 LIB_NAME=website
@@ -74,7 +76,8 @@ dep:
 
 modify:
 	# This invokes the monster modification script
-	python $(GOPATH)/Import.py
+	# $(GOPATH)/import.py
+	$(GOPATH)/import
 
 build:
 	cd $(LIB_FSPATH) && hugo
