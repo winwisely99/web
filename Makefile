@@ -80,8 +80,13 @@ os-dep: ## os-dep
 
 modify: ## modify
 	# This invokes the monster modification script
+
+	# Call the pything code
 	# $(GOPATH)/import.py
-	$(GOPATH)/import
+	
+
+	# Call the golang code
+	go run import.go
 
 build:
 	cd $(LIB_FSPATH) && hugo
