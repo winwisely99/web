@@ -188,13 +188,13 @@ func writeToLine(line, appendText string) string {
 // exemple:
 // insertFile("html", sourceFilePath, destinationFilePath , 10)
 // the result will be insert sourceFilePath content in destinationFilePath in line 10
-func insertFile(fileType, src, dest string, index int) {
+func insertFile(fileType, src, dest string, index int) error {
 
 	f, err := os.OpenFile(dest, os.O_RDWR, 0660)
 	defer f.Close()
 
 	if err != nil {
-		log.Fatal(err)
+		return err
 	}
 
 	scanner := bufio.NewScanner(f)
@@ -203,13 +203,10 @@ func insertFile(fileType, src, dest string, index int) {
 	for scanner.Scan() {
 		lines = append(lines, scanner.Text())
 	}
-	fmt.Println(lines[index])
-
 	data, err := ioutil.ReadFile(src)
 
 	lines[index] = writeToLine(lines[index], string(data))
 
-	// fmt.Println(lines[index])
 	mergeLines := ""
 
 	for _, l := range lines {
@@ -220,7 +217,47 @@ func insertFile(fileType, src, dest string, index int) {
 		mergeLines = gohtml.Format(mergeLines)
 	}
 
-	f.WriteAt([]byte(mergeLines), 0)
+	_, err = f.WriteAt([]byte(mergeLines), 0)
+	return err
+}
+
+// check if there is a line equal to checkLine variable if not append sec file
+func appendFileByLineCheck(src, dest, checkLine string) error {
+
+	f, err := os.OpenFile(dest, os.O_RDWR, 0700)
+	defer f.Close()
+
+	if err != nil {
+		return err
+	}
+
+	scanner := bufio.NewScanner(f)
+	buff := ""
+
+	for scanner.Scan() {
+		buff += scanner.Text() + "\n"
+	}
+
+	if strings.Contains(buff, checkLine) {
+		buff = strings.Split(buff, checkLine)[0]
+	}
+	data, err := ioutil.ReadFile(src)
+
+	buff = buff + string(data)
+
+	err = f.Truncate(0)
+
+	if err != nil {
+		return err
+	}
+	_, err = f.Seek(0, 0)
+
+	if err != nil {
+		return err
+	}
+	_, err = f.Write([]byte(buff))
+
+	return nil
 }
 
 // get goquery Document struct from a file path
@@ -407,6 +444,46 @@ func updateFiles() {
 
 }
 
+// update resources/website content and i18n folders
+func updateContentAndI18n() error {
+
+	// remove content folder from resources/website
+	err := deleteDirectory(leRoot + "content/")
+	if err != nil {
+		return err
+	}
+
+	// add content folder from golden/ to resources/website
+	err = placeDirectory(goldenRoot+"content/", leRoot+"content/")
+	if err != nil {
+		return err
+	}
+
+	// append i18n files to resources/i18n
+	src := goldenRoot + "i18n/"
+	dest := leRoot + "i18n/"
+	srcFiles, err := ioutil.ReadDir(src)
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for _, file := range srcFiles {
+		srcFile := path.Join(src, file.Name())
+		destFile := path.Join(dest, file.Name())
+
+		appendFileByLineCheck(srcFile, destFile, "# append")
+
+		if err != nil {
+			fmt.Println(file.Name(), " Faild to update!")
+			log.Fatal(err)
+		}
+	}
+
+	return err
+}
+
 func main() {
 	updateFiles()
+	updateContentAndI18n()
 }

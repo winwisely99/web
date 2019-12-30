@@ -7,14 +7,12 @@
 #GOPATH=/Users/dyan/Sites/Clients/getcourage.org/web
 
 # joe
-GOPATH=/Users/apple/workspace/go/src/github.com/winwisely99/web
+# GOPATH=/Users/apple/workspace/go/src/github.com/winwisely99/web
 # rosie
-#GOPATH=/Users/rosiehoberg/workspace/winwisely/web
+# GOPATH=/Users/rosiehoberg/workspace/winwisely/web
 # idir
-
-
-#GOPATH=${HOME}/go/src/web
-
+GOPATH=${HOME}/go/src/github.com/winwisely99/web
+GOBIN=${HOME}/go/bin
 
 LIB_NAME=website
 LIB=resources/$(LIB_NAME)
@@ -87,11 +85,17 @@ modify: ## modify
 	# This invokes the monster modification script
 
 	# Call the pything code
-	# $(GOPATH)/import.py
+	#$(GOPATH)/import.py
 	
+	$(GOBIN)/googlesheet -option=hugo
+
+	# rm -rf $(GOPATH)/i18n/golden/content/
+	# mv $(GOPATH)/outputs/hugo/i18n/golden/content/ $(GOPATH)/golden/
+	# mv $(GOPATH)/outputs/hugo/i18n/i18n/ $(GOPATH)/golden/
+	# rm -rf $(GOPATH)/outputs/
 
 	# Call the golang code
-	go run import.go
+	# go run import.go
 
 hugo-build: ## hugo-build
 	cd $(LIB_FSPATH) && hugo
@@ -101,7 +105,7 @@ hugo-run: ## hugo-run
 	cd $(LIB_FSPATH) && hugo server -F
 
 	#if this doesn't work, try 'hugo server -D'
-	#cd $(LIB_FSPATH) && hugo server -D
+	# cd $(LIB_FSPATH) && hugo server -D
 	
 hugo-open: ## hugo-open
 	open http://localhost:1313/

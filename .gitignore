@@ -16,3 +16,5 @@
 .firebase
 *.log
 *.DS_Store
+
+outputs/
