@@ -1,0 +1,63 @@
+[dates.weekday.tuesday]
+other = "星期二"
+
+[dates.weekday.wednesday]
+other = "星期三"
+
+[dates.weekday.thursday]
+other = "星期四"
+
+[dates.weekday.friday]
+other = "星期五"
+
+[dates.weekday.saturday]
+other = "星期六"
+
+[dates.weekday.sunday]
+other = "星期日"
+
+[dates.month.january]
+other = "一月"
+
+[dates.month.february]
+other = "二月"
+
+[dates.month.march]
+other = "游行"
+
+[dates.month.april]
+other = "四月"
+
+[templated.hello]
+other = "您好{{first_name}}您好"
+
+[templated.contact]
+male = "先生{{姓氏}}"
+female = "太太{{姓氏}}"
+
+[plurals.man]
+zero = "男子"
+one = "男子"
+multiple = "男人"
+
+[login.signIn]
+other = "登入"
+
+[login.getStarted]
+other = "入门"
+
+[home.news]
+other = "新闻"
+
+[home.chat]
+other = "聊天"
+
+[home.enrollments]
+other = "扩招"
+
+[home.title]
+other = "标题"
+
+[home.tltle1]
+other = "数据"
+

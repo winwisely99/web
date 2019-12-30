@@ -1,0 +1,63 @@
+[dates.weekday.tuesday]
+other = "martes"
+
+[dates.weekday.wednesday]
+other = "miércoles"
+
+[dates.weekday.thursday]
+other = "jueves"
+
+[dates.weekday.friday]
+other = "viernes"
+
+[dates.weekday.saturday]
+other = "sábado"
+
+[dates.weekday.sunday]
+other = "domingo"
+
+[dates.month.january]
+other = "enero"
+
+[dates.month.february]
+other = "febrero"
+
+[dates.month.march]
+other = "marzo"
+
+[dates.month.april]
+other = "abril"
+
+[templated.hello]
+other = "Hola {{first_name}}"
+
+[templated.contact]
+male = "Mr {{}} apellidos"
+female = "Sra {{}} apellidos"
+
+[plurals.man]
+zero = "hombre"
+one = "hombre"
+multiple = "hombres"
+
+[login.signIn]
+other = "Registrarse"
+
+[login.getStarted]
+other = "Empezar"
+
+[home.news]
+other = "Noticias"
+
+[home.chat]
+other = "chats"
+
+[home.enrollments]
+other = "Las inscripciones"
+
+[home.title]
+other = "Título"
+
+[home.tltle1]
+other = "Datos"
+
