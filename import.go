@@ -306,12 +306,12 @@ func updateFiles() {
 	}
 
 	// Replace the Golden LE CONTENT/EN dir with the WW CONTENT/EN dir only
-	srcContent := "golden/content/en"
+	srcContent := goldenRoot + "content/en"
 	destContent := leRoot + "content/en"
 	placeDirectory(srcContent, destContent)
 
 	// Replace the Golden LE CONFIG dir with the WW content dir
-	srcConfig := "golden/config"
+	srcConfig := goldenRoot + "config"
 	destConfig := leRoot + "config"
 	placeDirectory(srcConfig, destConfig)
 
@@ -324,7 +324,7 @@ func updateFiles() {
 	/////////////////////////////////////
 
 	// Replace file favicon
-	srcFavicon := "golden/images/favicon.ico"
+	srcFavicon := goldenRoot + "images/favicon.ico"
 	destFavicon := leRoot + "static/favicon.ico"
 	placeFile("Favicon", srcFavicon, destFavicon)
 
@@ -394,9 +394,9 @@ func updateFiles() {
 	/////////////////////////////////////
 
 	// Append custom home content and css to corresponding files
-	customHome := "golden/layouts/home.txt"
-	customCSS := "golden/layouts/css.txt"
-	customHead := "golden/layouts/google.txt"
+	customHome := goldenRoot + "layouts/home.txt"
+	customCSS := goldenRoot + "layouts/css.txt"
+	customHead := goldenRoot + "layouts/google.txt"
 
 	indexPartial := leRoot + "layouts/index.html"
 	headPartial := leRoot + "layouts/partials/head.html"
@@ -484,6 +484,6 @@ func updateContentAndI18n() error {
 }
 
 func main() {
-	updateFiles()
-	updateContentAndI18n()
+	// updateFiles()
+	// updateContentAndI18n()
 }

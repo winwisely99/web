@@ -11,6 +11,7 @@
 # rosie
 # GOPATH=/Users/rosiehoberg/workspace/winwisely/web
 # idir
+
 GOPATH=${HOME}/go/src/github.com/winwisely99/web
 GOBIN=${HOME}/go/bin
 
@@ -55,8 +56,6 @@ git-update:
 code:
 	code $(LIB_FSPATH)
 
-
-
 ###
 
 os-dep: ## os-dep
@@ -78,18 +77,15 @@ os-dep: ## os-dep
 
 
 modify: ## modify
+	# !!!Important: go install github.com/winwisely99/bootstrap/tool/googlesheet !!!
 	# This invokes the monster modification script
 
 	# Call the pything code
 	#$(GOPATH)/import.py
+
+	# Download files from Gsheet
+	googlesheet -option=hugo
 	
-	$(GOBIN)/googlesheet -option=hugo
-
-	# rm -rf $(GOPATH)/i18n/golden/content/
-	# mv $(GOPATH)/outputs/hugo/i18n/golden/content/ $(GOPATH)/golden/
-	# mv $(GOPATH)/outputs/hugo/i18n/i18n/ $(GOPATH)/golden/
-	# rm -rf $(GOPATH)/outputs/
-
 	# Call the golang code
 	# go run import.go
 
