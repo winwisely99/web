@@ -17,5 +17,4 @@
 *.log
 *.DS_Store
 
-outputs/
-pkg/
+./outputs/
