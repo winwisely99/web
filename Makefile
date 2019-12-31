@@ -75,6 +75,10 @@ os-dep: ## os-dep
 	# pip
 	pip3 install BeautifulSoup4
 
+gsheet: ## gsheet
+	# Runs the golang gsheet to pull the pre-transaltioned markdown.
+	
+	googlesheet -option=hugo
 
 modify: ## modify
 	# !!!Important: go install github.com/winwisely99/bootstrap/tool/googlesheet !!!
