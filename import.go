@@ -20,9 +20,11 @@ import (
 /////////////////////////////////////
 
 var (
-	goldenRoot = "golden/"
-	leRoot     = "resources/website/"
-	leImages   = "resources/website/static/images/"
+	goldenRoot     = "golden/"
+	outputsContent = "outputs/hugo/content/"
+	outputsI18n    = "outputs/hugo/i18n/"
+	leRoot         = "resources/website/"
+	leImages       = "resources/website/static/images/"
 )
 
 /////////////////////////////////////
@@ -42,8 +44,6 @@ func placeDirectory(srcDir, destDir string) error {
 		if err != nil {
 			return err
 		}
-
-		fmt.Println(destDir + " directory created successfully!")
 		return nil
 	}
 
@@ -82,19 +82,22 @@ func deleteDirectory(rmDir string) error {
 }
 
 // placeFile move file from srcFile to destFile
-func placeFile(fileName, srcFile, destFile string) (int64, error) {
+func placeFile(srcFile, destDir, fileName string) (int64, error) {
 
 	f, err := os.Open(srcFile)
 	defer f.Close()
 
 	if err != nil {
+		fmt.Println(1)
 		return 0, err
 	}
 
-	d, err := os.Create(destFile)
+	os.MkdirAll(destDir, 0700)
+	d, err := os.Create(path.Join(destDir, fileName))
 	defer d.Close()
 
 	if err != nil {
+		fmt.Println(2)
 		return 0, err
 	}
 
@@ -179,7 +182,6 @@ func appendToFile(source, file string) error {
 
 // allows to append a text to a line
 func writeToLine(line, appendText string) string {
-
 	line = strings.TrimRight(line, "\n")
 	return line + " " + appendText + "\n"
 }
@@ -241,9 +243,10 @@ func appendFileByLineCheck(src, dest, checkLine string) error {
 	if strings.Contains(buff, checkLine) {
 		buff = strings.Split(buff, checkLine)[0]
 	}
+
 	data, err := ioutil.ReadFile(src)
 
-	buff = buff + string(data)
+	buff = buff + checkLine + "\n" + string(data)
 
 	err = f.Truncate(0)
 
@@ -280,41 +283,6 @@ func getDocFromFile(file string) (*goquery.Document, error) {
 
 func updateFiles() {
 
-	/////////////////////////////////////
-	// Directory Structure
-	/////////////////////////////////////
-
-	// Copy the Golden IMAGE files into the LE 'static' dir
-	src := goldenRoot + "images/"
-	dest := leImages
-	srcFiles, err := ioutil.ReadDir(src)
-
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	for _, file := range srcFiles {
-		srcFile := path.Join(src, file.Name())
-		destFile := path.Join(dest, file.Name())
-		_, err := placeFile("", srcFile, destFile)
-
-		if err != nil {
-			fmt.Println(file.Name(), " Faild to update!")
-			log.Fatal(err)
-		}
-		// fmt.Println(file.Name(), " updated successfully!")
-	}
-
-	// Replace the Golden LE CONTENT/EN dir with the WW CONTENT/EN dir only
-	srcContent := goldenRoot + "content/en"
-	destContent := leRoot + "content/en"
-	placeDirectory(srcContent, destContent)
-
-	// Replace the Golden LE CONFIG dir with the WW content dir
-	srcConfig := goldenRoot + "config"
-	destConfig := leRoot + "config"
-	placeDirectory(srcConfig, destConfig)
-
 	// Delete LE git directory, it doesnt need to be there
 	gitDir := leRoot + ".git"
 	deleteDirectory(gitDir)
@@ -322,11 +290,6 @@ func updateFiles() {
 	/////////////////////////////////////
 	// Layout Only
 	/////////////////////////////////////
-
-	// Replace file favicon
-	srcFavicon := goldenRoot + "images/favicon.ico"
-	destFavicon := leRoot + "static/favicon.ico"
-	placeFile("Favicon", srcFavicon, destFavicon)
 
 	//### Head Partial #####
 	headHTML := leRoot + "layouts/partials/head.html"
@@ -444,46 +407,113 @@ func updateFiles() {
 
 }
 
-// update resources/website content and i18n folders
-func updateContentAndI18n() error {
+func replaceConfig() error {
+	srcConfig := goldenRoot + "config"
+	destConfig := leRoot + "config"
+	return placeDirectory(srcConfig, destConfig)
+}
 
-	// remove content folder from resources/website
-	err := deleteDirectory(leRoot + "content/")
-	if err != nil {
-		return err
-	}
-
-	// add content folder from golden/ to resources/website
-	err = placeDirectory(goldenRoot+"content/", leRoot+"content/")
-	if err != nil {
-		return err
-	}
-
-	// append i18n files to resources/i18n
-	src := goldenRoot + "i18n/"
-	dest := leRoot + "i18n/"
+// Copy the Golden IMAGE files into the LE 'static' dir
+func replaceImages() error {
+	src := goldenRoot + "images/"
+	dest := leImages
 	srcFiles, err := ioutil.ReadDir(src)
 
 	if err != nil {
-		log.Fatal(err)
+		return err
 	}
 
 	for _, file := range srcFiles {
 		srcFile := path.Join(src, file.Name())
-		destFile := path.Join(dest, file.Name())
-
-		appendFileByLineCheck(srcFile, destFile, "# append")
+		_, err := placeFile(srcFile, dest, file.Name())
 
 		if err != nil {
-			fmt.Println(file.Name(), " Faild to update!")
-			log.Fatal(err)
+			return err
 		}
 	}
+
+	// Replace file favicon
+	srcFavicon := goldenRoot + "images/favicon.ico"
+	destFavicon := leRoot + "static"
+	_, err = placeFile(srcFavicon, destFavicon, "favicon.ico")
 
 	return err
 }
 
+// Append I18n files from outputs to LE i18n/
+func appendI18n() error {
+
+	dest := leRoot + "i18n/"
+	srcFiles, err := ioutil.ReadDir(outputsI18n)
+
+	if err != nil {
+		return err
+	}
+
+	for _, file := range srcFiles {
+		srcFile := path.Join(outputsI18n, file.Name())
+		destFile := path.Join(dest, file.Name())
+
+		appendFileByLineCheck(srcFile, destFile, "#append")
+
+		if err != nil {
+			fmt.Println(file.Name(), " Faild to update!")
+			return err
+		}
+	}
+	return nil
+}
+
+// Replace Content folders files from outputs to LE content/
+func replaceContent() error {
+
+	dirs, err := ioutil.ReadDir(outputsContent)
+	if err != nil {
+		return err
+	}
+
+	for _, dir := range dirs {
+
+		files, err := ioutil.ReadDir(outputsContent + dir.Name())
+		if err != nil {
+			return err
+		}
+
+		for _, file := range files {
+			srcFilePath := outputsContent + path.Join(dir.Name(), file.Name())
+			destDirPath := leRoot + path.Join("content", dir.Name())
+
+			_, err = placeFile(srcFilePath, destDirPath, file.Name())
+			if err != nil {
+				return err
+			}
+		}
+	}
+	return nil
+}
+
 func main() {
-	// updateFiles()
-	// updateContentAndI18n()
+	err := replaceImages()
+	if err != nil {
+		log.Fatal("Could not update images", err)
+	}
+	fmt.Println("Images directory updated successfully!")
+
+	err = replaceConfig()
+	if err != nil {
+		log.Fatal("Could not replace config folder", err)
+	}
+	fmt.Println("Configs directory updated successfully!")
+
+	err = appendI18n()
+	if err != nil {
+		log.Fatal("Could not append i18n", err)
+	}
+	fmt.Println("I18n directory updated successfully!")
+
+	err = replaceContent()
+	if err != nil {
+		log.Fatal("Could not append i18n", err)
+	}
+	fmt.Println("Contents directory updated successfully!")
 }

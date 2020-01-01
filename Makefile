@@ -5,21 +5,20 @@
 
 # dyan
 #GOPATH=/Users/dyan/Sites/Clients/getcourage.org/web
-
 # joe
 # GOPATH=/Users/apple/workspace/go/src/github.com/winwisely99/web
 # rosie
 # GOPATH=/Users/rosiehoberg/workspace/winwisely/web
-# idir
 
-GOPATH=${HOME}/go/src/github.com/winwisely99/web
+GO111MODULE=on
+GOPATH=${HOME}/go
 GOBIN=${HOME}/go/bin
 
 LIB_NAME=website
 LIB=resources/$(LIB_NAME)
 LIB_BRANCH=dev
 #LIB_BRANCH=flutter_web
-LIB_FSPATH=$(GOPATH)/$(LIB)
+LIB_FSPATH=$(LIB)
 LE_REPO=https://github.com/letsencrypt/website.git
 
 help:  ## Display this help
@@ -77,28 +76,25 @@ os-dep: ## os-dep
 
 gsheet: ## gsheet
 	# Runs the golang gsheet to pull the pre-transaltioned markdown.
-	
+	go get -u github.com/winwisely99/bootstrap/tool/googlesheet
 	googlesheet -option=hugo
 
 modify: ## modify
-	# !!!Important: go install github.com/winwisely99/bootstrap/tool/googlesheet !!!
 	# This invokes the monster modification script
 
 	# Call the pything code
 	#$(GOPATH)/import.py
 
-	# Download files from Gsheet
-	googlesheet -option=hugo
-	
 	# Call the golang code
-	# go run import.go
+	go run import.go
 
 hugo-build: ## hugo-build
-	cd $(LIB_FSPATH) && hugo
-	ls -al $(LIB_FSPATH)/public
+	cd $(LIB) && hugo
+	# ls -al $(LIB_FSPATH)/public
 
 hugo-run: ## hugo-run
-	cd $(LIB_FSPATH) && hugo server -F
+	# cd $(LIB_FSPATH) && hugo server -F
+	cd $(LIB) && hugo server -F
 
 	#if this doesn't work, try 'hugo server -D'
 	# cd $(LIB_FSPATH) && hugo server -D

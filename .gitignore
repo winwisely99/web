@@ -17,4 +17,4 @@
 *.log
 *.DS_Store
 
-./outputs/
+outputs/
