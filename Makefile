@@ -1,18 +1,9 @@
 # SOURCE
 # https://github.com/letsencrypt/website
 
-#Change this before proceding to reflect environment
-
-# dyan
-#GOPATH=/Users/dyan/Sites/Clients/getcourage.org/web
-# joe
-# GOPATH=/Users/apple/workspace/go/src/github.com/winwisely99/web
-# rosie
-# GOPATH=/Users/rosiehoberg/workspace/winwisely/web
 
 GO111MODULE=on
-GOPATH=${HOME}/go
-GOBIN=${HOME}/go/bin
+GOBIN=${GOPATH}/bin
 
 LIB_NAME=website
 LIB=resources/$(LIB_NAME)
@@ -28,8 +19,8 @@ help:  ## Display this help
 print: ## print
 
 	@echo
-	@echo TODO. Fix this so its generic for everyone
 	@echo GOPATH: $(GOPATH)
+	@echo GOBIN: $(GOBIN)
 	@echo
 
 	@echo
