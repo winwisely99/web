@@ -141,6 +141,8 @@ github.com/winwisely99/bootstrap/tool/googlesheet v0.0.0-20191231121917-c26c1005
 github.com/winwisely99/bootstrap/tool/googlesheet v0.0.0-20191231121917-c26c10057bc8/go.mod h1:wCV+SscvfwEM6Dbqp9YkOTiH1wj2b5w5eR1gl/WlOOE=
 github.com/winwisely99/bootstrap/tool/googlesheet v0.0.0-20191231213254-67daa1b1bbbf h1:6CuSoO/D3f/bCACO8mfiWAto5rxmcjuMdB5laCcBqG0=
 github.com/winwisely99/bootstrap/tool/googlesheet v0.0.0-20191231213254-67daa1b1bbbf/go.mod h1:wCV+SscvfwEM6Dbqp9YkOTiH1wj2b5w5eR1gl/WlOOE=
+github.com/winwisely99/bootstrap/tool/googlesheet v0.0.0-20200105145401-c74e122735d5 h1:QUF7VKT3BlFW31b/Pv2n2GIb5ENarwgeVazzMV49ohU=
+github.com/winwisely99/bootstrap/tool/googlesheet v0.0.0-20200105145401-c74e122735d5/go.mod h1:wCV+SscvfwEM6Dbqp9YkOTiH1wj2b5w5eR1gl/WlOOE=
 github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2/go.mod h1:UETIi67q53MR2AWcXfiuqkDkRtnGDLqkBTpCHuJHxtU=
 github.com/xordataexchange/crypt v0.0.3-0.20170626215501-b2862e3d0a77/go.mod h1:aYKd//L2LvnjZzWKhF00oedf4jCCReLcmhLdhm1A27Q=
 github.com/yosssi/gohtml v0.0.0-20190915184251-7ff6f235ecaf h1:VA200mPTYh9FWY8zKX5ctXCtNk78HUez8ecTdsQGhoo=
@@ -189,6 +191,8 @@ golang.org/x/sys v0.0.0-20191228213918-04cbcbbfeed8 h1:JA8d3MPx/IToSyXZG/RhwYEtf
 golang.org/x/sys v0.0.0-20191228213918-04cbcbbfeed8/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20200102141924-c96a22e43c9c h1:OYFUffxXPezb7BVTx9AaD4Vl0qtxmklBIkwCKH1YwDY=
 golang.org/x/sys v0.0.0-20200102141924-c96a22e43c9c/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
+golang.org/x/sys v0.0.0-20200103143344-a1369afcdac7 h1:/W9OPMnnpmFXHYkcp2rQsbFUbRlRzfECQjmAFiOyHE8=
+golang.org/x/sys v0.0.0-20200103143344-a1369afcdac7/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/text v0.3.0 h1:g61tztE5qeGQ89tm6NTjjM9VPIm088od1l6aSorWRWg=
 golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
 golang.org/x/text v0.3.2 h1:tW2bmiBqwgJj/UpqtC8EpXEZVYOwU0yG4iWbprSVAcs=
