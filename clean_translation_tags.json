@@ -11,5 +11,10 @@
     {"error": "«", "fixe": "\""},
     {"error": "»", "fixe": "\""},
     {"error": "：", "fixe": ": "},
-    {"error":"** ** GetCourageNow应用！", "fixe": "** GetCourageNow应用！**"}
+    {"error":"** ** GetCourageNow应用！", "fixe": "** GetCourageNow应用！**"},
+    {"error":"ref \"become-a-sponsor.html \"", "fixe": "ref \"become-a-sponsor.html\""},
+    {"error": "    menu", "fixe":"menu"},
+    {"error": "  main", "fixe":"  main"},
+    {"error": "    parent", "fixe":"    parent"},
+    {"error": "    weight", "fixe":"    weight"}
 ]

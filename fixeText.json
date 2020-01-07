@@ -1,0 +1,105 @@
+[
+    {
+        "file_path": "resources/website/layouts/partials/head.html",
+        "errors": [
+            { "old": "@letsencrypt", "new": "@winwisely" },
+            {
+                "old": "images/le-logo-twitter.png",
+                "new": "wwimages/logo-main.png"
+            }
+        ]
+    },
+
+    {
+        "file_path": "resources/website/layouts/partials/header.html",
+        "errors": [
+            {
+                "old": "/images/letsencrypt-logo-horizontal.svg",
+                "new": "/images/logo-main.png"
+            },
+            { "old": "Let's Encrypt", "new": "GetCourageNow" },
+            { "old": "{{ .URL }}", "new": "{{ .URL | relLangURL}}" }
+        ]
+    },
+
+    {
+        "file_path": "resources/website/layouts/partials/footer.html",
+        "errors": [
+            {
+                "old": "/images/letsencrypt-logo-horizontal.svg",
+                "new": "/images/logo-main.png"
+            },
+            {
+                "old": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-56433935-1&aip=1\"></script>",
+                "new": ""
+            }
+        ]
+    },
+
+    {
+        "file_path": "resources/website/static/css/main.min.css",
+        "errors": [
+            {
+                "old": "/images/3.jpg",
+                "new": "/images/1-dark.jpg"
+            }
+        ]
+    },
+
+    {
+        "file_path": "resources/website/i18n/en.toml",
+        "errors": [
+            {
+                "old": "Let&rsquo;s Encrypt is a <span>free</span>, <span>automated</span>, and <span>open</span> Certificate Authority.",
+                "new": "<span>GetCourageNow</span><br>It&rsquo;s A Numbers Game"
+            },
+            {
+                "old": "Support a more secure and privacy-respecting Web.",
+                "new": "Support us and help scale courage!"
+            }
+        ]
+    },
+
+    {
+        "file_path": "resources/website/layouts/partials/footer.html",
+        "errors": [
+            {
+                "old": "1 Letterman Drive, Suite D4700,",
+                "new": "(650) 383 8435 | gary@getcouragenow.org"
+            },
+            {
+                "old": "San Francisco,",
+                "new": ""
+            },
+            {
+                "old": "CA",
+                "new": ""
+            },
+            {
+                "old": "94129",
+                "new": ""
+            },
+            {
+                "old": "{{ i18n \"linux_foundation_trademark\" }}",
+                "new": ""
+            }
+        ]
+    },
+    {
+        "file_path": "resources/website/layouts/index.html",
+        "errors": [
+            {
+                "old": "become-a-sponsor",
+                "new": "donate"
+            },
+            {
+                "old": "home_hero_sponsor",
+                "new": "home_hero_donate"
+            },
+            {
+                "old": "/how-it-works",
+                "new": "{{ \"/how-it-works\" | relLangURL}}"
+            }
+        ]
+    }
+]

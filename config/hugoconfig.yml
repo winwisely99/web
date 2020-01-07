@@ -22,8 +22,8 @@ languages:
   CSV: https://docs.google.com/spreadsheets/d/e/2PACX-1vQmZ9DVnxUKkGzX5OuhbC1Zf9PDv_XELImFsGr8snSDq19AwfxzZ-LnZF5V83W2eFfMsaa9t-NjxjS9/pub?output=csv
   MERGE: "row"
   OUT_DIR: "outputs/hugo/config/_default/"
-  FILE_NAME: "languages" 
-  EXTENSION: ".toml"
+  FILE_NAME: "" 
+  EXTENSION: ""
 
 menu:
   ID: 1HAK9SCb0VxVr22RSpHPVNrgGiNQyn6DwN7zXpJcZhGU

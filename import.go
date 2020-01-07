@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"encoding/json"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -21,8 +22,10 @@ import (
 
 var (
 	goldenRoot     = "golden/"
-	outputsContent = "outputs/hugo/content/"
-	outputsI18n    = "outputs/hugo/i18n/"
+	outputs        = "outputs/hugo/"
+	outputsContent = outputs + "content/"
+	outputsI18n    = outputs + "/i18n/"
+	outputsConfig  = outputs + "/config/"
 	leRoot         = "resources/website/"
 	leImages       = "resources/website/static/images/"
 )
@@ -283,89 +286,19 @@ func getDocFromFile(file string) (*goquery.Document, error) {
 
 func updateFiles() {
 
-	// Delete LE git directory, it doesnt need to be there
 	gitDir := leRoot + ".git"
-	deleteDirectory(gitDir)
-
-	/////////////////////////////////////
-	// Layout Only
-	/////////////////////////////////////
-
-	//### Head Partial #####
-	headHTML := leRoot + "layouts/partials/head.html"
-	oldMetaTwitter := "@letsencrypt"
-	newMetaTwitter := "@winwisely"
-	oldMetaLogo := "images/le-logo-twitter.png"
-	newMetaLogo := "wwimages/logo-main.png"
-	replaceString(headHTML, oldMetaTwitter, newMetaTwitter)
-	replaceString(headHTML, oldMetaLogo, newMetaLogo)
-
-	/////////////////////////////////////
-	// Header Partial
-	/////////////////////////////////////
-
-	// Replace logo and alt text
 	headerHTML := leRoot + "layouts/partials/header.html"
-	footerHTML := leRoot + "layouts/partials/footer.html"
-	oldLogo := "/images/letsencrypt-logo-horizontal.svg"
-	newLogo := "/images/logo-main.png"
-	oldAlt := "Let's Encrypt"
-	newAlt := "GetCourageNow"
-	replaceString(headerHTML, oldLogo, newLogo)
-	replaceString(headerHTML, oldAlt, newAlt)
-
-	// Remove hideous foundation link
-	deleteElement(headerHTML, "div", "class", "linux-foundation-link")
-
-	// Remove their LE GA link
-	replaceString(footerHTML, `<script async src="https://www.googletagmanager.com/gtag/js?id=UA-56433935-1&aip=1"></script>`, "")
-
-	// Replace banner on homepage
 	mainCSS := leRoot + "static/css/main.min.css"
-	oldBanner := "/images/3.jpg"
-	newBanner := "/images/1-dark.jpg"
-	replaceString(mainCSS, oldBanner, newBanner)
-
-	// Change banner text
-	i18nEN := leRoot + "i18n/en.toml"
-	oldHeroTitle := "Let&rsquo;s Encrypt is a <span>free</span>, <span>automated</span>, and <span>open</span> Certificate Authority."
-	newHeroTitle := "<span>GetCourageNow</span><br>It&rsquo;s A Numbers Game"
-	replaceString(i18nEN, oldHeroTitle, newHeroTitle)
-
-	// Replace contact footer text
-	footerHTML = leRoot + "layouts/partials/footer.html"
-	oldAddress1 := "1 Letterman Drive, Suite D4700,"
-	newAddress1 := "(650) 383 8435 | gary@getcouragenow.org"
-	oldAddress2 := "San Francisco,"
-	oldAddress3 := "CA"
-	oldAddress4 := "94129"
-	linuxLink := `{{ i18n "linux_foundation_trademark" }}`
-	replaceString(footerHTML, oldAddress1, newAddress1)
-	replaceString(footerHTML, oldAddress2, "")
-	replaceString(footerHTML, oldAddress3, "")
-	replaceString(footerHTML, oldAddress4, "")
-	replaceString(footerHTML, linuxLink, "")
-
-	// Replace content in donate footer
-	enFile := leRoot + "i18n/en.toml"
-	oldDonateBox := "Support a more secure and privacy-respecting Web."
-	newDonateBox := "Support us and help scale courage!"
-	replaceString(enFile, oldDonateBox, newDonateBox)
-
-	/////////////////////////////////////
-	// Homepage Adhoc
-	/////////////////////////////////////
-
-	// Append custom home content and css to corresponding files
 	customHome := goldenRoot + "layouts/home.txt"
 	customCSS := goldenRoot + "layouts/css.txt"
 	customHead := goldenRoot + "layouts/google.txt"
-
 	indexPartial := leRoot + "layouts/index.html"
 	headPartial := leRoot + "layouts/partials/head.html"
-	// basePartial := leRoot + "layouts/_default/baseof.html"
-	// blankPartial := leRoot + "layouts/_default/blank.html"
-	// postPartial := leRoot + "layouts/post/baseof.html"
+
+	// Delete LE git directory, it doesnt need to be there
+	deleteDirectory(gitDir)
+	// Remove hideous foundation link
+	deleteElement(headerHTML, "div", "class", "linux-foundation-link")
 
 	// update resources/website/layouts/index.html file by adding content
 	// from golden/layouts/home.txt
@@ -384,7 +317,6 @@ func updateFiles() {
 	// update layouts/partials/head.html file by adding content
 	// from "golden/layouts/google.txt"
 	doc, err = getDocFromFile(headPartial)
-
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -393,24 +325,11 @@ func updateFiles() {
 	if !(doc.Find("script").Length() > 0) {
 		insertFile("html", customHead, headPartial, 1)
 	}
-
-	// Change Button and Link on Banner
-	oldButtonLink := "become-a-sponsor"
-	newButtonLink := "donate"
-	oldButtonText := "home_hero_sponsor"
-	newButtonText := "home_hero_donate"
-
-	replaceString(indexPartial, oldButtonLink, newButtonLink)
-	replaceString(indexPartial, oldButtonText, newButtonText)
-
-	fmt.Println("Done")
-
 }
 
 func replaceConfig() error {
-	srcConfig := goldenRoot + "config"
 	destConfig := leRoot + "config"
-	return placeDirectory(srcConfig, destConfig)
+	return placeDirectory(outputsConfig, destConfig)
 }
 
 // Copy the Golden IMAGE files into the LE 'static' dir
@@ -516,4 +435,61 @@ func main() {
 		log.Fatal("Could not append i18n", err)
 	}
 	fmt.Println("Contents directory updated successfully!")
+
+	updateFiles()
+	fmt.Println("Files updated successfully!")
+
+	err = fixeText()
+	if err != nil {
+		log.Fatal("Could not append i18n ", err)
+	}
+	fmt.Println("Text Fixed successfully!")
+	fmt.Println("--------------------Done--------------------")
+}
+
+type textData struct {
+	Old string `json:"old"`
+	New string `json:"new"`
+}
+
+type errorsModels struct {
+	Type     string     `json:"type"`
+	FilePath string     `json:"file_path"`
+	Errors   []textData `json:"errors"`
+}
+
+func fixeText() error {
+	file, err := os.Open("fixeText.json")
+	defer file.Close()
+
+	if err != nil {
+		return err
+	}
+	errorsM := []errorsModels{}
+	err = json.NewDecoder(file).Decode(&errorsM)
+	if err != nil {
+		return err
+	}
+	for _, m := range errorsM {
+
+		data, err := ioutil.ReadFile(m.FilePath)
+		if err != nil {
+			return err
+		}
+		for _, e := range m.Errors {
+			out := strings.ReplaceAll(string(data), e.Old, e.New)
+
+			f, err := os.OpenFile(m.FilePath, os.O_WRONLY|os.O_CREATE, 0700)
+			if err != nil {
+				return err
+			}
+
+			_, err = f.WriteString(out)
+			if err != nil {
+				return err
+			}
+			f.Close()
+		}
+	}
+	return nil
 }
