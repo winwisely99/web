@@ -1,98 +1,81 @@
 # GetCourageNow Squarespace-to-Hugo Migration Project
 
-This is a small business template built with [Hugo](https://github.com/gohugoio/hugo) based on [Let's Encrypt](https://github.com/letsencrypt) using content exported from Squarespace.  
+This is a small business template built with [Hugo](https://github.com/gohugoio/hugo) based on [Let's Encrypt](https://github.com/letsencrypt) using content exported from Squarespace.
 
 ## Getting started
 
-Download `[https://github.com/winwisely99/web/]https://github.com/winwisely99/web/)` or clone using ``$ git clone https://github.com/winwisely99/web.git``
+Download `[https://github.com/getcouragenow/web/]https://github.com/getcouragenow/web/)` or clone using `$ git clone https://github.com/getcouragenow/web.git`
 
-- Run `$ git fetch`
-- Run `$ git checkout dev` to be on the correct branch
+-   Run `$ git fetch`
+-   Run `$ git checkout dev` to be on the correct branch
 
 ## Local Development
 
-*Makefile* has all the commands necessary for building, starting server, and deploying to Firebase and must be executed from the checked out root directory of [GetCourageNow](https://github.com/winwisely99/web.git)
+_Makefile_ has all the commands necessary for building, starting server, and deploying to Firebase and must be executed from the checked out root directory of [GetCourageNow](https://github.com/getcouragenow/web.git)
 
-- Change **$GOPATH** variable in *Makefile* to match your local checked out path
+## To install all dependencies:
+-   Use bootstrap/os to quick install [Golang 1.13](https://github.com/getcouragenow/bootstrap)
+-   Run `$ make os-dep`
 
-To install all dependencies:
-``
-- Run `$ make dep` 
-   
-  - #### Runtime dependencies (if `$ make dep` fails)
-  
-    - `Python <http://python.org/>`_ 2.6, 2.7, ???
-    - `Beautiful soup <http://www.crummy.com/software/BeautifulSoup/>`_ : Parsing HTML/Text/Css files (python)
-    - `Firebase <https://firebase.google.com/>`
-    - `Hugo <https://gohugo.io/getting-started/installing/>`
+-   #### Runtime dependencies (if `$ make dep` fails)
+    -   [Golang](https://golang.org/)
+    -   [mage](https://github.com/magefile/mage)
+    -   [Firebase](https://firebase.google.com/)
+    -   [Hugo](https://gohugo.io/getting-started/installing/)
 
-  - #### Manually installing dependencies in ubuntu/debian, mac
-  
-      ``$ apt-get install python-bs4 (for Python 2)``
-   
-      ``$ apt-get install python3-bs4 (for Python 3)``
 
-  - #### Manually installing dependencies in mac
-  
-      ``$ brew install hugo``
-      
-      ``$ brew install firebase-cli``
-      
-      ``$ brew install python3``
-      
-      ``$ pip3 install BeautifulSoup4``      
+## To clean or update Let's Encrypt codebase:
 
-  - ####  Manually installing Python dependencies using python package installer (pip)
-  
-      ``$ sudo pip install --upgrade  -r Import_requirements.txt``
+-   Run `$ make git-clean` to clean Let's Encrypt codebase directory when necessary
+-   Run `$ make git-upstream` to pull Let's Encrypt repo if codebase directory is cleaned
+-   Or run `$ make git-update` to update Let's Encrypt's codebase directory
 
-To clean or update Let's Encrypt codebase:
+## To import content from googlesheet:
 
-- Run `$ make git-clean` to clean Let's Encrypt codebase directory when necessary
-  - Run `$ make git-upstream` to pull Let's Encrypt repo if codebase directory is cleaned
-- Or run `$ make git-update` to update Let's Encrypt's codebase directory
+-   Run `$ make gsheet`This will create a document called outputs and contains all .
+-   To add a new sheet see `/config` folder for more infos.
 
-To import GetCourageNow content into the Let's Encrypt codebase:
+## To import GetCourageNow content into the Let's Encrypt codebase:
 
-- Run `$ make modify` to invoke Import.py script. 
+-   Run `$ make modify` to invoke Import.go script. By default it will replace, overwrite, or append to Let's Encrypt codebase.
 
-  By default it will replace, overwrite, or append to Let's Encrypt codebase:
-    - config files
-    - content i18n files
-    - images
-    - specific strings in the layout directory 
+-   Run `$ make hugo-build` to build after importing GetCourageNow content into Let's Encrypt codebase
 
-- Run `$ make build` to build after importing GetCourageNow content into Let's Encrypt codebase
+-   Run `$ make hugo-run` to start the server.
 
-- Run `$ make run` to start the server
+-   Run `$ make hugo-open` to launch browser to see the build locally.
 
-- Run `$ make open` to launch browser to see the build locally
+## To fixe text on one file:
 
-## Modifying Content
+The file `fixe_text.json` is used to replace strings on some files, so how it's work?
 
-**All content changes, adding languages, modifying menu, etc. must be done in _golden_ directory.**
+- `file_path`: adding file path where there is an error an you want to fixe it.
+- `errors`: it's an array contains objects where you need to set "old" and "new" string that you want to replace in the `file_path`.
+-  example:
+```
+{
+    "file_path": "resources/website/layouts/partials/head.html",
+    "errors": [
+        { "old": "@letsencrypt", "new": "@winwisely" }
+    ]
+}
+```
+- Run `make modify-text` to fixe and update all strings.
 
-The _golden_ directory contains:
-- _hidden:
-  - Let's Encrypt files that we are not using
-- config:
-  - General configuration settings
-  - Languages
-  - Menu
-- content:
-  - All the markdown files for the content.  Structure matters. (Please only add directories or files if intended for publishing.)
-- images:
-  - These images will be copied into the build
-- layouts:
-  - The files here are used for custom HTML, CSS, Script that need to be injected or appended into appropriate partials. (See _Import.py_ for usage)
-  
-To import all changes, adds, or deletes from _golden_ folder into Let's Encrypt codebase:
-- Run `$ make modify` 
+## To fixe text on multiple files:
+
+The file `clean_translation_tags.json` is used by gsheet import to clean tags used to translate, or fixe translation errors for all the files.
+```
+{
+    "error": "NOTRANSLATE_",
+    "fixe": ""
+}
+```
+- Run `make gsheet` to fixe and update `outputs` folder.
 
 ## Deployment
 
-- Run `$ make build` to rebuild Hugo
-- If first time deploying:
-  - Run `$ make deploy-fb-init`
-- Run `$ make deploy-fb` to deploy build to Dev server located at [https://getcourage-letsencrypt-web.firebaseapp.com/](https://getcourage-letsencrypt-web.firebaseapp.com/)
-
+-   Run `$ make build` to rebuild Hugo
+-   If first time deploying:
+    -   Run `$ make deploy-fb-init`
+-   Run `$ make deploy-fb` to deploy build to Dev server located at [https://getcourage-letsencrypt-web.firebaseapp.com/](https://getcourage-letsencrypt-web.firebaseapp.com/)

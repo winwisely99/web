@@ -52,32 +52,28 @@ os-dep: ## os-dep
 	# hugo
 	brew install hugo
 
+	# install mage
+	go get -u -d github.com/magefile/mage
+
 	# firebase cli
 	brew install firebase-cli
 
 	## gcloud
 	brew cask install google-cloud-sdk
 
-	## python ( https://docs.python-guide.org/starting/install3/osx/)
-	brew install python
-	# python3 --version
-	
-	# pip
-	pip3 install BeautifulSoup4
-
 gsheet: ## gsheet
 	# Runs the golang gsheet to pull the pre-transaltioned markdown.
-	go get -u github.com/winwisely99/bootstrap/tool/googlesheet
+	go get -u github.com/getcouragenow/bootstrap/tool/googlesheet
 	googlesheet -option=hugo
 
 modify: ## modify
 	# This invokes the monster modification script
-
-	# Call the pything code
-	#$(GOPATH)/import.py
-
 	# Call the golang code
 	go run import.go
+	mage FixeText
+
+modify-text: ## fixe text 
+	mage FixeText
 
 hugo-build: ## hugo-build
 	cd $(LIB) && hugo
