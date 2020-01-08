@@ -97,8 +97,8 @@
                 "new": "home_hero_donate"
             },
             {
-                "old": "/how-it-works",
-                "new": "{{ \"/how-it-works\" | relLangURL}}"
+                "old": "<a href=\"/how-it-works\">",
+                "new": "<a href=\"{{ \"/how-it-works\" | relLangURL}}\">"
             }
         ]
     }
