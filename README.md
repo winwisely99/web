@@ -4,7 +4,7 @@ This is a small business template built with [Hugo](https://github.com/gohugoio/
 
 ## Getting started
 
-Download `[https://github.com/getcouragenow/web/]https://github.com/getcouragenow/web/)` or clone using `$ git clone https://github.com/getcouragenow/web.git`
+Download [https://github.com/getcouragenow/web/](https://github.com/getcouragenow/web/) or clone using `$ git clone https://github.com/getcouragenow/web.git`
 
 -   Run `$ git fetch`
 -   Run `$ git checkout dev` to be on the correct branch
