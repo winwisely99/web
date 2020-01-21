@@ -4,7 +4,6 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
-
 enableRobotsTXT = true
 
 # Note that this currently has no effect in Hugo.
@@ -16,10 +15,13 @@ timezone = "America/Los_Angeles"
 # Default page top graphic if not set in page front matter. This is an integer representing the base filename.
 # See the JPEG files below /static/images.
 top_graphic = 5
-
-github_username = "winwisely99"
-twitter_username = "getcouragenow"
+long_name = "GetCourageNow"
+short_name = "GCN"
+github_username = "github.com/getcouragenow"
+twitter_username = "twitter.com/getcouragenow"
 crowdfunding_url = ""
+email = "contact@getcouragenow.org"
+tel = "+1 (650) 383 8435"
 
 # Date and time formatting, see https://gohugo.io/functions/format/
 time_format_RFC3339 = "2006-01-02T15:04:05Z07:00"

@@ -1,5 +1,5 @@
 [en]
-title = "GetCourageNow.org - It's A Numbers Game"
+title = "GetCourageNow.org - GetCourageNow.org is a non profit providing News and tools to fight Climate Change using self organising tools for Climate Change campaign organisations."
 contentDir = "content/en"
 languageName ="English"
 languageCode= "en-us"
@@ -8,7 +8,7 @@ beforeColon= ""
 # Weight used for sorting. (alphabetical order using languageCode, with English first)
 weight = 10
 description = """
-  GetCourageNow is a free, mobile friendly, open source, volunteer recruitment app that aims to help climate justice campaigns to organize and commit strikers on a mass scale. 
+  A non-profit providing secure, open source, self organising software for Climate Change campaign organisations.
 """
 
 

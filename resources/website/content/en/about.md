@@ -28,7 +28,7 @@ Secure: GetCourageNow will serve as a platform for advancing TLS security best p
 - Open: The automatic issuance and renewal protocol will be published as an open standard that others can adopt.
 Cooperative: We work with campaign partners to ensure the best possible outcomes for climate actions, activists, and their supporters. 
 
-See [HOW WINWISLEY WORKS](/how-it-works) for more info.
+See [HOW GET COURAGE NOW WORKS](/how-it-works) for more info.
 
 ### More about how the GetCourageNow idea came about:
 
