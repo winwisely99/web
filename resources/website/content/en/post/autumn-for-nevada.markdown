@@ -13,7 +13,7 @@ wordpress_id: 16
 
 
   
-      [![](https://images.squarespace-cdn.com/content/v1/5985dfd0b8a79b27663a4a57/1539667287433-MULWSGJCQT6V3DETVCGC/ke17ZwdGBToddI8pDm48kM8gjLDDGRTmNdyX_GmpY79Zw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVGzqP_v8q_hAxVlCx0CTos0AJR8Srl7crQ_bAF1DdiEg8Y7NDhP2oKiM3zyEiUrQlM/GetCourageNow+-+App+Store+Button300.jpg?format=original)](https://l.facebook.com/l.php?u=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Fwinwisely%2Fid1412145042%3Fmt%3D8&h=AT1oN0yXQvgbEE3zQoHYhuweRtcU-ZORcM9hH_y3LCg_u1czmZOYNr6oqsRjQjpHtXAm11zcRuGSY0MyGp45R0zc7lifivY6q26Xf6DRDtJjq2X6Av1beRE)
+      [![](https://images.squarespace-cdn.com/content/v1/5985dfd0b8a79b27663a4a57/1539667287433-MULWSGJCQT6V3DETVCGC/ke17ZwdGBToddI8pDm48kM8gjLDDGRTmNdyX_GmpY79Zw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVGzqP_v8q_hAxVlCx0CTos0AJR8Srl7crQ_bAF1DdiEg8Y7NDhP2oKiM3zyEiUrQlM/GetCourageNow+-+App+Store+Button300.jpg?format=original)](https://l.facebook.com/l.php?u=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2FGetCourageNow%2Fid1412145042%3Fmt%3D8&h=AT1oN0yXQvgbEE3zQoHYhuweRtcU-ZORcM9hH_y3LCg_u1czmZOYNr6oqsRjQjpHtXAm11zcRuGSY0MyGp45R0zc7lifivY6q26Xf6DRDtJjq2X6Av1beRE)
   
 
 

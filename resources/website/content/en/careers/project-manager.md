@@ -33,7 +33,7 @@ GetCourageNow believes a diverse, inclusive staff makes us a stronger company an
 
   1. First, read our [demo package](http://bit.ly/GetCouragePrep). Please make sure to also watch the 3-Minute ["Crowdacting" video](http://bit.ly/crowdacting) and our 10-Minute [demo video](http://bit.ly/GetCourageZoomDemo6).
 
-  3. Send your resume along with a cover letter to [Gary@GetCourageNow.org](mailto:Gary@GetCourageNow.org), describing --
+  3. Send your resume along with a cover letter to [gary.krane@GetCourageNow.org](mailto:gary.krane@GetCourageNow.org), describing --
 
     * “Why us” (when there are so many other do good outfits out there?) and
 

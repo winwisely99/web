@@ -24,7 +24,7 @@ When you use an HTTPS web site or other TLS service with a GetCourageNow certifi
 
 If you are a Subscriber, you are requesting a trusted certificate from GetCourageNow intended to publicly vouch that you control a certain domain name or names that are reachable on the Internet. As part of the process of proving that control, GetCourageNow will collect various information related to certificate authentication and management. That information includes the IP addresses from which you access the GetCourageNow service; all resolved IP addresses for any domain names requested; server information related to any validation requests; full logs of all inbound HTTP / ACME requests, all outbound validation requests; and information sent by or inferred from your client software. We will store this information for a minimum of seven years per both contractual necessity and public interest. We need to be able to demonstrate to the public, including those who rely on the trustworthiness of our certificates, that our services perform as expected. As a result, we may be unable to delete information, including IP addresses. This information may be made public in a number of ways, including via public API, public repositories, and/or public discussions.
 
-You may have the option to provide contact information, such as your email address, for account service and recovery purposes. Your contact information will not be made public, and it will only be shared per “Law Enforcement and Extenuating Circumstances,” below. By providing your email address, you are consenting to receive service-related emails from us. You may unsubscribe from service-related emails at any time by clicking the “unsubscribe” link at the bottom of our emails or by contacting us at [gary@getcouragenow.org](mailto:gary@getcouragenow.org). We will not use your contact information for marketing or promotional purposes.
+You may have the option to provide contact information, such as your email address, for account service and recovery purposes. Your contact information will not be made public, and it will only be shared per “Law Enforcement and Extenuating Circumstances,” below. By providing your email address, you are consenting to receive service-related emails from us. You may unsubscribe from service-related emails at any time by clicking the “unsubscribe” link at the bottom of our emails or by contacting us at [gary.krane@getcouragenow.org](mailto:gary.krane@getcouragenow.org). We will not use your contact information for marketing or promotional purposes.
 
 You may need to download client software from a repository such as those run by Debian, Ubuntu, Red Hat, or Github. Your interaction with such a software repository is governed by that repository’s own privacy policy and/or Terms of Use.
 
@@ -53,11 +53,11 @@ We process personal data as described in this policy. We rely on your consent to
 Individuals located in the European Economic Area (EEA) have certain rights in respect to their personal information, including the right to access, correct, or delete personal data we process through your use of the site. If you're a relying party, subscriber, or visitor based in the EEA, you can:
 
 * Request a personal data report by emailing us at contact@getcouragenow.org. This report will include the personal data we have about you, provided to you in a structured, commonly used, and portable format. Please note that we may request additional information from you to verify your identity before we disclose any information.
-* Request that your information be corrected or deleted by contacting us at gary@getcouragenow.org.
+* Request that your information be corrected or deleted by contacting us at gary.krane@getcouragenow.org.
 * Object to us processing your information. You can ask us to stop using your information, including when we use your information to send you service emails. You may withdraw your consent to receive service emails at any time by clicking the “unsubscribe” link found within GetCourageNow emails.
 * Complain to a regulator. If you're based in the EEA and think that we haven't complied with data protection laws, you have a right to lodge a complaint with your local supervisory authority.
 
-For more information, or to report a privacy issue, please contact: [gary@getcouragenow.org](mailto:gary@getcouragenow.org)
+For more information, or to report a privacy issue, please contact: [gary.krane@getcouragenow.org](mailto:gary.krane@getcouragenow.org)
 
   
 

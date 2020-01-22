@@ -11,5 +11,5 @@ menu:
 
 ### Coming soon!
 
-If you have immediate questions, please email [gary@getcouragenow.org](email:gary@getcouragenow.org)
+If you have immediate questions, please email [gary.krane@getcouragenow.org](email:gary.krane@getcouragenow.org)
 
