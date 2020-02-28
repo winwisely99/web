@@ -25,7 +25,7 @@ Gerard has over 20 years of experience in a variety of fields, including archite
 
 Michael is a senior level web-based app programmer who has been programming for more than 25 years, and is so passionate about the potential of GetCourageNow he has been willing to work as a cofounder without pay.
 
-### **Rosie Hoberg, Cofounder/Research & Outreach Director/ Associate Finance Director**
+### **Rosie Dime, Cofounder/Research & Outreach Director/ Associate Finance Director**
 
 Rosie brings the team together with her communication skills and empathic reasoning, easily slipping into any role. Rosie’s background is in psychology research, with a specific interest and published research in the area of conservation psychology. She has experience leading and assisting various international and interdisciplinary research projects, going out of her way to ensure their success. Rosie is passionate about giving her time to projects that make a difference, and has worked full-time with only living expenses pay for several months.
 
