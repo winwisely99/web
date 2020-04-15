@@ -1,6 +1,11 @@
 # SOURCE
 # https://github.com/letsencrypt/website
 
+# git
+REPO_NAME=$(notdir $(shell pwd))
+UPSTREAM_ORG=getcouragenow
+FORK_ORG=$(shell basename $(dir $(abspath $(dir $$PWD))))
+
 
 GO111MODULE=on
 GOBIN=${GOPATH}/bin
@@ -17,6 +22,12 @@ help:  ## Display this help
 
 
 print: ## print
+
+	@echo
+	@echo FORK_ORG: $(FORK_ORG)
+	@echo UPSTREAM_ORG: $(UPSTREAM_ORG)
+	@echo REPO_NAME: $(REPO_NAME)
+	@echo
 
 	@echo
 	@echo GOPATH: $(GOPATH)
